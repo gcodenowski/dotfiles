@@ -110,6 +110,7 @@ alias ls="ls -A"
 alias obsidian="cd '/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas'"
 alias home="cd ~"
 alias zshreload="source ~/.zshrc"
+alias dotfiles="cd ~/dotfiles"
 
 # ==Functions==
 # Empty Downloads Folder
