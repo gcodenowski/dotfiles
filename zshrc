@@ -77,6 +77,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Brew plugins
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -122,7 +125,7 @@ empty_downloads(){
 # Empty the bin
 empty_bin(){
 	TRASH_PATH="$HOME/.Trash"
-	rm "$TRASH_PATH/*"
+	rm -rf -- "$TRASH_PATH"/*(N)
 	echo "Files Deleted Succesfully!" 
 }
 
