@@ -108,9 +108,9 @@ source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # ==Aliases==
 alias zshconfig='vim ~/.zshrc'
 alias ohmyzsh='nano ~/.oh-my-zsh'
-alias icloud='cd '/Users/gilbertkozanowski/Library/Mobile Documents/com~apple~CloudDocs''
+alias icloud='cd "/Users/gilbertkozanowski/Library/Mobile Documents/com~apple~CloudDocs"'
 alias ls='ls -A'
-alias obsidian='cd '/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas''
+alias obsidian='cd "/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas"'
 alias home='cd ~'
 alias zshreload='source ~/.zshrc'
 alias dotfiles='cd ~/dotfiles'
