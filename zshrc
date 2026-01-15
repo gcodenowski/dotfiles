@@ -115,6 +115,7 @@ alias home='cd ~'
 alias zshreload='exec zsh'
 alias dotfiles='cd ~/dotfiles'
 alias obs_push='cd "/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas" && git add . && git commit -m "Obsidian sync $(date +%d-%h-%Y-%H)" && git push origin main'
+alias dot_push='cd "/Users/gilbertkozanowski/dotfiles" && git add . && git commit -m "Dotfiles update $(date +%d-%h-%Y)" && git push'
 
 # ==Functions==
 # Empty Downloads Folder
