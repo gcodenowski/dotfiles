@@ -112,7 +112,7 @@ alias icloud='cd "/Users/gilbertkozanowski/Library/Mobile Documents/com~apple~Cl
 alias ls='ls -A'
 alias obsidian='cd "/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas"'
 alias home='cd ~'
-alias zshreload='source ~/.zshrc'
+alias zshreload='exec zsh'
 alias dotfiles='cd ~/dotfiles'
 alias obs_push='cd "/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas" && git add . && git commit -m "Obsidian sync $(date +%d-%h-%Y-%H)" && git push origin main'
 
@@ -150,5 +150,5 @@ low_priority_throttling(){
 # zsh autosuggestions
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-
-
+# zsh-vi-mode 
+source "$(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh" 
