@@ -1,0 +1,31 @@
+sudo yabai --load-sa
+
+# Setting bsp (binary space partitioning) as base layout config
+yabai -m config layout bsp
+
+# Stack of float
+yabai -m config window_placement second_child
+
+# Padding
+yabai -m config top_padding 15
+yabai -m config bottom_padding 15
+yabai -m config left_padding 15
+yabai -m config right_padding 15
+yabai -m config window_gap 15
+
+# Mouse settings
+yabai -m config mouse_follows_focus on
+
+yabai -m config mouse_modifier alt
+# LMB + drag
+yabai -m config mouse_action1 move
+# RMB + drag
+yabai -m config mouse_action2 resize
+
+# Apps excluded from yabai
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Proton VPN$" manage=off
+
+# Debug reporting
+yabai -m config debug_output true
+
