@@ -77,9 +77,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Brew plugins
-source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -118,6 +115,7 @@ alias obs_push='cd "/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~
 alias dot_push='cd "/Users/gilbertkozanowski/dotfiles" && git add . && git commit -m "Dotfiles update $(date +%d-%h-%Y_%H-%M-%S)" && git push'
 alias yabaiconfig='vim ~/.config/yabai/yabairc'
 alias skhdconfig='vim ~/.config/skhd/skhdrc'
+alias sketchybarconfig='vim ~/.config/sketchybar/sketchybarrc'
 
 # ==Functions==
 # Empty Downloads Folder
