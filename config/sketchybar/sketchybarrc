@@ -12,9 +12,10 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 
 ##### Bar Appearance #####
 sketchybar --bar position=top      \
-		 height=35         \
-		 blur_radius=2    \
-   		 color=0x40000000  
+		 height=33         \
+		 blur_radius=4    \
+   		 color=0x40000000 \
+		 sticky=on
 
 ##### Changing Defaults #####
 # We now change some default values, which are applied to all further items.
@@ -51,6 +52,13 @@ sketchybar --add item clock right \
   	   --set clock update_freq=1 \
 	         script='sketchybar --set $NAME label="$(date "+%H:%M:%S")"' \
 		 icon=􀐫 \
+		 clock icon.y_offset=1 \
+		 label.width=75 \
+		 label.font_smoothing=on
+
+# == Item Order ==
+sketchybar --reorder clock calendar
+
 
            #### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
