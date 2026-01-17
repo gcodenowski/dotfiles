@@ -1,5 +1,14 @@
 #!/bin/sh
 
+# == Battery == 
+sketchybar --add item battery right \
+           --set battery update_freq=60 \
+                 script="$HOME/.config/sketchybar/plugins/battery.sh" \
+                 label.width=52 \
+           --subscribe battery system_woke power_source_change \
+
+
+# === Logic ===
 PERCENTAGE="$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)"
 CHARGING="$(pmset -g batt | grep 'AC Power')"
 

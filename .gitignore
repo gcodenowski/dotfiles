@@ -1,0 +1,19 @@
+# gitignore file for the dotfiles config
+
+# macOS system files
+.DS_Store
+
+# vim tempfiles
+*.swp
+*.swo
+*~
+
+# Compiled binaries from sketchybar
+config/sketchybar/helpers*
+
+# Logs
+*.log
+
+# Backup files
+*.bak
+*.backup

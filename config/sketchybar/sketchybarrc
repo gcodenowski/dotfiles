@@ -72,29 +72,14 @@ $HOME/.config/sketchybar/helpers/stats_provider \
     --memory ram_usage \
     --interval 2 &
 
-# Battery
-sketchybar --add item battery right \
-           --set battery update_freq=60 \
-		 script="$HOME/.config/sketchybar/plugins/battery.sh" \
-		 label.width=52 \
-           --subscribe battery system_woke power_source_change \
-
+# Battery 
+source "$PLUGIN_DIR/battery.sh"
 
 # Calendar
-sketchybar --add item calendar right \
-	   --set calendar update_freq=3600 \
-	         script='sketchybar --set $NAME label="$(date "+%a %d %b")"' \
-		 icon=􀉉 \
-		 icon.y_offset=1 \
- 		 label.width=85 \
+source "$PLUGIN_DIR/calendar.sh"
 
 # Clock
-sketchybar --add item clock right \
-  	   --set clock update_freq=1 \
-	         script='sketchybar --set $NAME label="$(date "+%H:%M:%S")"' \
-		 icon=􀐫 \
-		 icon.y_offset=1 \
-		 label.width=75 \
+source "$PLUGIN_DIR/clock.sh"
 
 # == Item Order ==
 # For some reason they have to be in backwards order (rightmost > leftmost)
