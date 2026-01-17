@@ -3,61 +3,102 @@
 # Colours config file
 source "$CONFIG_DIR/colors.sh" # Loads defined colours
 
-# This is a demo config to showcase some of the most important commands.
-# It is meant to be changed and configured, as it is intentionally kept sparse.
-# For a (much) more advanced configuration example see my dotfiles:
-# https://github.com/FelixKratz/dotfiles
-
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
-##### Bar Appearance #####
+# === Bar Appearance ===	
 sketchybar --bar position=top      \
 		 height=33         \
 		 blur_radius=4    \
    		 color=0x40000000 \
 		 sticky=on
 
-##### Changing Defaults #####
-# We now change some default values, which are applied to all further items.
-# For a full list of all available item properties see:
-# https://felixkratz.github.io/SketchyBar/config/items
+# === Defaults ===
 
 default=(
+  # Padding
   padding_left=5
   padding_right=5
+
+  # Icons
   icon.font="SF Pro:Bold:17.0"
-  label.font="SF Pro:Bold:14.0"
-  icon.color=$ACCENT_COLOR
-  label.color=$LABEL_COLOR
-  background.corner_radius=5
-  background.color=$ITEM_BG_COLOR
-  background.height=24
-  icon.padding_left=4
+  icon.color=$LABEL_COLOR
+  icon.padding_left=7
   icon.padding_right=4
+
+  # Labels
+  label.font="SF Pro:Bold:14.0"
+  label.color=$LABEL_COLOR
+  label.font_smoothing=on
   label.padding_left=4
   label.padding_right=4
+
+  # Background
+  background.corner_radius=5
+  background.color=$ITEM_BG_COLOR
+  background.height=30 
+  background.border_color=$BORDER_COLOR 
+  background.border_width=1 
+  background.corner_radius=20 
 )
 sketchybar --default "${default[@]}"
 
+# == Left Side Items ==
+
+# Front app
+sketchybar --add item frontapp left \
+	   --set frontapp script="$HOME/.config/sketchybar/plugins/front_app.sh" \
+		 update_freq=5 \
+
+
 # == Right Side Items == 
+
+# System Stats (as one label)
+#	CPU
+	sketchybar --add item cpu right \
+		   --set cpu script="sketchybar --set cpu label=\$CPU_USAGE" \
+		   --subscribe cpu system_stats \
+
+#	RAM
+	sketchybar --add item ram right \
+		   --set ram script="sketchybar --set cpu label=\$RAM_USAGE" \
+		   --subscribe ram system_stats \
+
+# Kill any existing instance of stats_provider, silencing error messages
+killall stats_provider 2>/dev/null
+
+# Instantiate stats_provider
+$HOME/.config/sketchybar/helpers/stats_provider \
+    --cpu usage \
+    --memory ram_usage \
+    --interval 2 &
+
+# Battery
+sketchybar --add item battery right \
+           --set battery update_freq=60 \
+		 script="$HOME/.config/sketchybar/plugins/battery.sh" \
+		 label.width=52 \
+           --subscribe battery system_woke power_source_change \
+
 
 # Calendar
 sketchybar --add item calendar right \
 	   --set calendar update_freq=3600 \
 	         script='sketchybar --set $NAME label="$(date "+%a %d %b")"' \
 		 icon=􀉉 \
+		 icon.y_offset=1 \
+ 		 label.width=85 \
 
 # Clock
 sketchybar --add item clock right \
   	   --set clock update_freq=1 \
 	         script='sketchybar --set $NAME label="$(date "+%H:%M:%S")"' \
 		 icon=􀐫 \
-		 clock icon.y_offset=1 \
+		 icon.y_offset=1 \
 		 label.width=75 \
-		 label.font_smoothing=on
 
 # == Item Order ==
-sketchybar --reorder clock calendar
+# For some reason they have to be in backwards order (rightmost > leftmost)
+sketchybar --reorder clock calendar battery ram cpu 
 
 
            #### Force all scripts to run the first time (never do this in a script) #####
