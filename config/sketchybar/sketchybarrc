@@ -9,24 +9,24 @@ source "$CONFIG_DIR/colors.sh" # Loads defined colours
 
 # === Bar Appearance ===	
 sketchybar --bar position=top      \
-		 height=33         \
-		 blur_radius=4    \
-   		 color=0x40000000 \
-		 sticky=on
-
+		 height=36         \
+		 blur_radius=40    \
+   		 color=0x40000000  \
+		 sticky=on         \
+		 corner_radius=20
 
 # === Defaults ===
 
 default=(
   # Padding
-  padding_left=5
-  padding_right=5
+  padding_left=3
+  padding_right=3
 
   # Icons
   icon.font="SF Pro:Bold:17.0"
   icon.color=$LABEL_COLOR
-  icon.padding_left=7
-  icon.padding_right=4
+  icon.padding_left=8
+  icon.padding_right=3
 
   # Labels
   label.font="SF Pro:Bold:14.0"
@@ -40,8 +40,9 @@ default=(
   background.color=$ITEM_BG_COLOR
   background.height=30 
   background.border_color=$BORDER_COLOR 
-  background.border_width=2 
-  background.corner_radius=20 
+  background.border_width=3 
+  background.corner_radius=15 
+  background.blur_radius=1
 )
 sketchybar --default "${default[@]}"
 
@@ -59,18 +60,16 @@ $HOME/.local/bin/stats_provider --cpu usage --memory ram_usage --interval 2 &
 
 # CPU
 source "$PLUGIN_DIR/cpu.sh"
-sketchybar --subscribe cpu system_stats
 
 # RAM
-source "$PLUGIN_DIR/ram.sh"
-sketchybar --subscribe ram system_stats
+source "$PLUGIN_DIR/memory.sh"
 
 # Group the CPU & RAM together using a bracket
-sketchybar --add bracket system_stats_right cpu ram \
-	   --set system_stats_right background.color=$BG_DARKER \
+sketchybar --add bracket system_stats_right cpu memory battery  \
+	   --set system_stats_right background.color=$BG_DARKER \ 
 				    background.corner_radius=20 \
-				    background.border_width=0 \
-				    background.height=30 
+				    background.height=29 
+
 
 # Battery 
 source "$PLUGIN_DIR/battery.sh"
@@ -83,7 +82,7 @@ source "$PLUGIN_DIR/clock.sh"
 
 # == Item Order ==
 # For some reason they have to be in backwards order (rightmost > leftmost)
-sketchybar --reorder clock calendar battery ram cpu 
+sketchybar --reorder clock calendar battery memory cpu 
 
 
            #### Force all scripts to run the first time (never do this in a script) #####

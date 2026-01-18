@@ -7,5 +7,3 @@ sketchybar --add item calendar right \
                  icon=􀉉 \
                  icon.y_offset=1 \
                  label.width=85 \
-
-
