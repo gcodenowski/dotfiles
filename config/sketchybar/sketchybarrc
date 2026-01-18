@@ -34,7 +34,7 @@ default=(
 
   # Labels
   label.font="SF Pro:Bold:14.0"
-  label.color=$LABEL_COLOR
+  label.color=$OFF_WHITE
   label.font_smoothing=on
   label.padding_left=4
   label.padding_right=4
