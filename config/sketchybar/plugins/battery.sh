@@ -10,8 +10,9 @@ sketchybar --add item battery right \
                  label.width=52 \
 		 background.border_color=%CLEAR \
 		 padding_left=0 \
-  		 padding_right=0 \	
-           --subscribe battery system_woke power_source_change \
+  		 padding_right=0 \
+		 click_script="open 'x-apple.systempreferences:com.apple.Battery-Settings.extension'" \
+           --subscribe battery system_woke power_source_change 
 
 
 # === Logic ===
