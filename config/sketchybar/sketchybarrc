@@ -13,20 +13,21 @@ sketchybar --bar position=top      \
 		 blur_radius=40    \
    		 color=0x40000000  \
 		 sticky=on         \
-		 corner_radius=20
+		 corner_radius=10  \
 
 # === Defaults ===
 
 default=(
   # Padding
-  padding_left=3
-  padding_right=3
+  padding_left=2
+  padding_right=2
 
-  # Icons
+# Icons
   icon.font="SF Pro:Bold:17.0"
   icon.color=$LABEL_COLOR
   icon.padding_left=8
   icon.padding_right=3
+  icon.y_offset=1
 
   # Labels
   label.font="SF Pro:Bold:14.0"
@@ -40,36 +41,31 @@ default=(
   background.color=$ITEM_BG_COLOR
   background.height=30 
   background.border_color=$BORDER_COLOR 
-  background.border_width=3 
-  background.corner_radius=15 
+  background.border_width=1 
+  background.corner_radius=10 
   background.blur_radius=1
 )
 sketchybar --default "${default[@]}"
 
 
-# == Left Side Items ==
-
-
-# == Right Side Items == 
-
 # Kill any existing instance of stats_provider, silencing error messages
 killall stats_provider 2>/dev/null
 
 # Instantiate stats_provider
-$HOME/.local/bin/stats_provider --cpu usage --memory ram_usage --interval 2 &
+$HOME/.local/bin/stats_provider --cpu usage --memory ram_usage --interval 1 &
 
-# CPU
-source "$PLUGIN_DIR/cpu.sh"
+# == Left Side Items ==
 
-# RAM
-source "$PLUGIN_DIR/memory.sh"
+# Menu
+source "$PLUGIN_DIR/menu.sh"
 
-# Group the CPU & RAM together using a bracket
-sketchybar --add bracket system_stats_right cpu memory battery  \
-	   --set system_stats_right background.color=$BG_DARKER \ 
-				    background.corner_radius=20 \
-				    background.height=29 
+# Front App
+source "$PLUGIN_DIR/front_app.sh"
 
+# Spaces
+source "$PLUGIN_DIR/spaces.sh"
+
+# == Right Side Items == 
 
 # Battery 
 source "$PLUGIN_DIR/battery.sh"
@@ -79,6 +75,19 @@ source "$PLUGIN_DIR/calendar.sh"
 
 # Clock
 source "$PLUGIN_DIR/clock.sh"
+
+# CPU
+source "$PLUGIN_DIR/cpu.sh"
+
+# RAM
+source "$PLUGIN_DIR/memory.sh"
+
+# Group the CPU & RAM together using a bracket
+sketchybar --add bracket system_stats_right cpu memory battery \
+	   --set system_stats_right background.color=$BG_DARKER \
+				    background.corner_radius=10 \
+				    height=30
+
 
 # == Item Order ==
 # For some reason they have to be in backwards order (rightmost > leftmost)
