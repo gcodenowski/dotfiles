@@ -1,9 +1,11 @@
 #!/bin/bash
 
+# Dirs
+export CONFIG_DIR="$HOME/.config/sketchybar"
+export PLUGIN_DIR="$CONFIG_DIR/plugins"
+
 # Colours config file
 source "$CONFIG_DIR/colors.sh" # Loads defined colours
-
-PLUGIN_DIR="$CONFIG_DIR/plugins"
 
 # === Bar Appearance ===	
 sketchybar --bar position=top      \
@@ -11,6 +13,7 @@ sketchybar --bar position=top      \
 		 blur_radius=4    \
    		 color=0x40000000 \
 		 sticky=on
+
 
 # === Defaults ===
 
@@ -37,40 +40,37 @@ default=(
   background.color=$ITEM_BG_COLOR
   background.height=30 
   background.border_color=$BORDER_COLOR 
-  background.border_width=1 
+  background.border_width=2 
   background.corner_radius=20 
 )
 sketchybar --default "${default[@]}"
 
-# == Left Side Items ==
 
-# Front app
-sketchybar --add item frontapp left \
-	   --set frontapp script="$HOME/.config/sketchybar/plugins/front_app.sh" \
-		 update_freq=5 \
+# == Left Side Items ==
 
 
 # == Right Side Items == 
-
-# System Stats (as one label)
-#	CPU
-	sketchybar --add item cpu right \
-		   --set cpu script="sketchybar --set cpu label=\$CPU_USAGE" \
-		   --subscribe cpu system_stats \
-
-#	RAM
-	sketchybar --add item ram right \
-		   --set ram script="sketchybar --set cpu label=\$RAM_USAGE" \
-		   --subscribe ram system_stats \
 
 # Kill any existing instance of stats_provider, silencing error messages
 killall stats_provider 2>/dev/null
 
 # Instantiate stats_provider
-$HOME/.config/sketchybar/helpers/stats_provider \
-    --cpu usage \
-    --memory ram_usage \
-    --interval 2 &
+$HOME/.local/bin/stats_provider --cpu usage --memory ram_usage --interval 2 &
+
+# CPU
+source "$PLUGIN_DIR/cpu.sh"
+sketchybar --subscribe cpu system_stats
+
+# RAM
+source "$PLUGIN_DIR/ram.sh"
+sketchybar --subscribe ram system_stats
+
+# Group the CPU & RAM together using a bracket
+sketchybar --add bracket system_stats_right cpu ram \
+	   --set system_stats_right background.color=$BG_DARKER \
+				    background.corner_radius=20 \
+				    background.border_width=0 \
+				    background.height=30 
 
 # Battery 
 source "$PLUGIN_DIR/battery.sh"
