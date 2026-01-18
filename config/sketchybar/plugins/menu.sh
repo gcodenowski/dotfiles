@@ -3,6 +3,7 @@
 # Colours config file
 source "$CONFIG_DIR/colors.sh" # Loads defined colours
 
+# === Menu ===
 # Apple menu logo with child popup items
 # Each item executes an action and disables popup drawing after execution
 

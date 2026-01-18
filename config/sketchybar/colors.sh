@@ -4,6 +4,7 @@
 export LABEL_COLOR=0xff94dcff
 export ITEM_BG_COLOR=0xa1000000
 export BORDER_COLOR=0x96374f4f
-export OFF_WHITE=0xffffffff
+# export OFF_WHITE=0xffffffff
+export OFF_WHITE=0xffc6dbde
 export BG_DARKER=0x3d87a9a8
 export CLEAR=0x00ffffff

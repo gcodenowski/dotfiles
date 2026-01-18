@@ -15,8 +15,8 @@ sketchybar --bar position=top      \
 		 sticky=on         \
 		 corner_radius=10  \
 		 shadow=on	   \
-		 padding_left=0    \
-		 padding_right=0   \
+		 padding_left=8    \
+		 padding_right=8   \
 
 # === Defaults ===
 
@@ -33,7 +33,7 @@ default=(
   icon.y_offset=1
 
   # Labels
-  label.font="SF Pro:Bold:14.0"
+  label.font="SF Pro:Bold:16.0"
   label.color=$OFF_WHITE
   label.font_smoothing=on
   label.padding_left=4
@@ -66,7 +66,7 @@ source "$PLUGIN_DIR/menu.sh"
 source "$PLUGIN_DIR/front_app.sh"
 
 # Spaces
-source "$PLUGIN_DIR/spaces.sh"
+# source "$PLUGIN_DIR/space.sh"
 
 # == Right Side Items == 
 
