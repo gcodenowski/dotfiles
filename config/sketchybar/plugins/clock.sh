@@ -6,4 +6,5 @@ sketchybar --add item clock right \
                  script='sketchybar --set $NAME label="$(date "+%H:%M:%S")"' \
                  icon=􀐫  \
                  label.width=75 \
-		 padding_left=0
+		 padding_left=0  \
+	         icon.y_offset=0
