@@ -10,10 +10,11 @@ source "$CONFIG_DIR/colors.sh" # Loads defined colours
 # === Bar Appearance ===	
 sketchybar --bar position=top      \
 		 height=36         \
-		 blur_radius=40    \
+		 blur_radius=7    \
    		 color=0x40000000  \
 		 sticky=on         \
 		 corner_radius=10  \
+		 shadow=on
 
 # === Defaults ===
 
