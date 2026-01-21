@@ -89,7 +89,7 @@ source "$PLUGIN_DIR/memory.sh"
 sketchybar --add bracket system_stats_right cpu memory battery \
 	   --set system_stats_right background.color=$BG_DARKER \
 				    background.corner_radius=10 \
-				    height=30
+				    height=35
 
 
 # == Item Order ==

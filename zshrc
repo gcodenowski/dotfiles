@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # ==Aliases==
-alias zshconfig='vim ~/.zshrc'
+alias zshconfig='nvim ~/.zshrc'
 alias ohmyzsh='nano ~/.oh-my-zsh'
 alias icloud='cd "/Users/gilbertkozanowski/Library/Mobile Documents/com~apple~CloudDocs"'
 alias ls='ls -A'
@@ -112,21 +112,23 @@ alias zshreload='exec zsh'
 alias dotfiles='cd ~/dotfiles'
 alias obs_push='cd "/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas" && git add . && git commit -m "Obsidian sync $(date +%d-%h-%Y_%H-%M-%S)" && git push origin main'
 alias dot_push='cd "/Users/gilbertkozanowski/dotfiles" && git add . && git commit -m "Dotfiles update $(date +%d-%h-%Y_%H-%M-%S)" && git push'
-alias yabaiconfig='vim ~/.config/yabai/yabairc'
-alias skhdconfig='vim ~/.config/skhd/skhdrc'
-alias sketchybarconfig='vim ~/.config/sketchybar/sketchybarrc'
+alias yabaiconfig='nvim ~/.config/yabai/yabairc'
+alias skhdconfig='nvim ~/.config/skhd/skhdrc'
+alias sketchybarconfig='nvim ~/.config/sketchybar/sketchybarrc'
+alias kittyconfig='nvim ~/.config/kitty/kitty.conf'
+alias vim='nvim'
 
 # ==Functions==
 # Empty Downloads Folder
 empty_downloads(){
-	rm /Users/gilbertkozanowski/Downloads/*
+	rm -r /Users/gilbertkozanowski/Downloads/*
 	echo "Files Deleted Successfully!"
 }
 
 # Empty the bin
 empty_bin(){
 	TRASH_PATH="$HOME/.Trash"
-	rm -rf -- "$TRASH_PATH"/*(N)
+	rm -r -- "$TRASH_PATH"/*(N)
 	echo "Files Deleted Succesfully!" 
 }
 
