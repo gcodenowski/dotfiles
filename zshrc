@@ -112,7 +112,6 @@ alias zshreload='exec zsh'
 alias dotfiles='cd ~/dotfiles'
 
 alias obs_push='cd "/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas" && git add . && git commit -m "Obsidian sync $(date +%d-%h-%Y_%H-%M-%S)" && git push origin main'
-# alias dot_push='cd "/Users/gilbertkozanowski/dotfiles" && git add . && git commit -m "Dotfiles update $(date +%d-%h-%Y_%H-%M-%S)" && git push'
 alias yabaiconfig='nvim ~/.config/yabai/yabairc'
 alias skhdconfig='nvim ~/.config/skhd/skhdrc'
 alias sketchybarconfig='nvim ~/.config/sketchybar/sketchybarrc'
