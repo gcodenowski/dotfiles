@@ -149,7 +149,7 @@ low_priority_throttling(){
 dot_push(){
 	cd "/Users/gilbertkozanowski/dotfiles"
 	git add .
-	local msg="$1"
+	local msg="$*"
 	if [[ -z "$msg" ]]; then
 		msg="Dotfiles sync $(date +%d-%h-%Y_%H-%M-%S)"
 	fi
