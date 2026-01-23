@@ -1,11 +1,5 @@
 {
-  {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
-  "display": {
-    "size" : {
-	"binaryPrefix" : "jedec"
-    }
-  },	  
   "modules": [
     "title",
     "separator",
@@ -17,7 +11,11 @@
     "shell",
     "display",
     "de",
-    "wm",
+    {  
+	    "type":"wm", 
+	    "detectPlugin": true,
+	    "format":"Yabai"
+    }, 
     "wmtheme",
     "theme",
     "icons",
