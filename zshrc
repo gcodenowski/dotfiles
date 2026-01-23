@@ -110,8 +110,9 @@ alias obsidian='cd "/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~
 alias home='cd ~'
 alias zshreload='exec zsh'
 alias dotfiles='cd ~/dotfiles'
+
 alias obs_push='cd "/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas" && git add . && git commit -m "Obsidian sync $(date +%d-%h-%Y_%H-%M-%S)" && git push origin main'
-alias dot_push='cd "/Users/gilbertkozanowski/dotfiles" && git add . && git commit -m "Dotfiles update $(date +%d-%h-%Y_%H-%M-%S)" && git push'
+# alias dot_push='cd "/Users/gilbertkozanowski/dotfiles" && git add . && git commit -m "Dotfiles update $(date +%d-%h-%Y_%H-%M-%S)" && git push'
 alias yabaiconfig='nvim ~/.config/yabai/yabairc'
 alias skhdconfig='nvim ~/.config/skhd/skhdrc'
 alias sketchybarconfig='nvim ~/.config/sketchybar/sketchybarrc'
@@ -142,6 +143,18 @@ low_priority_throttling(){
 	else 
 		echo "-==Throttling disabled==-"
 	fi
+}
+
+# Push the dotiles to my GitHub with a message and a date stamp
+dot_push(){
+	cd "/Users/gilbertkozanowski/dotfiles"
+	git add .
+	local msg="$1"
+	if [[ -z "$msg" ]]; then
+		msg="Dotfiles sync $(date +%d-%h-%Y_%H-%M-%S)"
+	fi
+	git commit -m "$msg"
+	git push origin main
 }
 
 
