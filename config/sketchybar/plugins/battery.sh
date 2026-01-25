@@ -7,7 +7,7 @@ source "$CONFIG_DIR/colors.sh" # Loads defined colours
 sketchybar --add item battery right \
            --set battery update_freq=60 \
                  script="$HOME/.config/sketchybar/plugins/battery.sh" \
-                 label.width=52 \
+                 label.width=40 \
 		 background.border_color=%CLEAR \
 		 padding_left=0 \
   		 padding_right=0 \
