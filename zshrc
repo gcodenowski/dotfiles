@@ -128,7 +128,7 @@ empty_downloads(){
 # Empty the bin
 empty_bin(){
 	TRASH_PATH="$HOME/.Trash"
-	rm -r -- "$TRASH_PATH"/*(N)
+	rm -r --"$TRASH_PATH"/*(N)
 	echo "Files Deleted Succesfully!" 
 }
 

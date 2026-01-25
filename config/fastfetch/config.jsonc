@@ -14,7 +14,7 @@
     {  
 	    "type":"wm", 
 	    "detectPlugin": true,
-	    "format":"Yabai"
+	    "format":"Yabai + JankyBorders"
     }, 
     "wmtheme",
     "theme",

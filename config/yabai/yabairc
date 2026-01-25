@@ -36,4 +36,4 @@ yabai -m config external_bar all:33:0
 yabai -m config debug_output true
 
 # Bootstrap janky borders
-borders active_color=0xff94dcff inactive_color=0x00ffffff width=3.0 &
+borders active_color=0xff94dcff inactive_color=0x00ffffff width=5.0 &
