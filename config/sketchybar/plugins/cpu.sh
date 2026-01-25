@@ -9,7 +9,7 @@ source "$CONFIG_DIR/colors.sh" # Loads defined colours
 sketchybar --add item cpu right \
            --set cpu icon=􀯐 \
 		     script='sketchybar --set cpu label="$CPU_USAGE"' \
-		     label.width=47 \
+		     label.width=38 \
 		     padding_left=0 \
 		     padding_right=0 \
 		     background.border_color=$CLEAR
