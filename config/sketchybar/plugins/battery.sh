@@ -7,7 +7,7 @@ source "$CONFIG_DIR/colors.sh" # Loads defined colours
 sketchybar --add item battery right \
            --set battery update_freq=60 \
                  script="$HOME/.config/sketchybar/plugins/battery.sh" \
-                 label.width=40 \
+		 label.width=2 \
 		 background.border_color=%CLEAR \
 		 padding_left=0 \
   		 padding_right=0 \
@@ -41,4 +41,8 @@ fi
 
 # The item invoking this script (name $NAME) will get its icon and label
 # updated with the current battery status
-sketchybar --set "$NAME" icon="$ICON" label="${PERCENTAGE}%"
+sketchybar --set "$NAME" icon="$ICON" 
+
+# Uncomment this and add to --set above to display percentage value
+# label="${PERCENTAGE}%"
+
