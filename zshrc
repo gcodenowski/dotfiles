@@ -132,14 +132,13 @@ eza_tree(){
 
 # Empty Downloads Folder
 empty_downloads(){
-	rm -r /Users/gilbertkozanowski/Downloads/*
+	rm -r ~/Downloads/*
 	echo "Files Deleted Successfully!"
 }
 
 # Empty the bin
 empty_bin(){
-	TRASH_PATH="$HOME/.Trash"
-	rm -r --"$TRASH_PATH"/*(N)
+	osascript -e 'tell application "Finder" to empty trash'
 	echo "Files Deleted Succesfully!" 
 }
 
