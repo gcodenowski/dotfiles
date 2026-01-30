@@ -14,6 +14,7 @@ This is my dotfiles configuration from my MBP. It is not stable by any means and
 - svim
 - oh-my-zsh
 - eza
+- GNU stow
 
 ---
 
