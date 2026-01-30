@@ -2,6 +2,8 @@
 
 This is my dotfiles configuration from my MBP. It is not stable by any means and only meant to be a demo configuration, use at your discretion. 
 
+Built on macOS Tahoe 26.2
+
 ## Tools Used
 
 - Yabai
@@ -38,5 +40,6 @@ This is my dotfiles configuration from my MBP. It is not stable by any means and
 - Bootstrapped process with Yabai (see /config/yabai/yabairc)
 
 ### Yabai
+- SIP (System Integrity Protection) **doesn't** need to be disabled for this yabai config to work.
 - Shortcuts managed in /config/skhd/skhdrc
 - App exceptions, mouse bindings & default settings managed in /config/yabai/yabairc
