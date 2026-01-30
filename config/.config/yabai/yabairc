@@ -1,7 +1,7 @@
 sudo yabai --load-sa
 
 # source the colours file
-source ~/dotfiles/config/sketchybar/colors.sh
+source ~/dotfiles/config/.config/sketchybar/colors.sh
 
 # Setting bsp (binary space partitioning) as base layout config
 yabai -m config layout bsp
