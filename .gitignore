@@ -17,3 +17,6 @@ config/sketchybar/helpers*
 # Backup files
 *.bak
 *.backup
+
+# Any SSH keys
+.ssh/
