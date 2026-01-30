@@ -13,7 +13,9 @@ This is my dotfiles configuration from my MBP. It is not stable by any means and
 - skhd
 - svim
 
-## SketchyBar
+---
+
+### SketchyBar
 
 **Right Side:**
 - CPU graph & percentage
@@ -26,3 +28,8 @@ This is my dotfiles configuration from my MBP. It is not stable by any means and
 - Apple Menu with a dropdown menu on mouse click
 - Currently selected app with icon & name
 
+**General**
+- Edit sketchybar/colors.sh for different colours 
+
+### JankyBorders
+- Bootstrapped process with Yabai (see /config/yabai/yabairc)
