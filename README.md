@@ -12,6 +12,8 @@ This is my dotfiles configuration from my MBP. It is not stable by any means and
 - fastfetch
 - skhd
 - svim
+- oh-my-zsh
+- eza
 
 ---
 
@@ -33,3 +35,7 @@ This is my dotfiles configuration from my MBP. It is not stable by any means and
 
 ### JankyBorders
 - Bootstrapped process with Yabai (see /config/yabai/yabairc)
+
+### Yabai
+- Shortcuts managed in /config/skhd/skhdrc
+- App exceptions, mouse bindings & default settings managed in /config/yabai/yabairc

@@ -105,7 +105,6 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig='nvim ~/.zshrc'
 alias ohmyzsh='nano ~/.oh-my-zsh'
 alias icloud='cd "/Users/gilbertkozanowski/Library/Mobile Documents/com~apple~CloudDocs"'
-alias ls='ls -A'
 alias obsidian='cd "/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas"'
 alias home='cd ~'
 alias zshreload='exec zsh'
@@ -119,6 +118,18 @@ alias kittyconfig='nvim ~/.config/kitty/kitty.conf'
 alias vim='nvim'
 
 # ==Functions==
+
+# eza tree
+eza_tree(){
+	local depth="${1:--L 1}"
+	if [[ $# -eq 0 ]]; then
+		eza -a --tree -L 1
+	else
+		eza -a --tree "$@"
+	fi
+}
+
+
 # Empty Downloads Folder
 empty_downloads(){
 	rm -r /Users/gilbertkozanowski/Downloads/*
