@@ -8,3 +8,7 @@ This is my dotfiles configuration from my MBP. It is not stable by any means and
 - SketchyBar
 - JankyBorders
 - nvim
+- Kitty
+- fastfetch
+- skhd
+- svim
