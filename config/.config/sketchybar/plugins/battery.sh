@@ -8,7 +8,6 @@ sketchybar --add item battery right \
            --set battery update_freq=60 \
                  script="$HOME/.config/sketchybar/plugins/battery.sh" \
 		 label.width=2 \
-		 background.border_color=%CLEAR \
 		 padding_left=0 \
   		 padding_right=0 \
 		 click_script="open 'x-apple.systempreferences:com.apple.Battery-Settings.extension'" \

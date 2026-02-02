@@ -12,7 +12,6 @@ sketchybar --add item cpu right \
 		     label.width=38 \
 		     padding_left=0 \
 		     padding_right=0 \
-		     background.border_color=$CLEAR
 
 sketchybar --subscribe cpu system_stats
 
