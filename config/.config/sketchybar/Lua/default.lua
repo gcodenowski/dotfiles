@@ -30,4 +30,4 @@ sbar.default({
 		border_width = 1,
 		blur_radius = 1,
 	}
-}
+})
