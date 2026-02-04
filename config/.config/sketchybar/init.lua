@@ -10,4 +10,4 @@ sbar.end_config()
 
 -- Run the event loop of the sketchybar module (without this there will be no
 -- callback functions executed in the lua module)
-sbar.event_loop():
+sbar.event_loop()
