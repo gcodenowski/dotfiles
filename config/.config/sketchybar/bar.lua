@@ -1,14 +1,15 @@
 local colors = require("colors")
 
--- Equivalent to the --bat domain
+-- Equivalent to the --bar domain
 sbar.bar({
 	position = "top",
 	height = 36,
-	-- *not recognised* blur_radius = 20,
+	blur_radius = 20,
 	color = colors.bar,
 	sticky = true,
 	shadow = true, 
 	corner_radius = 10,
 	padding_left = 4,
 	padding_right = 4,
+	font_smoothing = true,
 })
