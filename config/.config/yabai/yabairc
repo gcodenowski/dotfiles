@@ -1,8 +1,6 @@
 sudo yabai --load-sa
 
 # source the colours file
-# source ~/dotfiles/config/.config/sketchybar/colors.sh
-source ~/dorfiles/config/.config/sketchybar/colors.lua
 
 # Setting bsp (binary space partitioning) as base layout config
 yabai -m config layout bsp
@@ -39,6 +37,5 @@ yabai -m config external_bar all:33:0
 yabai -m config debug_output true
 
 # Bootstrap janky borders
-borders active_color=0xff94dcff inactive_color=0x3d87a9a8 width = 5.0 & 
+borders active_color=0xff94dcff inactive_color=0xa1000000 inactive_width=5.0 width = 5.0 & 
 
-echo "yabai config loaded"
