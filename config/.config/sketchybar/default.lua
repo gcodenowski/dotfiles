@@ -15,8 +15,7 @@ sbar.default({
 	},
 
 	label = {
-		font = "JetBrains Mono:Bold:14.0",
-		-- font = "SF Pro:Regular:15.5",
+		font = "SF Pro:Bold:12.5",
 		color = colors.text,
 		padding_left = 4,
 		padding_right = 4,
