@@ -39,6 +39,6 @@ yabai -m config external_bar all:33:0
 yabai -m config debug_output true
 
 # Bootstrap janky borders
-borders active_color=$LABEL_COLOR inactive_color=$CLEAR width = 5.0 & 
+borders active_color=0xff94dcff inactive_color=0x3d87a9a8 width = 5.0 & 
 
 echo "yabai config loaded"
