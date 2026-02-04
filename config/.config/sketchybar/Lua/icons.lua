@@ -1,3 +1,6 @@
+local settings = require("settings")
+
+
 local icons = {
   sf_symbols = {
     plus = "􀅼",
@@ -8,6 +11,8 @@ local icons = {
     clipboard = "􀉄",
     memory = "􀫦",
     brain = "􀯐",
+    calendar = "􀉉 ",
+    clock = "􀐫 ",
 
     switch = {
       on = "􁏮",

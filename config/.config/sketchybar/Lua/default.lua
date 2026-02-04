@@ -1,4 +1,5 @@
 local colors = require("colors")
+local settings = require("settings")
 
 -- Equivalent to the --default domain
 sbar.default({
