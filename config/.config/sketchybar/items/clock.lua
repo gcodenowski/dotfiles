@@ -6,11 +6,15 @@ local clock = sbar.add("item", "clock", {
 	icon = {
 		string = icons.clock,
 	},
-	label = { width=68 },
+	label = {
+		width = 75,
+	},
 	update_freq = 1,
-	padding_left = 0
 })
 
-clock:subscribe( function(env)
-		clock:set({icon = os.date("%H:%M:%S")})
+clock:subscribe({ "routine" }, function(env)
+		clock:set({
+			icon = { string = icons.clock },
+			label = { string = os.date("%H:%M:%S") },
+		})
 	end)

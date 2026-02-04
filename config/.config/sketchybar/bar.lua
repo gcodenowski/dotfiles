@@ -8,7 +8,6 @@ sbar.bar({
 	color = colors.bar,
 	sticky = true,
 	shadow = true, 
-	corner_radius = 10,
 	padding_left = 4,
 	padding_right = 4,
 	font_smoothing = true,

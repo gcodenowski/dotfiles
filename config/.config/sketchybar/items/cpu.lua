@@ -11,8 +11,6 @@ local cpu = sbar.add("item", "cpu", {
 	label = {
 		width = 38,
 	},
-	padding_left = 0,
-	padding_right = 0,
 })
 
 -- Subscribe to cpu usage and display it
@@ -28,11 +26,8 @@ local cpu_graph = sbar.add("graph", "cpu_graph", 40, {
 		fill_color = colors.transparent,
 		line_width = 1.5,
 	},
-	padding_left = 0,
-	padding_right = 0,
 	background = {
 		height = 30, 
-		corner_radius = 10,
 	},
 	y_offset = 0,
 	update_freq = 1,

@@ -4,12 +4,10 @@ local icons = require("icons")
 
 local calendar = sbar.add("item", "calendar", {
 	position = "right",
-	icon = {
-		string = icons.calendar,
-	},
 	label = {
-		width = 85,
+		width = 110,
 	},
+	icon = { string = icons.calendar },
 	update_freq = 30,
 
 	-- Open calendar app on mouse click
@@ -23,5 +21,9 @@ calendar:subscribe({
 	"system_woke",
 	},
 	function(env)
-		calendar:set({icon = os.date("%a. %d %b.")})
+		calendar:set({
+			icon = { string = icons.calendar },
+			label = { string = os.date("%a. %d %b.") },
+		})
 	end)
+
