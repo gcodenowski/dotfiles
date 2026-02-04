@@ -1,0 +1,102 @@
+#!/bin/bash
+
+# Dirs
+export CONFIG_DIR="$HOME/.config/sketchybar"
+export PLUGIN_DIR="$CONFIG_DIR/plugins"
+
+# Colours config file
+source "$CONFIG_DIR/colors.sh" # Loads defined colours
+
+# === Bar Appearance ===	
+sketchybar --bar position=top      \
+		 height=36         \
+		 blur_radius=20    \
+   		 color=0x40000000  \
+		 sticky=on         \
+		 corner_radius=10  \
+		 shadow=on	   \
+		 padding_left=4    \
+		 padding_right=4   \
+
+# === Defaults ===
+
+default=(
+  # Padding
+  padding_left=2
+  padding_right=2
+
+# Icons
+  icon.font="SF Pro:Bold:17.0"
+  icon.color=$LABEL_COLOR
+  icon.padding_left=6
+  icon.padding_right=0
+  icon.y_offset=1
+
+  # Labels
+  label.font="SF Pro:Bold:16.0"
+  label.color=$OFF_WHITE
+  label.font_smoothing=on
+  label.padding_left=4
+  label.padding_right=4
+
+  # Background
+  background.corner_radius=5
+  background.color=$ITEM_BG_COLOR
+  background.height=30 
+  background.border_color=$BORDER_COLOR 
+  background.border_width=1 
+  background.corner_radius=10 
+  background.blur_radius=1
+)
+sketchybar --default "${default[@]}"
+
+
+# Kill any existing instance of stats_provider, silencing error messages
+killall stats_provider 2>/dev/null
+
+# Instantiate stats_provider
+$HOME/.local/bin/stats_provider --cpu usage --memory ram_usage --interval 1 &
+
+# == Left Side Items ==
+
+# Menu
+source "$PLUGIN_DIR/menu.sh"
+
+# Front App
+source "$PLUGIN_DIR/front_app.sh"
+
+# Spaces
+# source "$PLUGIN_DIR/space.sh"
+
+
+# == Right Side Items == 
+
+# Battery 
+source "$PLUGIN_DIR/battery.sh"
+
+# Calendar
+source "$PLUGIN_DIR/calendar.sh"
+
+# Clock
+source "$PLUGIN_DIR/clock.sh"
+
+# CPU
+source "$PLUGIN_DIR/cpu.sh"
+
+# RAM
+source "$PLUGIN_DIR/memory.sh"
+
+# Group the CPU & RAM together using a bracket
+sketchybar --add bracket system_stats_right cpu memory battery \
+	   --set system_stats_right background.color=$BG_DARKER \
+				    background.corner_radius=10 \
+				    height=35
+
+
+# == Item Order ==
+# For some reason they have to be in backwards order (rightmost > leftmost)
+sketchybar --reorder clock calendar battery memory cpu 
+
+
+           #### Force all scripts to run the first time (never do this in a script) #####
+sketchybar --update

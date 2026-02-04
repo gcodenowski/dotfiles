@@ -36,6 +36,7 @@ local cpu_graph = sbar.add("graph", {
 	},
 	y_offset = 0,
 	update_freq = 1,
+	-- drawing = true - I don't know if I need this yet
 })
 
 -- Draw the graph

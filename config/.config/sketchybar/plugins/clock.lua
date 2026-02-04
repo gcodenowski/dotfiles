@@ -1,7 +1,7 @@
 local icons = require("icons")
 local colors = require("colors")
 
-local clock = sbar.add("item", {
+local clock = sbar.add("item", "clock", {
 	position = "right",
 	icon = {
 		string = icons.clock,
