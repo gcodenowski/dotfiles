@@ -4,9 +4,11 @@ local icons = require("icons")
 
 local calendar = sbar.add("item", {
 	position = "right",
-	icon = icons.calendar, 
+	icon = {
+		string = icons.calendar,
+	}
 	label = {
-		width = 85
+		width = 85,
 	},
 	update_freq = 30,
 
@@ -23,6 +25,3 @@ calendar:subscribe({
 	function(env)
 		calendar:set({icon = os.date("%a. %d %b.")})
 	end)
-	
-
-
