@@ -15,7 +15,7 @@ sbar.default({
 	},
 
 	label = {
-		font = "SF Pro:Bold:12.5",
+		font = "SF Pro:Semibold:12.5",
 		color = colors.text,
 		padding_left = 4,
 		padding_right = 4,

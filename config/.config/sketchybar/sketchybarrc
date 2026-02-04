@@ -12,7 +12,7 @@ require("default")
 sbar.end_config()
 
 -- Kill and restart stats_provider
-sbar.exec("killall stats_provider 2>/dev/null; " .. os.getenv("HOME") .. "/.local/bin/stats_provider --cpu usage --memory ram_usage --interval 1 &")
+sbar.exec("killall stats_provider 2>/dev/null; " .. os.getenv("HOME") .. "/.local/bin/stats_provider --cpu usage --memory ram_available --interval 1 &")
 
 -- Load items
 require("items")

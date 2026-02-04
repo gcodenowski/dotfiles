@@ -1,16 +1,11 @@
 -- == CPU == 
 
-local colors = require("colors")
 local icons = require("icons")
 
 local cpu = sbar.add("item", "cpu", {
 	position = "right",
-	icon = {
-		string = icons.brain,
-	},
-	label = {
-		width = 39,
-	},
+	icon = { string = icons.brain, },
+	label = { width = 35 },
 })
 
 -- Subscribe to cpu usage and display it

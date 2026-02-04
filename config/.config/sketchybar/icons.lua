@@ -15,6 +15,10 @@ local icons = {
     question = "􀿨",
     about = "􂹚",
     meter = "􂚚",
+    lock = "􀢵",
+    specs = "􀩛",
+    memory = "􀫦",
+
 
     switch = {
       on = "􁏮",
