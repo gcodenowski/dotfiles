@@ -5,7 +5,7 @@ local colors = require("colors")
 
 local cpu = sbar.add("item", "cpu", {
 	position = "right",
-	icon = { string = icons.brain, },
+	icon = { string = icons.meter, },
 	label = { width = 35 },
 	background = { color = colors.transparent, border_color = colors.transparent }
 })
