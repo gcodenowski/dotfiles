@@ -7,7 +7,7 @@ sbar.default({
 	padding_right = 2,
 
 	icon = {
-		font = "SF Pro:Expanded Regular:17.0",
+		font = "SF Pro:Bold:17.0",
 		color = colors.light_blue,		
 		padding_left = 4,
 		padding_right = 4,
@@ -15,7 +15,8 @@ sbar.default({
 	},
 
 	label = {
-		font = "SF Pro:Expanded Regular:12.5",
+		font = "JetBrains Mono:Bold:14.0",
+		-- font = "SF Pro:Regular:15.5",
 		color = colors.text,
 		padding_left = 4,
 		padding_right = 4,
