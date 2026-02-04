@@ -5,7 +5,7 @@ sbar = require("sketchybar")
 sbar.begin_config()
 require("bar")
 require("default")
-require("plugins")
+require("items")
 sbar.end_config()
 
 -- Run the event loop of the sketchybar module (without this there will be no
