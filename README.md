@@ -22,6 +22,8 @@ Built on macOS Tahoe 26.2
 
 ### SketchyBar
 
+Sketchybar uses SbarLua in this setup.
+
 **Right Side:**
 - CPU graph & percentage
 - Memory usage percentage
