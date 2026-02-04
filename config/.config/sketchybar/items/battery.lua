@@ -1,61 +1,46 @@
 local icons = require("icons")
 local settings = require("settings")
 
-
+-- Battery item
 local battery = sbar.add("item", "battery", {
-	position = "right",
-	update_freq = 60,
-	label = {
-		width = 2,
-	},
-	padding_left = 0,
-	padding_right = 0,
-	click_script = "open 'x-apple.systempreferences:com.apple.Battery-Settings.extension'",
+  position = "right",
+  update_freq = 60,
+  label = { width = 2 },
+  padding_left = 0,
+  padding_right = 0,
+  click_script = "open 'x-apple.systempreferences:com.apple.Battery-Settings.extension'"
 })
 
-battery:subscribe({"routine", "power_source_change", "system_woke"}, function()
-  sbar.exec("pmset -g batt", function(batt_info)
-    local icon = "!"
-    local label = "?"
-
-    local found, _, charge = batt_info:find("(%d+)%%")
-    if found then
-      charge = tonumber(charge)
-      -- label = charge .. "%" Uncomment for percentage display
+-- Subscribing to the battery event 
+battery:subscribe({"system_woke", "power_source_change"}, function(env)
+  sbar.exec("pmset -g batt", function(info)
+    local found_percent, _, PERCENTAGE = info:find("(%d+)%%")
+    local CHARGING = info:find("AC Power")
+    
+    if not found_percent then
+      return -- exit 0 equivalent
     end
-
-    local charging, _, _ = batt_info:find("AC Power")
-
-    if charging then
-      icon = icons.battery.charging
-    else
-      if found and charge > 80 then
-        icon = icons.battery._100
-      elseif found and charge > 60 then
-        icon = icons.battery._75
-      elseif found and charge > 40 then
-        icon = icons.battery._50
-      elseif found and charge > 20 then
-        icon = icons.battery._25
-        color = colors.orange
-      else
-        icon = icons.battery._0
-        color = colors.red
-      end
+    
+    PERCENTAGE = tonumber(PERCENTAGE)
+    local icon = icons.battery._0 -- default
+    
+    if PERCENTAGE >= 90 or PERCENTAGE == 100 then
+      icon = icons.battery._100 
+    elseif PERCENTAGE >= 60 then
+      icon = icons.battery._75
+    elseif PERCENTAGE >= 30 then
+      icon = icons.battery._50
+    elseif PERCENTAGE >= 10 then
+      icon = icons.battery._25
     end
-
-    local lead = ""
-    if found and charge < 10 then
-      lead = "0"
+    
+    if CHARGING then
+      icon = icons.battery.charging 
     end
-
+    
     battery:set({
-      icon = {
-        string = icon,
-      },
-      label = { string = lead .. label },
+      icon = { string = icon }
     })
   end)
 end)
-
 

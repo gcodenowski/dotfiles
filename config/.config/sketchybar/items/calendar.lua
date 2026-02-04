@@ -2,11 +2,11 @@ local colors = require("colors")
 local settings = require("settings")
 local icons = require("icons")
 
-local calendar = sbar.add("item", {
+local calendar = sbar.add("item", "calendar", {
 	position = "right",
 	icon = {
 		string = icons.calendar,
-	}
+	},
 	label = {
 		width = 85,
 	},

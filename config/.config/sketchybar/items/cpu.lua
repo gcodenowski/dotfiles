@@ -3,14 +3,14 @@
 local colors = require("colors")
 local icons = require("icons")
 
-local cpu = sbar.add("item", {
+local cpu = sbar.add("item", "cpu", {
 	position = "right",
 	icon = {
 		string = icons.brain,
 	},
 	label = {
 		width = 38,
-	}
+	},
 	padding_left = 0,
 	padding_right = 0,
 })
@@ -18,10 +18,10 @@ local cpu = sbar.add("item", {
 -- Subscribe to cpu usage and display it
 cpu:subscribe("system_stats", function(env)
 	cpu:set({ label = env.CPU_USAGE })
-)
+end)
 
 
-local cpu_graph = sbar.add("graph", {
+local cpu_graph = sbar.add("graph", "cpu_graph", 40, {
 	position = "right",
 	graph = {
 		color = colors.light_blue,
@@ -41,6 +41,6 @@ local cpu_graph = sbar.add("graph", {
 
 -- Draw the graph
 cpu_graph:subscribe("system_stats", function(env)
-	local cpu_value = tonumber(env.CPU.USAGE:match("(%d+)")) / 100
+	local cpu_value = tonumber(env.CPU_USAGE:match("(%d+)")) / 100
 	cpu_graph:push({ cpu_value })
 end)

@@ -2,7 +2,6 @@ local settings = require("settings")
 
 
 local icons = {
-  sf_symbols = {
     plus = "􀅼",
     loading = "􀖇",
     apple = "􀣺",
@@ -45,4 +44,6 @@ local icons = {
       forward = "􀊌",
       play_pause = "􀊈",
     },
-  },
+  }
+
+return icons 
