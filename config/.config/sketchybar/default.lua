@@ -16,7 +16,7 @@ sbar.default({
 
 	label = {
 		font = "SF Pro:Bold:16.0",
-		font_smoothing = true,
+		-- *not recognised by lua* font_smoothing = true,
 		color = colors.text,
 		padding_left = 4,
 		padding_right = 4,
@@ -28,6 +28,6 @@ sbar.default({
 		height = 30,
 		border_color = colors.border,
 		border_width = 1,
-		blur_radius = 1,
+		-- *not recognised by lua* blur_radius = 1,
 	},
 })
