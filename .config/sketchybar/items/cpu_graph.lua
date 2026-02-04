@@ -10,7 +10,9 @@ local cpu_graph = sbar.add("graph", "cpu_graph", 40, {
 		line_width = 1.5,
 	},
 	background = {
+		color = colors.transparent,
 		height = 30, 
+		border_color = colors.transparent,
 	},
 	y_offset = 0,
 	update_freq = 1,

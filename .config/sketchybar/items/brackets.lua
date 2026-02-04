@@ -10,8 +10,11 @@ local bracket = sbar.add("bracket", "stats_bracket", {
 	"memory",
 },
 { background = {
-	color = colors.bg_bracker,
-	border_color = colors.transparent,
-	}
+	color = colors.bg,
+	border_color = colors.border,
+	height = 30,
+	corner_radius = 8,
+	blur_radius = 0,
+	},
 })
 

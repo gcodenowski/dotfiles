@@ -22,7 +22,7 @@ sbar.default({
 	},
 
 	background = {
-		corner_radius = 10,
+		corner_radius = 8,
 		color = colors.bg,
 		height = 30,
 		border_color = colors.border,
