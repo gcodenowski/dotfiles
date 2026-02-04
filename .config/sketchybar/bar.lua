@@ -4,7 +4,7 @@ local colors = require("colors")
 sbar.bar({
 	position = "top",
 	height = 36,
-	blur_radius = 20,
+	blur_radius = 35,
 	color = colors.bar,
 	sticky = true,
 	shadow = true, 

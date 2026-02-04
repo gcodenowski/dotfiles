@@ -9,7 +9,7 @@ local clock = sbar.add("item", "clock", {
 		string = icons.clock,
 	},
 	label = {
-		width = 72,
+		width = 67,
 	},
 	update_freq = 1,
 })

@@ -3,6 +3,7 @@
 local frontapp = sbar.add("item", "frontapp", {
   position = "left",
   script = "$PLUGIN_DIR/front_app_switched.sh",
+  label = { padding_right = 7 },
   icon = {
     background = {
       drawing = true,

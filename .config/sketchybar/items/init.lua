@@ -10,4 +10,7 @@ require("items.memory")
 require("items.cpu_graph")
 require("items.cpu")
 
+-- == Bracket for cpu & memory ==
+require("items.brackets")
+
 
