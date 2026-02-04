@@ -12,6 +12,9 @@ local icons = {
     brain = "􀯐",
     calendar = "􀉉 ",
     clock = "􀐫 ",
+    question = "􀿨",
+    about = "􂹚",
+    meter = "􂚚",
 
     switch = {
       on = "􁏮",

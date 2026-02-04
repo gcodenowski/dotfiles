@@ -1,3 +1,5 @@
+-- == BATTERY == 
+
 local icons = require("icons")
 local settings = require("settings")
 
