@@ -43,3 +43,9 @@ Built on macOS Tahoe 26.2
 - SIP (System Integrity Protection) **doesn't** need to be disabled for this yabai config to work.
 - Shortcuts managed in /config/skhd/skhdrc
 - App exceptions, mouse bindings & default settings managed in /config/yabai/yabairc
+
+---
+
+# Acknowledgements
+
+Sketchybar lua config inspired by FelixKratz's *dotfiles*

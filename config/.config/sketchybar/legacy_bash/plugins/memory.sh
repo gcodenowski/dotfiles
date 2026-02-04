@@ -10,7 +10,5 @@ sketchybar --add item memory right \
 		        label.width=42 \
 		        padding_left=0 \
 			padding_right=0 \
-			background.border_color=$CLEAR
-
 
 sketchybar --subscribe memory system_stats
