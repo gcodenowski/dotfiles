@@ -4,13 +4,11 @@ local colors = require("colors")
 
 local wifi_up = sbar.add("item", "wifi_up", {
   position = "left",
-  padding_left = 5,
-  padding_right = 0,
-  padding_bottom = 0,
   icon = {
     string = icons.wifi.upload,
     font = "SF Pro:Expanded Bold:11.0", 
     padding_right = 2,
+    padding_left = 15,
   },
   label = {
     color = colors.text,
@@ -24,9 +22,6 @@ local wifi_up = sbar.add("item", "wifi_up", {
 
 local wifi_down = sbar.add("item", "wifi_down", {
   position = "left",
-  padding_left = 5,
-  padding_right = 0,
-  padding_top = 0,
   icon = {
     string = icons.wifi.download,
     font = "SF Pro:Expanded Bold:11.0", 

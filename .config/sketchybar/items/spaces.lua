@@ -7,6 +7,7 @@ for i = 1, 10 do
     space = i,
     icon = {
 	padding_left = 10,
+	padding_right = 12,
 	string = i,
 	color = colors.inactive,
 	highlight_color = colors.light_blue,

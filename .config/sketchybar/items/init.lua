@@ -4,7 +4,9 @@ require("items.front_app")
 require("items.spaces")
 require("items.wifi")
 
+-- == Bracket for spaces == 
 require("items.spaces_bracket")
+
 -- == RIGHT SIDE ITEMS == 
 require("items.clock")
 require("items.calendar")
