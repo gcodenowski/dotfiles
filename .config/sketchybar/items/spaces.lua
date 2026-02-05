@@ -8,8 +8,8 @@ for i = 1, 10 do
     icon = {
 	padding_left = 10,
 	string = i,
-	color = colors.light_blue,
-	highlight_color = colors.text,
+	color = colors.inactive,
+	highlight_color = colors.light_blue,
 	font = "SF Pro:Expanded Bold:14"
     },
     label = { drawing = false },

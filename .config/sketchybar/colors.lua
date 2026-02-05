@@ -6,4 +6,5 @@ return {
 	text = 0xffc6dbde,
 	bar = 0x40000000,
 	transparent = 0x0000000,
+	inactive = 0xff7c8a8c,
 }
