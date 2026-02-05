@@ -93,10 +93,10 @@ alias zshreload='exec zsh'
 alias dotfiles='cd ~/dotfiles'
 
 alias obs_push='cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas" && git add . && git commit -m "Obsidian sync $(date +%d-%h-%Y_%H-%M-%S)" && git push origin main'
-alias yabaiconfig='nvim ~/.config/yabai/yabairc'
+alias yabaiconfig='cd "$HOME/dotfiles/.config/yabai"'
 alias skhdconfig='nvim ~/.config/skhd/skhdrc'
-alias sketchybarconfig='cd "/Users/"'
-alias kittyconfig='nvim ~/.config/kitty/kitty.conf'
+alias sketchybarconfig='cd "$HOME/dotfiles/.config/sketchybar"'
+alias kittyconfig='cd "$HOME/dotfiles/.config/kitty"'
 alias vim='nvim'
 
 # ==Functions==
