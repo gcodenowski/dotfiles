@@ -86,16 +86,16 @@ source $ZSH/oh-my-zsh.sh
 # ==Aliases==
 alias zshconfig='nvim ~/.zshrc'
 alias ohmyzsh='nano ~/.oh-my-zsh'
-alias icloud='cd "/Users/gilbertkozanowski/Library/Mobile Documents/com~apple~CloudDocs"'
-alias obsidian='cd "/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas"'
+alias icloud='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs"'
+alias obsidian='cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas"'
 alias home='cd ~'
 alias zshreload='exec zsh'
 alias dotfiles='cd ~/dotfiles'
 
-alias obs_push='cd "/Users/gilbertkozanowski/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas" && git add . && git commit -m "Obsidian sync $(date +%d-%h-%Y_%H-%M-%S)" && git push origin main'
+alias obs_push='cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas" && git add . && git commit -m "Obsidian sync $(date +%d-%h-%Y_%H-%M-%S)" && git push origin main'
 alias yabaiconfig='nvim ~/.config/yabai/yabairc'
 alias skhdconfig='nvim ~/.config/skhd/skhdrc'
-alias sketchybarconfig='nvim ~/.config/sketchybar/sketchybarrc'
+alias sketchybarconfig='cd "/Users/"'
 alias kittyconfig='nvim ~/.config/kitty/kitty.conf'
 alias vim='nvim'
 
@@ -138,7 +138,7 @@ low_priority_throttling(){
 
 # Push the currect branch of dotiles to my GitHub with a message and a date stamp
 dot_push(){
-	cd "/Users/gilbertkozanowski/dotfiles"
+	cd "$HOME/dotfiles"
 	git add .
 	local msg="$*"
 	if [[ -z "$msg" ]]; then
