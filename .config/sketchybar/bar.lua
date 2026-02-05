@@ -8,7 +8,7 @@ sbar.bar({
 	color = colors.bar,
 	sticky = true,
 	shadow = true, 
-	padding_left = 4,
-	padding_right = 4,
+	padding_left = 8,
+	padding_right = 9,
 	font_smoothing = true,
 })

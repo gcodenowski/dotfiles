@@ -7,7 +7,7 @@ local icons = require("icons")
 local calendar = sbar.add("item", "calendar", {
 	position = "right",
 	label = {
-		width = 94,
+		width = 90,
 	},
 	icon = { string = icons.calendar },
 	update_freq = 30,

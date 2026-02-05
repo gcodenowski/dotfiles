@@ -42,7 +42,7 @@ battery:subscribe({"system_woke", "power_source_change"}, function(env)
     end
     
     battery:set({
-      icon = { string = icon }
+      icon = { string = icon, padding_left = 5 }
     })
   end)
 end)
