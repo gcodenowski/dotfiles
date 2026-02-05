@@ -97,7 +97,9 @@ alias yabaiconfig='cd "$HOME/dotfiles/.config/yabai"'
 alias skhdconfig='nvim ~/.config/skhd/skhdrc'
 alias sketchybarconfig='cd "$HOME/dotfiles/.config/sketchybar"'
 alias kittyconfig='cd "$HOME/dotfiles/.config/kitty"'
+alias fastfetchconfig='cd "$HOME/dotfiles/.config/fastfetch"'
 alias vim='nvim'
+alias ls='ls -a'
 
 # ==Functions==
 

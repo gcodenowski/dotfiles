@@ -16,7 +16,13 @@
 	    "detectPlugin": true,
 	    "format":"Yabai + JankyBorders"
     }, 
+    {
+	    "type":"menubar",
+	    "format":"SketchyBar"
+
+    },
     "wmtheme",
+    "mouse",
     "theme",
     "icons",
     "font",
