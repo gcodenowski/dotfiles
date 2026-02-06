@@ -40,7 +40,7 @@ local wifi_down = sbar.add("item", "wifi_down", {
 wifi_up:subscribe("system_stats", function(env)
   local tx = env.NETWORK_TX_en0 or "0"
   local rx = env.NETWORK_RX_en0 or "0"
-  
+
   wifi_up:set({ label = { string = tx } })
   wifi_down:set({ label = { string = rx } })
 end)
