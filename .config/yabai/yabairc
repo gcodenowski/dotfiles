@@ -26,7 +26,7 @@ yabai -m config mouse_action1 move
 yabai -m config mouse_action2 resize
 
 # Apps excluded from yabai
-yabai -m rule --add app="^System Settings$" manage=off # Settings will refuse to be resized so I won't force it lol
+yabai -m rule --add app="^System Settings$" manage=off # Settings refuse to be resized
 yabai -m rule --add app="^Proton VPN$" manage=off
 yabai -m rule --add app="^Steam$" manage=off # Steam is behaving a bit buggy
 
