@@ -60,11 +60,18 @@ brew install cbonsai
 brew install cmatrix
 brew install pipes-sh
 
+# Copying and checking out configuration files
+echo "Planting Configuration Files..."
+[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:gcodenowski/dotfiles.git $HOME/dotfiles
+git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout main
+
 # Start Services
 echo "Starting Services (grant permissions)..."
 yabai --start-service # Will start borders too
 skhd --start-service
 brew services start sketchybar
 brew services start svim
+
+
 
 echo "Installation Complete!"
