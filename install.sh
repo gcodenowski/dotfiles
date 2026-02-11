@@ -62,8 +62,9 @@ brew install pipes-sh
 
 # Copying and checking out configuration files
 echo "Planting Configuration Files..."
-[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:gcodenowski/dotfiles.git $HOME/dotfiles
-git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout main
+[ ! -d "$HOME/dotfiles" ] && git clone git@github.com:gcodenowski/dotfiles.git $HOME/dotfiles
+cd $HOME/dotfiles
+stow dotfiles
 
 # Start Services
 echo "Starting Services (grant permissions)..."
