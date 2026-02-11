@@ -14,6 +14,7 @@ brew analytics off
 echo "Tapping Brew..."
 brew tap FelixKratz/formulae
 brew tap koekeishiya/formulae
+brew tap joncragle/tap
 
 ## Formulae
 echo "Installing Brew Formulae..."
@@ -30,6 +31,7 @@ brew install skhd
 brew install yabai
 brew install borders
 brew install sketchybar
+brew install sketchybar-system-stats
 brew install svim
 brew install neovim
 brew install stow
