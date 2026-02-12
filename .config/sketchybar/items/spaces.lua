@@ -11,7 +11,6 @@ for i = 1, 10 do
 	string = i,
 	color = colors.inactive,
 	highlight_color = colors.light_blue,
-	font = "SF Pro:Expanded Bold:14"
     },
     label = { drawing = false },
     background = { 
@@ -19,4 +18,3 @@ for i = 1, 10 do
     },
   })
 end
-

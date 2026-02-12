@@ -13,7 +13,6 @@ local wifi_up = sbar.add("item", "wifi_up", {
   label = {
     color = colors.text,
     string = "0",
-    font = "SF Pro:Expanded Regular:11.0", 
   },
   height = 12,
   background = { color = colors.transparent, border_color = colors.transparent }, 
@@ -30,7 +29,6 @@ local wifi_down = sbar.add("item", "wifi_down", {
   label = {
     color = colors.text,
     string = "0",
-    font = "SF Pro:Expanded Regular:11.0", 
   },
   height = 12,
   background = { color = colors.transparent, border_color = colors.transparent }, 
