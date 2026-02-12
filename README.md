@@ -22,7 +22,7 @@ Built on macOS Tahoe 26.2
 
 ### SketchyBar
 
-Sketchybar uses SbarLua in this setup.
+Sketchybar uses SbarLua in this setup. Sketchybar stats provider is used to provide event subscription to system processes. If you are using an intel mac this will likely not work straight away as you install these dotfiles and you might have to change the path to the stats provider in the `sketchybarrc`. 
 
 **Right Side:**
 - CPU graph & percentage
