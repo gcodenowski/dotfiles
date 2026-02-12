@@ -153,10 +153,12 @@ dot_push(){
 
 # Plugins
 # syntax highlighting:
- source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# zsh autosuggestions
-source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
 
 # zsh-vi-mode 
 source "$(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh" 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
