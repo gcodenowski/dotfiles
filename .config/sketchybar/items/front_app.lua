@@ -8,7 +8,7 @@ local frontapp = sbar.add("item", "frontapp", {
     background = {
       drawing = true,
       image = {
-        scale = 0.7,
+        scale = 0.3,
 	padding_left = 3,
       }
     }
