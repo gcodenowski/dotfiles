@@ -1,6 +1,8 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+source /usr/local/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 # Lua path
 export LUA_CPATH="$HOME/.local/share/sketchybar_lua/?.so;$HOME/.local/share/sketchybar_lua/?/init.so;;"
 
@@ -152,13 +154,9 @@ low_priority_throttling(){
 
 
 # Plugins
-# syntax highlighting:
-plugins=( 
-    # other plugins...
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
 
 # zsh-vi-mode 
-source "$(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh" 
+plugins+=(zsh-vi-mode)
+
+# syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
