@@ -2,7 +2,7 @@
 sbar.popup_default({
   background = {
     padding_left = 5,
-    padding_right = 5
+    padding_right = 5,
   },
   icon = {
     padding_right = 5,

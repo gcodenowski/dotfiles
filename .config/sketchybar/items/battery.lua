@@ -5,6 +5,7 @@ local settings = require("settings")
 
 -- Battery item
 local battery = sbar.add("item", "battery", {
+  padding_left = 8, --to account for the inability to set padding on brackets
   position = "right",
   update_freq = 60,
   label = { 

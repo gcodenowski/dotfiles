@@ -31,7 +31,7 @@ yabai -m rule --add app="^Proton VPN$" manage=off
 yabai -m rule --add app="^Steam$" manage=off # Steam is behaving a bit buggy
 
 # External bar padding
-yabai -m config external_bar all:33:0
+yabai -m config external_bar all:40:0
 
 # Debug reporting
 yabai -m config debug_output true

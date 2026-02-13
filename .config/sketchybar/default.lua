@@ -3,8 +3,8 @@ local settings = require("settings")
 
 -- Equivalent to the --default domain
 sbar.default({
-	padding_left = 2,
-	padding_right = 2,
+	padding_left = 4,
+	padding_right = 4,
 
 	icon = {
 		font = "Fira Code:Bold:17.0",
@@ -26,6 +26,6 @@ sbar.default({
 		color = colors.bg,
 		height = 30,
 		border_color = colors.border,
-		border_width = 1,
+		border_width = 2,
 	},
 })

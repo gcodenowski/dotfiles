@@ -1,6 +1,7 @@
 -- == FRONT APP == 
 
 local frontapp = sbar.add("item", "frontapp", {
+  padding_right = 8, --to account for the inability to set padding on brackets
   position = "left",
   script = "$PLUGIN_DIR/front_app_switched.sh",
   label = { padding_right = 7 },
