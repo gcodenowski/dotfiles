@@ -16,7 +16,6 @@ local menu = sbar.add("item", "apple", {
     background = {
       border_width = 2,
       corner_radius = 3,
-      border_color = colors.border,
     }
   }
 })
