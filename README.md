@@ -6,17 +6,18 @@ Built on macOS Tahoe 26.2
 
 ## Tools Used
 
-- Yabai
-- SketchyBar
-- JankyBorders
-- nvim
-- Kitty
-- fastfetch
-- skhd
-- svim
-- oh-my-zsh
-- eza
-- GNU stow
+| Title | Purpose | Link |
+| ----- | ------- | ---- | 
+| yabai | Tiling WM |  https://github.com/asmvik/yabai |
+| skhd | key mapping for yabai | https://github.com/asmvik/skhd |
+| SketchyBar | Custom menu bar | https://github.com/FelixKratz/SketchyBar |
+| sketchybar-system-stats | Event provider for SkethyBar | https://github.com/joncrangle/sketchybar-system-stats |
+| JankyBorders | Window Borders | https://github.com/FelixKratz/JankyBorders | 
+| Nvim | Editor | https://github.com/neovim/neovim |
+| SketchyVim | Adds vim motions to macOS  | https://github.com/FelixKratz/SketchyVim |
+| Kitty | Terminal Emulator | https://github.com/kovidgoyal/kitty |
+| fastfetch | System Specs Fetch | https://github.com/fastfetch-cli/fastfetch |
+| GNU Stow | Easy symlinking | https://www.gnu.org/software/stow/ |
 
 ---
 
