@@ -141,16 +141,16 @@ low_priority_throttling(){
 }
 
 # Push the currect branch of dotiles to my GitHub with a message and a date stamp
-# dot_push(){
-#	cd "$HOME/dotfiles"
-#	git add .
-#	local msg="$*"
-#	if [[ -z "$msg" ]]; then
-#		msg="Dotfiles sync $(date +%d-%h-%Y_%H-%M-%S)"
-#	fi
-#	git commit -m "$msg"
-#	git push 
-#}
+dot_push(){
+	cd "$HOME/dotfiles"
+	git add .
+	local msg="$*"
+	if [[ -z "$msg" ]]; then
+		msg="Dotfiles sync $(date +%d-%h-%Y_%H-%M-%S)"
+	fi
+	git commit -m "$msg"
+	git push 
+}
 
 
 # Plugins
