@@ -39,6 +39,7 @@ brew install wget
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 brew install zsh-vi-mode
+brew install gh
 
 ## Casks
 brew install --cask kitty
@@ -64,9 +65,11 @@ brew install pipes-sh
 
 # Copying and checking out configuration files
 echo "Planting Configuration Files..."
+cd ~
+mkdir dotfiles
 [ ! -d "$HOME/dotfiles" ] && git clone git@github.com:gcodenowski/dotfiles.git $HOME/dotfiles
 cd $HOME/dotfiles
-stow dotfiles
+stow -v -t ~/.config .config # create symlinks to ~/.config with stow
 
 # Start Services
 echo "Starting Services (grant permissions)..."
@@ -74,7 +77,5 @@ yabai --start-service # Will start borders too
 skhd --start-service
 brew services start sketchybar
 brew services start svim
-
-
 
 echo "Installation Complete!"

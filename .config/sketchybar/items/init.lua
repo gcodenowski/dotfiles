@@ -8,7 +8,7 @@ require("items.wifi")
 require("items.spaces_bracket")
 
 -- == CENTER ITEMS ==
-require("items.uptime")
+-- require("items.uptime")
 
 -- == RIGHT SIDE ITEMS == 
 require("items.clock")
