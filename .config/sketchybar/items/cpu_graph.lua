@@ -14,9 +14,7 @@ local cpu_graph = sbar.add("graph", "cpu_graph", 40, {
 		height = 30, 
 		border_color = colors.transparent,
 	},
-	y_offset = 0,
 	update_freq = 1,
-	-- drawing = true - I don't know if I need this yet
 })
 
 -- Draw the graph
