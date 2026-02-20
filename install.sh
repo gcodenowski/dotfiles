@@ -55,6 +55,7 @@ brew install --cask libreoffice
 brew install --cask sf-symbols
 brew install --cask font-sf-pro
 brew install --cask font-fira-code
+brew install --cask font-fira-code-nerd-font
 
 ## Niceties
 brew install btop
