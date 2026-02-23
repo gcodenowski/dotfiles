@@ -106,7 +106,7 @@ alias ls='ls -a'
 # ==Functions==
 
 # eza tree
-eza_tree(){
+ezat(){
 	local depth="${1:--L 1}"
 	if [[ $# -eq 0 ]]; then
 		eza -a --tree -L 1
