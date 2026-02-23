@@ -1,4 +1,4 @@
--- == CLOCK == 
+-- == CLOCK ==
 
 local icons = require("icons")
 local colors = require("colors")
@@ -15,8 +15,8 @@ local clock = sbar.add("item", "clock", {
 })
 
 clock:subscribe({ "routine" }, function(env)
-		clock:set({
-			icon = { string = icons.clock },
-			label = { string = os.date("%H:%M:%S") },
-		})
-	end)
+	clock:set({
+		icon = { string = icons.clock },
+		label = { string = os.date("%H:%M:%S") },
+	})
+end)
