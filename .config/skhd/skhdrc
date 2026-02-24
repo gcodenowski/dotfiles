@@ -55,7 +55,6 @@ ctrl + alt - 3 : yabai -m window --space 3
 ctrl + alt - 4 : yabai -m window --space 4
 ctrl + alt - 5 : yabai -m window --space 5
 
-
 # Screen Management
 
 # focus next/previous display
