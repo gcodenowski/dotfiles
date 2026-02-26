@@ -14,6 +14,7 @@ Built on macOS Tahoe 26.2
 | sketchybar-system-stats | Event provider for SkethyBar | https://github.com/joncrangle/sketchybar-system-stats |
 | JankyBorders | Window Borders | https://github.com/FelixKratz/JankyBorders | 
 | Nvim | Editor | https://github.com/neovim/neovim |
+| Kickstart.nvim | Nvim config starting point | https://github.com/nvim-lua/kickstart.nvim |
 | SketchyVim | Adds vim motions to macOS  | https://github.com/FelixKratz/SketchyVim |
 | Kitty | Terminal Emulator | https://github.com/kovidgoyal/kitty |
 | fastfetch | System Specs Fetch | https://github.com/fastfetch-cli/fastfetch |
