@@ -286,6 +286,13 @@ require('lazy').setup({
     },
   },
 
+  -- Alpha-nvim, custom nvim greeter
+  {
+    'goolord/alpha-nvim',
+    dependencies = { 'nvim-mini/mini.icons' },
+    config = function() require('alpha').setup(require('alpha.themes.startify').config) end,
+  },
+
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
@@ -614,7 +621,7 @@ require('lazy').setup({
       -- You can press `g?` for help in this menu.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        'lua_ls', -- Lua Language server
+        'lua-language-server', -- Lua Language server
         'stylua', -- Used to format Lua code
         -- You can add other tools here that you want Mason to install
       })
@@ -806,7 +813,7 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'lunaperch'
+      vim.cmd.colorscheme 'lunaperche'
     end,
   },
 
