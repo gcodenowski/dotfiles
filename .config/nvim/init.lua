@@ -209,8 +209,11 @@ require('lazy').setup({
   -- Alpha-nvim, custom nvim greeter
   {
     'goolord/alpha-nvim',
-    dependencies = { 'nvim-mini/mini.icons' },
-    config = function() require('alpha').setup(require('alpha.themes.startify').config) end,
+    dependencies = {
+      'nvim-mini/mini.icons',
+      'nvim-lua/plenary.nvim',
+    },
+    config = function() require('alpha').setup(require('alpha.themes.theta').config) end,
   },
 
   --Ascii.nvim, for easy ASCII art, NOTE: use lua require("ascii").preview() to preview the art
