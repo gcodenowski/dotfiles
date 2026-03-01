@@ -1,8 +1,8 @@
 # dotfiles
 
-This is my dotfiles configuration from my MBP. It is not stable by any means and only meant to be a demo configuration, use at your discretion. 
+This is my main dotfiles configuration. It is not stable by any means and only meant to be a demo configuration, use at your discretion. 
 
-Built on macOS Tahoe 26.2
+Built on macOS Tahoe 26.3
 
 ## Tools Used
 
@@ -26,16 +26,7 @@ Built on macOS Tahoe 26.2
 
 Sketchybar uses SbarLua in this setup. Sketchybar stats provider is used to provide event subscription to system processes. If you are using an intel mac this will likely not work straight away as you install these dotfiles and you might have to change the path to the stats provider in the `sketchybarrc`. 
 
-**Right Side:**
-- CPU graph & percentage
-- Memory usage percentage
-- Battery (icon only, edit battery.sh and uncomment the percentage line if you want it), opens battery health on mouse click
-- Calendar that opens the Calendar app on mouse click
-- Clock (HH/MM/SS)
-
-**Left Side:**
-- Apple Menu with a dropdown menu on mouse click
-- Currently selected app with icon & name
+sketchybar-system-stats is being used as an easy way to provide system events to sketchybar. This can be used to create cpu graphs etc.
 
 **General**
 - Edit sketchybar/colors.sh for different colours 
@@ -52,4 +43,4 @@ Sketchybar uses SbarLua in this setup. Sketchybar stats provider is used to prov
 
 # Acknowledgements
 
-Sketchybar lua config inspired by FelixKratz's *dotfiles*
+Sketchybar config inspired by FelixKratz's dotfiles: https://github.com/FelixKratz/dotfiles
