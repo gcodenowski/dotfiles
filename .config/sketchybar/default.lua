@@ -8,7 +8,7 @@ sbar.default({
 
 	icon = {
 		font = "SF Pro:Bold:17.0",
-		color = colors.light_blue,		
+		color = colors.accent,
 		padding_left = 4,
 		padding_right = 4,
 		y_offset = 1,

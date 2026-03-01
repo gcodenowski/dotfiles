@@ -10,7 +10,7 @@ for i = 1, 10 do
 			padding_right = 12,
 			string = i,
 			color = colors.inactive,
-			highlight_color = colors.light_blue,
+			highlight_color = colors.accent,
 			font = "SF Pro:Expanded Bold:14",
 		},
 		label = { drawing = false },
