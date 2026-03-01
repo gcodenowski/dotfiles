@@ -1,4 +1,4 @@
--- == CPU GRAPH == 
+-- == CPU GRAPH ==
 
 local colors = require("colors")
 
@@ -11,7 +11,7 @@ local cpu_graph = sbar.add("graph", "cpu_graph", 40, {
 	},
 	background = {
 		color = colors.transparent,
-		height = 30, 
+		height = 30,
 		border_color = colors.transparent,
 	},
 	update_freq = 1,
