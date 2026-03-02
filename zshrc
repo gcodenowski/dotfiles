@@ -90,6 +90,7 @@ alias obsidian='cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/
 alias home='cd ~'
 alias zshreload='exec zsh'
 alias dotfiles='cd ~/dotfiles'
+alias timer="timr-tui"
 
 alias obs_push='cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas" && git add . && git commit -m "Obsidian sync $(date +%d-%h-%Y_%H-%M-%S)" && git push origin main'
 alias yabaiconfig='cd "$HOME/dotfiles/.config/yabai"'
