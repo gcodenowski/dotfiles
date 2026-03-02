@@ -5,7 +5,7 @@ local colors = require("colors")
 local cpu_graph = sbar.add("graph", "cpu_graph", 40, {
 	position = "right",
 	graph = {
-		color = colors.light_blue,
+		color = colors.accent,
 		fill_color = colors.transparent,
 		line_width = 1.5,
 	},
