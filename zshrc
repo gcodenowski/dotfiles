@@ -26,9 +26,8 @@ path=(
 
 # == Themes ==
 # ZSH_THEME="xiong-chiamiov-plus"
-# ZSH_THEME="obraun"
-# ZSH_THEME="alanpeabody"
-ZSH_THEME="gallois"
+ZSH_THEME="obraun"
+# ZSH_THEME="gallois"
 
 # Autoupdate every 2 weeks
 zstyle ':omz:update' frequency 14
