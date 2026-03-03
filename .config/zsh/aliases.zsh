@@ -1,0 +1,32 @@
+: <<'COMMENT'
+█████╗ ██╗     ██╗ █████╗ ███████╗███████╗███████╗
+██╔══██╗██║     ██║██╔══██╗██╔════╝██╔════╝██╔════╝
+███████║██║     ██║███████║███████╗█████╗  ███████╗
+██╔══██║██║     ██║██╔══██║╚════██║██╔══╝  ╚════██║
+██║  ██║███████╗██║██║  ██║███████║███████╗███████║
+╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
+COMMENT
+# ==Aliases==
+
+# Dirs
+alias icloud='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs"'
+alias obsidian='cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas"'
+alias home='cd ~'
+alias dotfiles='cd ~/dotfiles'
+alias yabaiconfig='cd "$HOME/dotfiles/.config/yabai"'
+alias kittyconfig='cd "$HOME/dotfiles/.config/kitty"'
+alias fastfetchconfig='cd "$HOME/dotfiles/.config/fastfetch"'
+alias sketchybarconfig='cd "$HOME/dotfiles/.config/sketchybar"'
+
+# Edit File
+alias zshconfig='nvim ~/.zshrc'
+alias ohmyzshconfig='nvim ~/.oh-my-zsh'
+alias skhdconfig='nvim ~/.config/skhd/skhdrc'
+
+# QoL
+alias vim='nvim'
+alias ls='ls -a' # Make ls show hidden files by default
+alias timer="timr-tui"
+
+# Misc
+alias zshreload='exec zsh' # This sources zshrc and creates new zsh instance

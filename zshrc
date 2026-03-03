@@ -1,5 +1,13 @@
-# Path to your Oh My Zsh installation.
+# Path to my Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+# Sourcing the modular config files
+for config in ~/dotfiles/.config/zsh/*.zsh(N); do
+	# (N) ensures that an empty list is returned if there are no matching files
+	# instead of throwing an error
+	source "$config"
+done
+unset config # Remove the variable after use
 
 # Autocomplete Plugin (has to be at the top of the file)
 source "$(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
@@ -22,17 +30,11 @@ path=(
 # ZSH_THEME="alanpeabody"
 ZSH_THEME="gallois"
 
-# Uncomment the following line to change how often to auto-update (in days).
+# Autoupdate every 2 weeks
 zstyle ':omz:update' frequency 14
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -82,25 +84,48 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 
+: <<'COMMENT'
+█████╗ ██╗     ██╗ █████╗ ███████╗███████╗███████╗
+██╔══██╗██║     ██║██╔══██╗██╔════╝██╔════╝██╔════╝
+███████║██║     ██║███████║███████╗█████╗  ███████╗
+██╔══██║██║     ██║██╔══██║╚════██║██╔══╝  ╚════██║
+██║  ██║███████╗██║██║  ██║███████║███████╗███████║
+╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
+COMMENT
 # ==Aliases==
-alias zshconfig='nvim ~/.zshrc'
-alias ohmyzsh='nano ~/.oh-my-zsh'
+
+# Dirs
 alias icloud='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs"'
 alias obsidian='cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas"'
 alias home='cd ~'
-alias zshreload='exec zsh'
 alias dotfiles='cd ~/dotfiles'
-alias timer="timr-tui"
-
-alias obs_push='cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas" && git add . && git commit -m "Obsidian sync $(date +%d-%h-%Y_%H-%M-%S)" && git push origin main'
 alias yabaiconfig='cd "$HOME/dotfiles/.config/yabai"'
-alias skhdconfig='nvim ~/.config/skhd/skhdrc'
-alias sketchybarconfig='cd "$HOME/dotfiles/.config/sketchybar"'
 alias kittyconfig='cd "$HOME/dotfiles/.config/kitty"'
 alias fastfetchconfig='cd "$HOME/dotfiles/.config/fastfetch"'
-alias vim='nvim'
-alias ls='ls -a'
+alias sketchybarconfig='cd "$HOME/dotfiles/.config/sketchybar"'
 
+# Edit File
+alias zshconfig='nvim ~/.zshrc'
+alias ohmyzshconfig='nvim ~/.oh-my-zsh'
+alias skhdconfig='nvim ~/.config/skhd/skhdrc'
+
+# QoL
+alias vim='nvim'
+alias ls='ls -a' # Make ls show hidden files by default
+alias timer="timr-tui"
+
+# Misc
+alias zshreload='exec zsh' # This sources zshrc and creates new zsh instance
+
+
+: <<'COMMENT'
+███████╗██╗   ██╗███╗   ██╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
+██╔════╝██║   ██║████╗  ██║██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+█████╗  ██║   ██║██╔██╗ ██║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗
+██╔══╝  ██║   ██║██║╚██╗██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║
+██║     ╚██████╔╝██║ ╚████║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
+╚═╝      ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+COMMENT
 # ==Functions==
 
 # eza tree
@@ -112,7 +137,6 @@ ezat(){
 		eza -a --tree "$@"
 	fi
 }
-
 
 # Empty Downloads Folder
 empty_downloads(){
@@ -126,7 +150,6 @@ empty_bin(){
 	echo "Files Deleted Succesfully!" 
 }
 
-
 # Turn on/off low priority process throttling (good for time machine backups)
 low_priority_throttling(){
 	local v="${1:-0}"	# default to 0 if no arg
@@ -138,18 +161,29 @@ low_priority_throttling(){
 	fi
 }
 
-# Push the currect branch of dotiles to my GitHub with a message and a date stamp
-dot_push(){
-	cd "$HOME/dotfiles"
+# Push obsidian to GitHub
+obs_push(){
+	cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas/"
 	git add .
 	local msg="$*"
 	if [[ -z "$msg" ]]; then
+		msg="Obsidian sync $(date +%d-%h-%Y_%H-%M-%S)"
+	fi
+	git commit -m "$msg"
+	git push origin main
+}
+
+# Push the current branch of dotiles to my GitHub with a message and a date stamp
+dot_push(){
+	cd "$HOME/dotfiles"
+	git add .
+	local msg="$*" # Variable capturing all positional parameters
+	if [[ -z "$msg" ]]; then # Checking if string is zero-length
 		msg="Dotfiles sync $(date +%d-%h-%Y_%H-%M-%S)"
 	fi
 	git commit -m "$msg"
 	git push 
 }
-
 
 # zsh plugins
 # syntax highlighting:
