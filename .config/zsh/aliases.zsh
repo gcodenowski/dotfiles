@@ -22,10 +22,11 @@ alias sketchybarconfig='cd "$HOME/dotfiles/.config/sketchybar"'
 alias zshconfig='nvim ~/.zshrc'
 alias ohmyzshconfig='nvim ~/.oh-my-zsh'
 alias skhdconfig='nvim ~/.config/skhd/skhdrc'
+alias zshaliases='nvim ~/dotfiles/.config/zsh/aliases.zsh'
+alias zshfunc='nvim ~/dotfiles/.config/zsh/functions.zsh'
 
 # QoL
 alias vim='nvim'
-alias ls='ls -a' # Make ls show hidden files by default
 alias timer="timr-tui"
 
 # Misc
