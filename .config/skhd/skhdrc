@@ -20,7 +20,6 @@ ctrl + alt - x : yabai -m space --mirror x-axis
 # toggle window float
 ctrl + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
-
 # Modifying window size
 
 # maximise 
@@ -28,7 +27,6 @@ ctrl + alt - return : yabai -m window --toggle zoom-fullscreen
 
 # balance out tree of windows (resize to occupy same area)
 ctrl + alt - e : yabai -m space --balance  
-
 
 # Moving windows around
 
