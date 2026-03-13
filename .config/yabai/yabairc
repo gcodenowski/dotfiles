@@ -30,6 +30,7 @@ yabai -m rule --add app="^System Settings$" manage=off # Settings refuse to be r
 yabai -m rule --add app="^Proton VPN$" manage=off
 yabai -m rule --add app="^Steam$" manage=off # Steam is behaving a bit buggy
 yabai -m rule --add app="^FL Studio 2025$" manage=off 
+yabai -m rule --add app="^Stickies$" manage=off # Defeats the purpose
 
 # External bar padding
 yabai -m config external_bar all:33:0
