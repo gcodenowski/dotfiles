@@ -72,3 +72,7 @@ ctrl + alt - down : yabai -m window --display prev
 # ==start/stop==
 ctrl + alt - q : yabai --stop-service
 ctrl + alt - s : yabai --start-service
+
+# Launching apps
+alt - return : open -a "Kitty"
+alt - s : open -a "Safari"
