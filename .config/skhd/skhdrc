@@ -73,6 +73,13 @@ ctrl + alt - down : yabai -m window --display prev
 ctrl + alt - q : yabai --stop-service
 ctrl + alt - s : yabai --start-service
 
-# Launching apps
-alt - return : open -a "Kitty"
-alt - s : open -a "Safari"
+# == Launching apps == 
+
+# ctrl + alt + cmd + shift handled by hyperkey
+ctrl + alt + cmd + shift - return : open -a "Kitty"
+ctrl + alt + cmd + shift - s : open -a "Safari"
+ctrl + alt + cmd + shift - f : open -a "FL Studio 2025"
+ctrl + alt + cmd + shift - d : open -a "Discord"
+ctrl + alt + cmd + shift - m : open -a "Spotify" # m for music
+ctrl + alt + cmd + shift - g : open -a "Steam" # g for games
+ctrl + alt + cmd + shift - o : open -a "Obsidian" 

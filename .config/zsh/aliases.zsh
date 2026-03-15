@@ -17,6 +17,7 @@ alias yabaiconfig='cd "$HOME/dotfiles/.config/yabai"'
 alias kittyconfig='cd "$HOME/dotfiles/.config/kitty"'
 alias fastfetchconfig='cd "$HOME/dotfiles/.config/fastfetch"'
 alias sketchybarconfig='cd "$HOME/dotfiles/.config/sketchybar"'
+alias nvimconfig='cd $HOME/dotfiles/.config/nvim"'
 
 # Edit File
 alias zshconfig='nvim ~/.zshrc'
