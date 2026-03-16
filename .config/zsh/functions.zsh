@@ -65,6 +65,6 @@ dot_push(){
 }
 
 # Run aider with qwen
-aiderq() {
-aider --model ollama/qwen3-coder:latest --openai-api-base http://localhost:11434
+run_aider() {
+aider --model ollama_chat/qwen3-coder:latest --openai-api-base http://localhost:11434
 }
