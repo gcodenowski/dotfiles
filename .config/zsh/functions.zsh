@@ -64,3 +64,8 @@ dot_push(){
 	git commit -m "$msg"
 	git push 
 }
+
+# Run aider with qwen
+aiderq() {
+aider --model ollama/qwen3-coder:latest --openai-api-base http://localhost:11434
+}
