@@ -20,3 +20,4 @@ config/sketchybar/helpers*
 
 # Any SSH keys
 .ssh/
+.aider*
