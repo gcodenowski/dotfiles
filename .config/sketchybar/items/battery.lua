@@ -14,7 +14,7 @@ local battery = sbar.add("item", "battery", {
 })
 
 -- Subscribing to the battery event
-battery:subscribe({ "system_woke", "power_source_change", "battery_update" }, function(env)
+battery:subscribe({ "system_woke", "power_source_change", "routine" }, function(env)
 	sbar.exec("pmset -g batt", function(info)
 		local found_percent, _, PERCENTAGE = info:find("(%d+)%%")
 		local CHARGING = info:find("AC Power")
