@@ -60,24 +60,6 @@ require('lazy').setup({
   -- NOTE: Plugins can be added via a link or github org/name. To run setup automatically, use `opts = {}`
   { 'NMAC427/guess-indent.nvim', opts = {} },
 
-  -- Alpha-nvim, custom nvim greeter
-  {
-    'goolord/alpha-nvim',
-    dependencies = {
-      'nvim-mini/mini.icons',
-      'nvim-lua/plenary.nvim',
-    },
-    config = function() require('alpha').setup(require('alpha.themes.theta').config) end,
-  },
-
-  --Ascii.nvim, for easy ASCII art, NOTE: use lua require("ascii").preview() to preview the art
-  {
-    'MaximilianLloyd/ascii.nvim',
-    dependencies = {
-      'MunifTanjim/nui.nvim',
-    },
-  },
-
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
