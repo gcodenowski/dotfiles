@@ -83,3 +83,4 @@ ctrl + alt + cmd + shift - d : open -a "Discord"
 ctrl + alt + cmd + shift - m : open -a "Spotify" # m for music
 ctrl + alt + cmd + shift - g : open -a "Steam" # g for games
 ctrl + alt + cmd + shift - o : open -a "Obsidian" 
+ctrl + alt + cmd + shift - n : open -a "Notes" 

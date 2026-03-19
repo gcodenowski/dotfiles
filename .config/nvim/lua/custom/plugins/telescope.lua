@@ -2,7 +2,6 @@
 
 return {
   'nvim-telescope/telescope.nvim',
-
   -- Note: If you customize your config for yourself,
   -- it’s best to remove the Telescope plugin config entirely
   -- instead of just disabling it here, to keep your config clean.
