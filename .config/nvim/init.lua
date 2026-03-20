@@ -445,7 +445,7 @@ require('lazy').setup {
       --  Check out: https://github.com/nvim-mini/mini.nvim
     end,
   },
-  import = 'custom.plugins', -- importing plugins from my plugins dir
+  { import = 'custom.plugins' }, -- importing plugins from my plugins dir
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
