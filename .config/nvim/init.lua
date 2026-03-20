@@ -18,9 +18,9 @@ vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
 
 -- Load the config files
-require 'custom.config.options'
-require 'custom.config.autocmds'
-require 'custom.config.keymaps'
+require 'config.options'
+require 'config.autocmds'
+require 'config.keymaps'
 
 --  Install `lazy.nvim` plugin manager
 --  See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
@@ -425,7 +425,7 @@ require('lazy').setup {
       --  Check out: https://github.com/nvim-mini/mini.nvim
     end,
   },
-  { import = 'custom.plugins' }, -- importing plugins from my plugins dir
+  { import = 'plugins' }, -- importing plugins from my plugins dir
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
