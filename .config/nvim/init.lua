@@ -170,7 +170,7 @@ require('lazy').setup {
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
       --  See `:help lsp-config` for information about keys and how to configure
       local servers = {
-        clangd = {},
+        clangd = {}, -- For C/C++
         pyright = {},
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -195,11 +195,7 @@ require('lazy').setup {
         'luacheck', -- linter
 
         -- Python
-        'pyright', -- lsp
-        'pyling', -- linter
-
-        -- C
-        'clangd', -- lsp
+        'pylint', -- linter
       })
 
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
