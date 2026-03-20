@@ -449,7 +449,7 @@ require('lazy').setup {
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     config = function()
-      local filetypes = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
+      local filetypes = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'typescript', 'python' }
       require('nvim-treesitter').install(filetypes)
       vim.api.nvim_create_autocmd('FileType', {
         pattern = filetypes,
@@ -457,15 +457,7 @@ require('lazy').setup {
       })
     end,
   },
-
-  -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-  --    This is the easiest way to modularize your config.
-  { import = 'custom.plugins' },
-  --
-  -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
-  -- Or use telescope!
-  -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
-  -- you can continue same window with `<space>sr` which resumes last telescope search
+  import = 'custom.plugins', -- importing plugins from my plugins dir
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
