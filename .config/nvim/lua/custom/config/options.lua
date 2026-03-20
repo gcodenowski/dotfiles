@@ -1,76 +1,56 @@
 --[[
- ░██████   ░█████████  ░██████████░██████  ░██████   ░███    ░██   ░██████
- ░██   ░██  ░██     ░██     ░██      ░██   ░██   ░██  ░████   ░██  ░██   ░██
-░██     ░██ ░██     ░██     ░██      ░██  ░██     ░██ ░██░██  ░██ ░██
-░██     ░██ ░█████████      ░██      ░██  ░██     ░██ ░██ ░██ ░██  ░████████
-░██     ░██ ░██             ░██      ░██  ░██     ░██ ░██  ░██░██         ░██
- ░██   ░██  ░██             ░██      ░██   ░██   ░██  ░██   ░████  ░██   ░██
-  ░██████   ░██             ░██    ░██████  ░██████   ░██    ░███   ░██████
+  ░██████                 ░██    ░██
+ ░██   ░██                ░██
+░██     ░██ ░████████  ░████████ ░██ ░███████  ░████████   ░███████
+░██     ░██ ░██    ░██    ░██    ░██░██    ░██ ░██    ░██ ░██
+░██     ░██ ░██    ░██    ░██    ░██░██    ░██ ░██    ░██  ░███████
+ ░██   ░██  ░███   ░██    ░██    ░██░██    ░██ ░██    ░██        ░██
+  ░██████   ░██░█████      ░████ ░██ ░███████  ░██    ░██  ░███████
+            ░██
+            ░██
 See ':help vim.o', ':help option-list'
 ]]
 
--- Line numbers & relative line numbers
-vim.o.number = true
-vim.o.relativenumber = true
+local options = {
+  number = true,
+  relativenumber = true, -- line numbering
+  mouse = 'a',
+  showmode = true, -- it's already in the status line
+  breakindent = true,
+  undofile = true, -- undo history
+  ignorecase = true,
+  smartcase = true, -- smart case-insensitive searching
+  signcolumn = 'yes', -- keep on by default
+  updatetime = 250,
+  timeoutlen = 300,
+  splitright = true,
+  splitbelow = true, -- how new splits should be opened
+  inccommand = 'split', -- live substitution preview!
+  cursorline = true, -- highlights current line
+  scrolloff = 10, -- min number of screen lines above and below the cursor
+  confirm = true, -- ask before quitting without saving
 
--- Enable the mouse, useful for resizing splits etc.
-vim.o.mouse = 'a'
+  -- Indentation
+  shiftwidth = 4,
+  softtabstop = 2,
+  expandtab = true,
+}
 
--- Don't show the mode, since it's already in the status line
-vim.o.showmode = false
+for k, v in pairs(options) do
+  vim.opt[k] = v
+end
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  See `:help 'clipboard'`
 vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 
--- Enable break indent
-vim.o.breakindent = true
-
--- Save undo history
-vim.o.undofile = true
-
--- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
--- Keep signcolumn on by default
-vim.o.signcolumn = 'yes'
-
--- Decrease update time
-vim.o.updatetime = 250
-
--- Decrease mapped sequence wait time
-vim.o.timeoutlen = 300
-
--- Configure how new splits should be opened
-vim.o.splitright = true
-vim.o.splitbelow = true
-
--- Preview substitutions live, as you type!
-vim.o.inccommand = 'split'
-
 -- How neovim displays whitespace characters
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
--- Show which line your cursor is on
-vim.o.cursorline = true
-
--- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
-
--- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
--- instead raise a dialog asking if you wish to save the current file(s)
--- See `:help 'confirm'`
-vim.o.confirm = true
-
--- Indentation management
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 2
-vim.opt.expandtab = true
-
 -- Diagnostics
+-- See :help vim.diagnostic.Opts
 vim.diagnostic.config {
   update_in_insert = false,
   severity_sort = true,

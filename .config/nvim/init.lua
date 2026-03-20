@@ -1,3 +1,13 @@
+--[[
+░██████           ░██   ░██
+  ░██                   ░██
+  ░██  ░████████  ░██░████████
+  ░██  ░██    ░██ ░██   ░██
+  ░██  ░██    ░██ ░██   ░██
+  ░██  ░██    ░██ ░██   ░██
+░██████░██    ░██ ░██    ░████
+]]
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -5,19 +15,15 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- Load the config files
-require 'custom.options'
-require 'custom.autocmds'
-require 'custom.keymaps'
-require 'custom.lsp'
+require 'custom.config.options'
+require 'custom.config.autocmds'
+require 'custom.config.keymaps'
 
--- Diagnostic Config
--- See :help vim.diagnostic.Opts
-
--- [[ Install `lazy.nvim` plugin manager ]]
---    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
+--  Install `lazy.nvim` plugin manager
+--  See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
