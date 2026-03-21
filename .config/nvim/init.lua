@@ -8,6 +8,9 @@
 ░██████░██    ░██ ░██    ░████
 ]]
 
+-- Adding homebrew to vim path
+vim.env.PATH = vim.env.PATH .. ':/opt/homebrew/bin'
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
