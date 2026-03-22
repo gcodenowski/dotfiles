@@ -16,7 +16,7 @@ return {
       -- Automatically install LSPs and related tools to stdpath for Neovim
       -- Mason must be loaded before its dependents so we need to set it up here.
       --NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
-      { 'mason-org/mason.nvim', lazy = false, opts = {} },
+      { 'mason-org/mason.nvim', lazy = false },
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
@@ -26,6 +26,7 @@ return {
       'saghen/blink.cmp',
     },
     config = function()
+      require('mason').setup()
       -- If you're wondering about lsp vs treesitter, you can check out the wonderfully
       -- and elegantly composed help section, `:help lsp-vs-treesitter`
 
