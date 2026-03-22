@@ -20,6 +20,7 @@ alias sketchybarconfig='cd "$HOME/dotfiles/.config/sketchybar"'
 alias nvimconfig='cd $HOME/dotfiles/.config/nvim"'
 alias wallpapers='cd "$HOME/Documents/Graphics/Wallpapers"'
 alias downloads='cd "$HOME/Downloads"'
+alias graphics='cd "$HOME/Documents/Graphics/"'
 
 # Edit File
 alias zshconfig='nvim ~/.zshrc'
