@@ -11,11 +11,11 @@
     "shell",
     "display",
     "de",
-    {  
+    {
 	    "type":"wm", 
 	    "detectPlugin": true,
 	    "format":"Yabai + JankyBorders"
-    }, 
+    },
     {
 	    "type":"menubar",
 	    "format":"SketchyBar"
