@@ -19,6 +19,9 @@ return {
       '  ░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓██████▓▒░   ░▒▓██▓▒░  ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░ ',
     }
 
+    vim.api.nvim_set_hl(0, 'AlphaHeader', { fg = '#89b4fa' })
+    theta.header.opts.hl = 'AlphaHeader'
+
     require('alpha').setup(config)
   end,
 }
