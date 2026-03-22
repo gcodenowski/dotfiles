@@ -3,10 +3,10 @@
 {
    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
    "logo": {
-      "source": "~/Documents/Graphics/coolPhotos/apple_blue.png",
-      "padding": {
-         "top": 5
-      }
+      "type": "kitty",
+      "source": "/Users/gilbertkozanowski/Documents/Graphics/coolPhotos/apple_blue.png",
+      "width": 30,
+      "height": 15
    },
    "display": {
       "separator": " -> ",
@@ -28,25 +28,25 @@
       "break",
       {
          "type": "custom",
-         "format": "{#keys}{#1}{#yellow}모Hardware"
+         "format": "{#keys}{#1}{#cyan}모Hardware"
       },
 
       {
          "type": "host",
          "key": "├ Model ",
-         "keyColor": "yellow",
+         "keyColor": "cyan",
          "format": "{5} {2} {3}"
       },
       {
          "type": "display",
          "key": "├ Screen",
-         "keyColor": "yellow",
+         "keyColor": "cyan",
          "format": "{22} x {23} px @ {24} Hz{?12} in {12}\" ({13} ppi){?} - {14} bit - HDR: {20} - {7}"
       },
       {
          "type": "brightness",
          "key": "├ Bright",
-         "keyColor": "yellow",
+         "keyColor": "cyan",
          "format": "{1}",
          "percent": {
             "type": [
@@ -57,49 +57,49 @@
       {
          "type": "cpu",
          "key": "├ CPU   ",
-         "keyColor": "yellow",
+         "keyColor": "cyan",
          "format": "{1} - {5} core @ {7} - {8}",
          "temp": true
       },
       {
          "type": "gpu",
          "key": "├ GPU   ",
-         "keyColor": "yellow",
+         "keyColor": "cyan",
          "format": "{2} - {5} core @ {12} - {4} - {11}",
          "temp": true
       },
       {
          "type": "memory",
          "key": "├ Memory",
-         "keyColor": "yellow"
+         "keyColor": "cyan"
       },
       {
          "type": "disk",
          "key": "├ Disk  ",
-         "keyColor": "yellow",
+         "keyColor": "cyan",
          "format": "{10} ({20}) - {1} / {2} ({3}) - {9}"
       },
       {
          "type": "battery",
          "key": "├ Charge",
-         "keyColor": "yellow",
+         "keyColor": "cyan",
          "format": "{4}{?12} ({12} hours, {13} mins remaining){?} - {7} cycles - {6}",
          "temp": true,
          "percent": {
             "green": 51,
-            "yellow": 11
+            "cyan": 11
          }
       },
       {
          "type": "camera",
          "key": "├ Camera",
-         "keyColor": "yellow",
+         "keyColor": "cyan",
          "format": "{1} - {5} x {6} px"
       },
       {         
          "type": "sound",
          "key": "└ Sound ",
-         "keyColor": "yellow",
+         "keyColor": "cyan",
          "format": "{2} - {3}",
          "percent": {
             "type": [
@@ -123,7 +123,6 @@
          "type":"custom",
          "key":"├ Bar   ",
          "keyColor":"magenta",
-         "detectPlugin": false,
          "format":"SketchyBar"
       },
 
