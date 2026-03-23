@@ -39,3 +39,7 @@ map('n', '<leader>c', '<cmd>Telescope colorscheme<CR>')
 
 -- See the registers
 map('n', '<leader>r', '<cmd>reg<CR>')
+
+-- Open Mason and Lazy
+map('n', '<leader>m', '<cmd>Mason<CR>')
+map('n', '<leader>l', '<cmd>Lazy<CR>')
