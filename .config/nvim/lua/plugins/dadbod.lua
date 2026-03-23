@@ -11,7 +11,7 @@ return {
     },
     cmd = { 'DBUI', 'DBUIToggle' },
     keys = {
-      { '<leader>db', '<cmd>DBUIToggle<cr>', desc = 'Toggle DB UI' },
+      { '<leader>odb', '<cmd>DBUIToggle<cr>', desc = 'Toggle DB UI' },
     },
     init = function()
       vim.g.db_ui_save_location = vim.fn.expand '~/.local/share/db_ui'
