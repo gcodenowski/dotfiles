@@ -35,11 +35,11 @@ map('n', '<C-k>', '<C-w><C-k>')
 map('n', '<leader>d', '<cmd>Alpha<CR>')
 
 -- Colorscheme picker
-map('n', '<leader>c', '<cmd>Telescope colorscheme<CR>')
+map('n', '<leader>oc', '<cmd>Telescope colorscheme<CR>')
 
 -- See the registers
 map('n', '<leader>r', '<cmd>reg<CR>')
 
 -- Open Mason and Lazy
-map('n', '<leader>m', '<cmd>Mason<CR>')
-map('n', '<leader>l', '<cmd>Lazy<CR>')
+map('n', '<leader>om', '<cmd>Mason<CR>')
+map('n', '<leader>ol', '<cmd>Lazy<CR>')
