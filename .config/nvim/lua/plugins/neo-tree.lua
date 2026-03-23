@@ -24,6 +24,9 @@ return {
         mappings = {
           ['\\'] = 'close_window',
           ['u'] = 'navigate_up',
+          ['l'] = 'open',
+          ['h'] = 'close_node',
+          [';'] = 'close_all_nodes',
         },
       },
     },
