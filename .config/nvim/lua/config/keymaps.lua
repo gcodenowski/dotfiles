@@ -33,3 +33,6 @@ map('n', '<C-k>', '<C-w><C-k>')
 
 -- Go the the dashboard
 map('n', '<leader>d', '<cmd>Alpha<CR>')
+
+-- Colorscheme picker
+map('n', '<leader>c', '<cmd>Telescope colorscheme<CR>')
