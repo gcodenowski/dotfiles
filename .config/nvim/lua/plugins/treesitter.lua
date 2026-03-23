@@ -1,4 +1,4 @@
-return { -- Highlight, edit, and navigate code
+return {
   'nvim-treesitter/nvim-treesitter',
   config = function()
     local filetypes = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'typescript', 'python' }
@@ -8,4 +8,5 @@ return { -- Highlight, edit, and navigate code
       callback = function() vim.treesitter.start() end,
     })
   end,
+  build = ':TSUpdate',
 }
