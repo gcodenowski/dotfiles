@@ -36,3 +36,6 @@ map('n', '<leader>d', '<cmd>Alpha<CR>')
 
 -- Colorscheme picker
 map('n', '<leader>c', '<cmd>Telescope colorscheme<CR>')
+
+-- See the registers
+map('n', '<leader>r', '<cmd>reg<CR>')
