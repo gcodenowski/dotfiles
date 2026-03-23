@@ -15,7 +15,7 @@ return {
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
       -- Mason must be loaded before its dependents so we need to set it up here.
-      --NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
+      --NOTE: `opts = {}` is the same as calling `require('mason').setup({})`lsp.lua
       { 'mason-org/mason.nvim', lazy = false },
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
@@ -108,7 +108,6 @@ return {
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
       --  See `:help lsp-config` for information about keys and how to configure
       local servers = {
-        clangd = {}, -- For C/C++
         pyright = {},
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
