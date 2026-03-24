@@ -20,5 +20,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Save dadbod sql query
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'sql' },
-  callback = function() vim.keymap.set('n', '<leader>qs', ':saveas ~/.local/share/db_ui/saved_queries/', { buffer = true, desc = 'Save query' }) end,
+  callback = function() vim.keymap.set('n', '<leader>wq', ':saveas ~/.local/share/db_ui/saved_queries/', { buffer = true, desc = 'Save query' }) end,
 })
