@@ -25,10 +25,6 @@ return {
           vim.keymap.set('n', 'h', '<Plug>(DBUI_SelectLine)', { buffer = true })
         end,
       })
-      vim.api.nvim_create_autocmd('FileType', {
-        pattern = { 'sql' },
-        callback = function() vim.keymap.set('n', '<leader>qs', ':saveas ~/.local/share/db_ui/saved_queries/') end,
-      })
     end,
   },
 }
