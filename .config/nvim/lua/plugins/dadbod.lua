@@ -17,5 +17,14 @@ return {
       vim.g.db_ui_save_location = vim.fn.expand '~/.local/share/db_ui'
       vim.g.db_ui_use_nerd_fonts = 1
     end,
+    config = function()
+      vim.api.nvim_create_autocmd('FileType', {
+        pattern = { 'dbui' },
+        callback = function()
+          vim.keymap.set('n', 'l', '<Plug>(DBUI_SelectLine)', { buffer = true })
+          vim.keymap.set('n', 'h', '<Plug>(DBUI_SelectLine)', { buffer = true })
+        end,
+      })
+    end,
   },
 }
