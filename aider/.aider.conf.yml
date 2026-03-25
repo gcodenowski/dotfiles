@@ -1,0 +1,19 @@
+# Global aider configuration
+
+model: ollama_chat/qwen3-coder:latest
+openai-api-base: http://localhost:11434
+
+# Git
+auto-commits: false
+dirty-commits: false # don't commit if repo has uncommmited changes
+attribute-author: false # skip adding "co-authored by: aider" to commits
+
+# UX
+dark-mode: true
+vim: true # enabled vi keybinds
+show-diffs:true # shows diffs after applying changes
+notifications: true
+multiline: true
+
+# Conventions I want aider to always follow
+read: /Users/gilbertkozanowski/dotfiles/.aider.conventions.md
