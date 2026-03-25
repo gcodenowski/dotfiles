@@ -3,6 +3,8 @@
 model: ollama_chat/qwen3-coder:latest
 openai-api-base: http://localhost:11434
 
+# General
+
 # Git
 auto-commits: false
 dirty-commits: false # don't commit if repo has uncommmited changes
