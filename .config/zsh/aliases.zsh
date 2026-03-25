@@ -1,5 +1,5 @@
 : <<'COMMENT'
-█████╗ ██╗     ██╗ █████╗ ███████╗███████╗███████╗
+ █████╗ ██╗     ██╗ █████╗ ███████╗███████╗███████╗
 ██╔══██╗██║     ██║██╔══██╗██╔════╝██╔════╝██╔════╝
 ███████║██║     ██║███████║███████╗█████╗  ███████╗
 ██╔══██║██║     ██║██╔══██║╚════██║██╔══╝  ╚════██║
@@ -32,7 +32,6 @@ alias zshfunc='nvim ~/dotfiles/.config/zsh/functions.zsh'
 # QoL
 alias vim='nvim'
 alias neovim='nvim'
-alias timer="timr-tui"
 
 # Misc
 alias zshreload='exec zsh' # This sources zshrc and creates new zsh instance
