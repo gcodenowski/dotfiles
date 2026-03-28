@@ -25,7 +25,6 @@ path=(
 )
 
 # == Themes ==
-ZSH_THEME="none"
 # ZSH_THEME="xiong-chiamiov-plus"
 # ZSH_THEME="obraun" -- that's my most recent
 # ZSH_THEME="gallois"
@@ -84,3 +83,6 @@ source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # zsh-vi-mode 
 source "$(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh" 
+
+# starship
+eval "$(starship init zsh)"
