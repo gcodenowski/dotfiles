@@ -25,8 +25,9 @@ path=(
 )
 
 # == Themes ==
+ZSH_THEME="none"
 # ZSH_THEME="xiong-chiamiov-plus"
-ZSH_THEME="obraun"
+# ZSH_THEME="obraun" -- that's my most recent
 # ZSH_THEME="gallois"
 
 # Autoupdate every 2 weeks
