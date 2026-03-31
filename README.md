@@ -20,6 +20,7 @@ Built on macOS Tahoe 26.3
 | [Kitty](https://github.com/kovidgoyal/kitty) | Terminal Emulator |
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) | System Specs Fetch |
 | [GNU](https://www.gnu.org/software/stow/) | Easy symlinking |
+| [Starship](https://github.com/starship/starship) | Custom prompt |
 
 ---
 
@@ -27,7 +28,7 @@ Built on macOS Tahoe 26.3
 
 This neovim configuration contains everything that can be
 found in kickstart.nvim, with the addition of [dadbod](https://github.com/tpope/vim-dadbod)
-for SQL work, and python linting.
+for database work, python linting and a custom greeter.
 
 ---
 
