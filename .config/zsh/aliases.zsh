@@ -21,6 +21,9 @@ alias nvimconfig='cd $HOME/dotfiles/.config/nvim"'
 alias wallpapers='cd "$HOME/Documents/Graphics/Wallpapers"'
 alias downloads='cd "$HOME/Downloads"'
 alias graphics='cd "$HOME/Documents/Graphics/"'
+alias calibrelibrary='cd "$HOME/Calibre Library/"'
+alias coolphotos='cd "$HOME/Documents/Graphics/coolPhotos/"'
+alias programming='cd "$HOME/Documents/Programming/"'
 
 # Edit File
 alias zshconfig='nvim ~/.zshrc'
