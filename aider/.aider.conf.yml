@@ -13,7 +13,7 @@ attribute-author: false # skip adding "co-authored by: aider" to commits
 # UX
 dark-mode: true
 vim: true # enabled vi keybinds
-show-diffs:true # shows diffs after applying changes
+show-diffs: true # shows diffs after applying changes
 notifications: true
 multiline: true
 

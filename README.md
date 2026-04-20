@@ -5,7 +5,7 @@ It is not stable by any means. Use at your own risk.
 
 Built on macOS Tahoe 26.3
 
-![Desktop](assets/nvimdemo.png)
+![Desktop](assets/screenRecord.gif)
 
 ## Tools Used
 
