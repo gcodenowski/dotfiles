@@ -60,12 +60,12 @@ ctrl + alt - 9 : yabai -m window --space 9
 # Screen Management
 
 # focus next/previous display
-ctrl + alt - right : yabai -m display --focus next
-ctrl + alt - left : yabai -m display --focus prev
+ctrl + alt - left : yabai -m display --focus next
+ctrl + alt - right : yabai -m display --focus prev
 
 # move windows between displays
-ctrl + alt - up : yabai -m window --display next
-ctrl + alt - down : yabai -m window --display prev
+ctrl + alt - down : yabai -m window --display next
+ctrl + alt - up : yabai -m window --display prev
 
 # Start/Stopping Yabai
 

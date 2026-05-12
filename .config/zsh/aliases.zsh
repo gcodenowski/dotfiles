@@ -24,6 +24,8 @@ alias graphics='cd "$HOME/Documents/Graphics/"'
 alias calibrelibrary='cd "$HOME/Calibre Library/"'
 alias coolphotos='cd "$HOME/Documents/Graphics/coolPhotos/"'
 alias programming='cd "$HOME/Documents/Programming/"'
+alias university='cd "$HOME/Documents/University/Chester/"'
+alias dissertation='cd "$HOME/Documents/University/Chester/Dissertation/"'
 
 # Edit File
 alias zshconfig='nvim ~/.zshrc'
