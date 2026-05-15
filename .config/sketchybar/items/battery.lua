@@ -8,7 +8,7 @@ local battery = sbar.add("item", "battery", {
 	update_freq = 60,
 	label = {
 		width = 1,
-		drawing = off,
+		drawing = "off",
 	},
 	click_script = "open 'x-apple.systempreferences:com.apple.Battery-Settings.extension'",
 })

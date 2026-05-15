@@ -8,7 +8,7 @@ local wifi_up = sbar.add("item", "wifi_up", {
 		string = icons.wifi.upload,
 		font = "SF Pro:Expanded Bold:11.0",
 		padding_right = 2,
-		padding_left = 15,
+		padding_left = 10,
 	},
 	label = {
 		color = colors.text,

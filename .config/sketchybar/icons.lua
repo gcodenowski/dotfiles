@@ -50,5 +50,4 @@ local icons = {
 		play_pause = "􀊈",
 	},
 }
-
 return icons
