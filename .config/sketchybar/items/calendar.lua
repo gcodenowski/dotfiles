@@ -1,4 +1,4 @@
--- == CALENDAR == 
+-- == CALENDAR ==
 
 local colors = require("colors")
 local settings = require("settings")
@@ -8,8 +8,12 @@ local calendar = sbar.add("item", "calendar", {
 	position = "right",
 	label = {
 		width = 90,
+		padding_left = 10,
 	},
-	icon = { string = icons.calendar },
+	icon = {
+		string = icons.calendar,
+		padding_right = 2,
+	},
 	update_freq = 30,
 
 	-- Open calendar app on mouse click
@@ -21,11 +25,9 @@ calendar:subscribe({
 	"forced",
 	"routine",
 	"system_woke",
-	},
-	function(env)
-		calendar:set({
-			icon = { string = icons.calendar },
-			label = { string = os.date("%a. %d %b.") },
-		})
-	end)
-
+}, function(env)
+	calendar:set({
+		icon = { string = icons.calendar },
+		label = { string = os.date("%a. %d %b.") },
+	})
+end)
