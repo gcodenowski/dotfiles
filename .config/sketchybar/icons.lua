@@ -17,6 +17,7 @@ local icons = {
 	lock = "􀢵",
 	specs = "􀩛",
 	sun = "􀷎",
+	power = "􀆨",
 
 	switch = {
 		on = "􁏮",
