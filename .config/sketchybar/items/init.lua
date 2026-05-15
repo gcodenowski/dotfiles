@@ -1,16 +1,16 @@
--- == LEFT SIDE ITEMS == 
+-- == LEFT SIDE ITEMS ==
 require("items.apple")
 require("items.front_app")
 require("items.spaces")
-require("items.wifi")
+require("items.network_speed")
 
--- == Bracket for spaces == 
+-- == Bracket for spaces ==
 require("items.spaces_bracket")
 
 -- == CENTER ITEMS ==
 -- require("items.uptime")
 
--- == RIGHT SIDE ITEMS == 
+-- == RIGHT SIDE ITEMS ==
 require("items.clock")
 require("items.calendar")
 require("items.battery")
@@ -20,4 +20,3 @@ require("items.cpu")
 
 -- == Bracket for cpu & memory ==
 require("items.brackets")
-
