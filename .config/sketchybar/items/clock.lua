@@ -12,6 +12,9 @@ local clock = sbar.add("item", "clock", {
 		width = 67,
 	},
 	update_freq = 1,
+
+	-- Open clock app on mouse click
+	click_script = "open -a 'Clock'",
 })
 
 clock:subscribe({ "routine" }, function(env)
