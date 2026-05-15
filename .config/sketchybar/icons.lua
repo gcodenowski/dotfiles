@@ -18,6 +18,7 @@ local icons = {
 	specs = "􀩛",
 	sun = "􀷎",
 	power = "􀆨",
+	display = "􀢹",
 
 	switch = {
 		on = "􁏮",
