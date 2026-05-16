@@ -18,6 +18,7 @@ require("items.battery")
 require("items.memory")
 require("items.cpu_graph")
 require("items.cpu")
+require("items.active_display")
 
 -- == Bracket for cpu & memory ==
 require("items.brackets")
