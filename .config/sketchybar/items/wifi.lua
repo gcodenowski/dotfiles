@@ -23,7 +23,6 @@ local wifi = sbar.add("item", "wifi", {
 -- Subscribing to the WiFi status
 wifi:subscribe({ "system_woke", "routine", "wifi_change" }, function(env)
 	sbar.exec("ipconfig getifaddr en0", function(info)
-		print(info)
 		local connected = info:match("%d+%.%d+%.%d+%.%d+")
 		local icon = icons.wifi.connected
 
