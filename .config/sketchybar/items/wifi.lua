@@ -13,9 +13,10 @@ local wifi = sbar.add("item", "wifi", {
 	click_script = "open /System/Library/PreferencePanes/Network.prefPane",
 	padding_left = 12,
 	icon = {
-		padding_left = 4,
+		padding_left = 5,
 		padding_right = 6,
 		font = { size = 14.0 },
+		y_offset = 1,
 	},
 })
 
