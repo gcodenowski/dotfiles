@@ -28,6 +28,6 @@ calendar:subscribe({
 }, function(env)
 	calendar:set({
 		icon = { string = icons.calendar },
-		label = { string = os.date("%a. %d %b.") },
+		label = { string = os.date("%a %d %b") },
 	})
 end)
