@@ -3,7 +3,7 @@ return {
   build = ':TSUpdate',
   config = function()
     vim.treesitter.language.register('sql', 'mysql')
-    require('nvim-treesitter.configs').setup {
+    require('nvim-treesitter').setup {
       ensure_installed = {
         'bash',
         'c',
@@ -22,9 +22,7 @@ return {
         'sql',
         'java',
       },
-      auto_install = true, -- installs missing parsers automatically on buffer open
-      highlight = { enable = true },
-      indent = { enable = true },
+      auto_install = true,
     }
   end,
 }
