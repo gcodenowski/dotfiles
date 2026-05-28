@@ -41,4 +41,3 @@ alias neovim='nvim'
 
 # Misc
 alias zshreload='exec zsh' # This sources zshrc and creates new zsh instance
-alias cpwd='pwd | tr -d "\n" | pbcopy' # Copies current working directory to clipboard
