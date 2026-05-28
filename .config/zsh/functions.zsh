@@ -54,14 +54,19 @@ obs_push(){
 
 # Push the current branch of dotiles to my GitHub with a message and a date stamp
 dot_push(){
-	cd "$HOME/dotfiles"
-	git add .
-	local msg="$*" # Variable capturing all positional parameters
-	if [[ -z "$msg" ]]; then # Checking if string is zero-length
-		msg="Dotfiles sync $(date +%d-%h-%Y_%H-%M-%S)"
+    cd "$HOME/dotfiles"
+    git add .
+    local msg="$*" # Variable capturing all positional parameters
+    if [[ -z "$msg" ]]; then # Checking if string is zero-length
+	msg="Dotfiles sync $(date +%d-%h-%Y_%H-%M-%S)"
 	fi
 	git commit -m "$msg"
 	git push 
+}
+
+# Copy working directory to clipboard
+cpwd() {
+    echo "$PWD" | sed "s|^$HOME|~|; s/ /\\\\ /g" | tr -d '\n' | pbcopy
 }
 
 # Run aider with qwen
