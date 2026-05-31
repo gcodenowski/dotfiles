@@ -65,7 +65,7 @@ dot_push(){
 }
 
 # Copy working directory to clipboard
-cpwd() {
+cwd() {
     echo "$PWD" | sed "s|^$HOME|~|; s/ /\\\\ /g" | tr -d '\n' | pbcopy
 }
 
