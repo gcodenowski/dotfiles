@@ -2,7 +2,6 @@ return {
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
   config = function()
-    vim.treesitter.language.register('sql', 'mysql')
     require('nvim-treesitter').setup {
       ensure_installed = {
         'bash',
@@ -24,5 +23,6 @@ return {
       },
       auto_install = true,
     }
+    vim.treesitter.language.register('sql', 'mysql')
   end,
 }
