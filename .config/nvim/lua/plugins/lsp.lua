@@ -47,6 +47,18 @@ return {
             vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
           end
 
+          -- Open diagnostic float window
+          map('<leader>e', vim.diagnostic.open_float, 'Show [e]rror diagnostic')
+
+          -- Yank the error diagnostic message
+          map('<leader>ey', function()
+            local diagnostics = vim.diagnostic.get(0, { lnum = vim.fn.line '.' - 1 })
+            if diagnostics and #diagnostics > 0 then
+              vim.fn.setreg('+', diagnostics[1].message)
+              vim.notify 'Diagnostic copied to clipboard'
+            end
+          end, 'Yank [E]rror Diagnostic')
+
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
           map('grn', vim.lsp.buf.rename, '[R]e[n]ame')
