@@ -8,7 +8,7 @@ return {
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
         lua = { 'luacheck' },
-        python = { 'pylint' },
+        python = { 'ruff' },
       }
 
       -- Luacheck config
