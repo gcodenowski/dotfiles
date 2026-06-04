@@ -121,6 +121,7 @@ return {
       --  See `:help lsp-config` for information about keys and how to configure
       local servers = {
         pyright = {},
+        ruff = {},
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
@@ -143,7 +144,7 @@ return {
         'stylua', -- Used to format Lua code
 
         -- Python
-        'pylint', -- linter
+        'ruff', -- linter
       })
 
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
