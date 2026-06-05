@@ -69,6 +69,12 @@ cwd() {
     echo "$PWD" | sed "s|^$HOME|~|; s/ /\\\\ /g" | tr -d '\n' | pbcopy
 }
 
+# Start Odysseus
+odysseus(){
+    cd "$HOME/Documents/Programming/odysseus/"
+    ./start-macos.sh
+}
+
 # Run aider with qwen
 run_aider() {
 aider --model ollama_chat/qwen3-coder:latest --openai-api-base http://localhost:11434
