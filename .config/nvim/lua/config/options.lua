@@ -41,8 +41,8 @@ for k, v in pairs(options) do
 end
 
 -- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
---  See `:help 'clipboard'`
+-- Schedule the setting after `UiEnter` because it can increase startup-time.
+-- See `:help 'clipboard'`
 vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 
 -- How neovim displays whitespace characters
