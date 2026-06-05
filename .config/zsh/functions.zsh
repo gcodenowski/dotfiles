@@ -59,7 +59,7 @@ dot_push(){
     local msg="$*" # Variable capturing all positional parameters
     if [[ -z "$msg" ]]; then # Checking if string is zero-length
 	msg="Dotfiles sync $(date +%d-%h-%Y_%H-%M-%S)"
-	fi
+    fi
 	git commit -m "$msg"
 	git push 
 }
