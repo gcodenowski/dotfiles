@@ -37,6 +37,9 @@ map('n', '<leader>r', '<cmd>reg<CR>')
 -- Go the the dashboard
 map('n', '<leader>d', '<cmd>Alpha<CR>')
 
+-- Checkhealth
+map('n', '<leader>ch', '<cmd>checkhealth<CR>')
+
 -- Keymaps to (o)pen things:
 -- Colorscheme picker
 map('n', '<leader>oc', '<cmd>Telescope colorscheme<CR>')
