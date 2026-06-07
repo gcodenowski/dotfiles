@@ -75,10 +75,22 @@ odysseus(){
     ./start-macos.sh
 }
 
-# Start Qwen through llama.cpp
+# Run Qwen
 qwen() {
-    llama-server -hf unsloth/Qwen3.6-27B-MTP-GGUF:Q5_K_M
+    case "$1" in
+	cli) llama-cli -hf unsloth/ # add exact qwen model here later
+	server) llama-server -hf unsloth/
+	*) echo "Please pass cli|server"
 }
+
+# Run Granite
+granite() {
+    case "$1" in
+	cli) llama-cli -hf unsloth/granite-3.3-8b-instruct-GGUF:UD-Q4_K_XL
+	server) llama-server -hf unsloth/granite-3.3-8b-instruct-GGUF:UD-Q4_K_XL
+	*) echo "Please pass cli|server"
+}
+
 
 # Run aider with qwen
 run_aider() {
