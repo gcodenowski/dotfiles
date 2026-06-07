@@ -75,7 +75,12 @@ odysseus(){
     ./start-macos.sh
 }
 
+# Start Qwen through llama.cpp
+qwen() {
+    llama-server -hf unsloth/Qwen3.6-27B-MTP-GGUF:Q5_K_M
+}
+
 # Run aider with qwen
 run_aider() {
-aider --model ollama_chat/qwen3-coder:latest --openai-api-base http://localhost:11434
+    aider --model ollama_chat/qwen3-coder:latest --openai-api-base http://localhost:11434
 }
