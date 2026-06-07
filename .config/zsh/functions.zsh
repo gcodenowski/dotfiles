@@ -78,17 +78,19 @@ odysseus(){
 # Run Qwen
 qwen() {
     case "$1" in
-	cli) llama-cli -hf unsloth/ # add exact qwen model here later
-	server) llama-server -hf unsloth/
-	*) echo "Please pass cli|server"
+	cli) llama-cli -hf unsloth/ ;; # add exact qwen model here later
+	server) llama-server -hf unsloth/ ;;
+	*) echo "Please pass cli|server" ;;
+    esac
 }
 
 # Run Granite
 granite() {
     case "$1" in
-	cli) llama-cli -hf unsloth/granite-3.3-8b-instruct-GGUF:UD-Q4_K_XL
-	server) llama-server -hf unsloth/granite-3.3-8b-instruct-GGUF:UD-Q4_K_XL
-	*) echo "Please pass cli|server"
+	cli) llama-cli -hf unsloth/granite-3.3-8b-instruct-GGUF:UD-Q4_K_XL ;;
+	server) llama-server -hf unsloth/granite-3.3-8b-instruct-GGUF:UD-Q4_K_XL ;;
+	*) echo "Please pass cli|server" ;;
+    esac
 }
 
 
