@@ -41,17 +41,6 @@ return {
     vim.keymap.set({ 'n', 'x' }, '<leader>as', function() require('opencode').command 'prompt.submit' end, { desc = 'Submit Prompt' })
     vim.keymap.set({ 'n', 'x' }, '<leader>ac', function() require('opencode').command 'prompt.clear' end, { desc = 'Clear Prompt' })
 
-    -- Send the yanked text (unnamed register) to opencode
-    vim.keymap.set({ 'n', 'x' }, '<leader>ay', function()
-      local yanked = vim.fn.getreg '"'
-      if yanked == '' then
-        vim.notify('No text yanked', vim.log.levels.WARN)
-        return
-      end
-
-      require('opencode').snacks_picker_send(yanked)
-    end, { desc = 'Send yanked text to Opencode' })
-
     vim.keymap.set({ 'n', 'x' }, '<leader>so', function() require('opencode').select() end, { desc = 'Select opencode…' })
 
     vim.keymap.set('n', '<leader>os', function()
