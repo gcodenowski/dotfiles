@@ -1,3 +1,4 @@
+-- To-do list, triggered with <leader>td
 return {
   'atiladefreitas/dooing',
   config = function()
