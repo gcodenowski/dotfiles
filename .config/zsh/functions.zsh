@@ -84,12 +84,22 @@ qwen() {
     esac
 }
 
-# Run Granite
-granite() {
+# Run Granite 3
+granite3() {
 local ctx=${2:-8192}
     case "$1" in
         cli)    llama-cli    -hf unsloth/granite-3.3-8b-instruct-GGUF --ctx-size "$ctx" ;;
         server) llama-server -hf unsloth/granite-3.3-8b-instruct-GGUF --ctx-size "$ctx" ;;
+        *)      echo "Please pass cli|server [ctx-size]" ;;
+    esac
+}
+
+# Run Granite 4
+granite4() {
+local ctx=${2:-8192}
+    case "$1" in
+	cli)    llama-cli    -hf unsloth/granite-4.1-8b-GGUF:Q6_K --ctx-size "$ctx" ;;
+        server) llama-server -hf unsloth/granite-4.1-8b-GGUF:Q6_K --ctx-size "$ctx" ;;
         *)      echo "Please pass cli|server [ctx-size]" ;;
     esac
 }
