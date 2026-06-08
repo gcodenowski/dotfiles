@@ -34,10 +34,23 @@ return {
     vim.o.autoread = true -- Required for `vim.g.opencode_opts.events.reload`
 
     -- Recommended/example keymaps
-    vim.keymap.set({ 'n', 'x' }, '<leader>ao', function() require('opencode').ask '@this: ' end, { desc = 'Ask opencode…' })
-    vim.keymap.set({ 'n', 'x' }, '<leader>av', function() require('opencode').ask '@visible: ' end, { desc = 'Ask opencode about visible text…' })
-    vim.keymap.set({ 'n', 'x' }, '<leader>ag', function() require('opencode').ask '@diff: ' end, { desc = 'Ask opencode about the git diff…' })
-    vim.keymap.set({ 'n', 'x' }, '<leader>ad', function() require('opencode').ask '@diagnostics: ' end, { desc = 'Ask opencode about the diagnostics…' })
+    vim.keymap.set({ 'n', 'x' }, '<leader>at', function() require('opencode').ask '@this: ' end, { desc = 'Ask opencode…' })
+    vim.keymap.set({ 'n', 'x' }, '<leader>av', function() require('opencode').ask '@visible: ' end, { desc = 'Visible Text' })
+    vim.keymap.set({ 'n', 'x' }, '<leader>ag', function() require('opencode').ask '@diff: ' end, { desc = 'Git Diff' })
+    vim.keymap.set({ 'n', 'x' }, '<leader>ad', function() require('opencode').ask '@diagnostics: ' end, { desc = 'Diagnostics' })
+    vim.keymap.set({ 'n', 'x' }, '<leader>as', function() require('opencode').command 'prompt.submit' end, { desc = 'Submit Prompt' })
+    vim.keymap.set({ 'n', 'x' }, '<leader>ac', function() require('opencode').command 'prompt.clear' end, { desc = 'Clear Prompt' })
+
+    -- Send the yanked text (unnamed register) to opencode
+    vim.keymap.set({ 'n', 'x' }, '<leader>ay', function()
+      local yanked = vim.fn.getreg '"'
+      if yanked == '' then
+        vim.notify('No text yanked', vim.log.levels.WARN)
+        return
+      end
+
+      require('opencode').snacks_picker_send(yanked)
+    end, { desc = 'Send yanked text to Opencode' })
 
     vim.keymap.set({ 'n', 'x' }, '<leader>so', function() require('opencode').select() end, { desc = 'Select opencode…' })
 
