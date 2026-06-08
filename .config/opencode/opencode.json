@@ -1,0 +1,34 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "reserved": 5000
+  },
+  "provider": {
+    "llama.cpp": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama-server (local)",
+      "options": {
+        "baseURL": "http://127.0.0.1:8080/v1"
+      },
+      "models": {
+        "unsloth/granite-4.1-8b-GGUF": {
+          "name": "Granite 4.1 8B",
+          "limit": { "context": 32000, "output": 4096 }
+        },
+        "model/unsloth/granite-3.3-8b-instruct-GGUF": {
+          "name": "Granite 3.3 8B Instruct",
+          "limit": { "context": 32000, "output": 4096 }
+        },
+        "model/Qwen/Qwen2.5-Coder-14B-Instruct-GGUF": {
+          "name": "Qwen 2.5 Coder 14B Instruct",
+          "limit": {
+            "context": 32000,
+            "output": 4000
+          }
+        }
+      }
+    }
+  }
+}
