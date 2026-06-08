@@ -35,17 +35,25 @@ return {
 
     -- Recommended/example keymaps
     vim.keymap.set({ 'n', 'x' }, '<leader>ao', function() require('opencode').ask '@this: ' end, { desc = 'Ask opencode…' })
+    vim.keymap.set({ 'n', 'x' }, '<leader>av', function() require('opencode').ask '@visible: ' end, { desc = 'Ask opencode about visible text…' })
+    vim.keymap.set({ 'n', 'x' }, '<leader>ag', function() require('opencode').ask '@diff: ' end, { desc = 'Ask opencode about the git diff…' })
+    vim.keymap.set({ 'n', 'x' }, '<leader>ad', function() require('opencode').ask '@diagnostics: ' end, { desc = 'Ask opencode about the diagnostics…' })
+
     vim.keymap.set({ 'n', 'x' }, '<leader>so', function() require('opencode').select() end, { desc = 'Select opencode…' })
 
-    vim.keymap.set('n', '<leader>od', function() require('opencode').prompt 'Explain @diagnostics' end, { desc = 'Explain diagnostics' })
-
-    vim.keymap.set('x', '<leader>ox', function() local selection = vim.fn.getreg '"' end)
-
-    vim.keymap.set('n', '<leader>os', function() require('opencode').command 'session.interrupt' end, { desc = 'Interrupt opencode' })
+    vim.keymap.set('n', '<leader>os', function()
+      require('opencode').command 'session.interrupt'
+      require('opencode').command 'session.interrupt'
+      -- has to be sent twice to confirm
+    end, { desc = 'Interrupt opencode' })
 
     vim.keymap.set('n', '<leader>ons', function() require('opencode').command 'session.new' end, { desc = 'Start a new session' })
 
     vim.keymap.set({ 'n', 'x' }, 'go', function() return require('opencode').operator '@this ' end, { desc = 'Add range to opencode', expr = true })
     vim.keymap.set('n', 'goo', function() return require('opencode').operator '@this ' .. '_' end, { desc = 'Add line to opencode', expr = true })
+
+    -- These don't work for now
+    vim.keymap.set('n', '<C>k', function() require('opencode').command 'session.half.page.up' end, { desc = 'Scroll opencode up' })
+    vim.keymap.set('n', '<C>j', function() require('opencode').command 'session.half.page.down' end, { desc = 'Scroll opencode down' })
   end,
 }
