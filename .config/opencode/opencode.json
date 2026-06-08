@@ -5,6 +5,24 @@
     "prune": true,
     "reserved": 5000
   },
+  "agent": {
+    "build": {
+      "mode": "primary",
+      "edit": "ask",
+      "write": "ask",
+      "bash": "ask"
+    },
+    "analyst": {
+      "mode": "primary",
+      "description": "Provides guidance, recommends best practices and highlights issues",
+      "permission": {
+        "edit": "ask",
+        "bash": "ask",
+        "write": "deny"
+      },
+      "prompt": "You are supposed to analyse the code, provide guidance and explanations, and recommend solutions in line with best software engineering practices"
+    }
+  },
   "provider": {
     "llama.cpp": {
       "npm": "@ai-sdk/openai-compatible",
