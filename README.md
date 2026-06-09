@@ -23,14 +23,21 @@ Built on macOS Tahoe 26.3
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) | System Specs Fetch |
 | [GNU](https://www.gnu.org/software/stow/) | Easy symlinking |
 | [Starship](https://github.com/starship/starship) | Custom prompt |
+| [Opencode](https://github.com/anomalyco/opencode) | AI |
 
 ---
 
 ### Neovim
 
 This neovim configuration contains everything that can be
-found in kickstart.nvim, with the addition of [dadbod](https://github.com/tpope/vim-dadbod)
-for database work, python linting and a custom greeter.
+found in kickstart.nvim, with the addition of the following:
+
+- [dadbod](https://github.com/tpope/vim-dadbod) - DB work
+- [opencode](https://github.com/nickjvandyke/opencode.nvim) - Opencode Integration
+- [snacks](https://github.com/folke/snacks.nvim) - Collection of QoL tools
+- [dooing](https://github.com/atiladefreitas/dooing) - To Do list
+- [typescript-tools](https://github.com/pmizio/typescript-tools.nvim) -
+ Typescript all-in-one plugin
 
 ---
 
@@ -57,8 +64,14 @@ Provides coloured borders around windows.
 
 - SIP (System Integrity Protection) **doesn't** need to be disabled
 for this yabai config to work.
-- Shortcuts managed in /.config/skhd/skhdrc
-- App exceptions, mouse bindings & default settings managed in /.config/yabai/yabairc
+- Shortcuts managed in .config/skhd/skhdrc
+- App exceptions, mouse bindings & default settings managed in .config/yabai/yabairc
+- Instant space switching is achieved via [this tool](https://github.com/jurplel/InstantSpaceSwitcher)
+
+### skhd
+
+skhd with [hyperkey](https://hyperkey.app) is used to add shortcuts for managing
+applications
 
 ---
 
@@ -66,7 +79,12 @@ for this yabai config to work.
 
 Sketchybar config inspired by FelixKratz's [dotfiles](https://github.com/FelixKratz/dotfiles)
 
-Kickstart.nvim is a great way to get into neovim and was a starting point
-for this neovim config.
+[Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
+is a great way to get into neovim, and was a starting point
+for this neovim config.  
+
 If you're after making your first config I'd recommend using kickstart and not
 using a pre-made configuration like this one.
+
+I would like to sincerely thank all developers that built the tools I use
+day-to-day!
