@@ -29,7 +29,7 @@ alias university='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Chester
 alias chester='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Chester/"'
 alias dissertation='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Chester/Dissertation"'
 alias tbackend='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Chester/T3/SoftwareStudio/TruckLoaderBackend"'
-alias midi='cd "$HOME/Documents/Programming/midiController/"'
+alias midi='cd "$HOME/Documents/Programming/midi-show-controller/"'
 
 # Edit File
 alias zshconfig='nvim ~/.zshrc'
