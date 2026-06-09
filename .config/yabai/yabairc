@@ -40,5 +40,5 @@ yabai -m config external_bar all:33:0
 yabai -m config debug_output true
 
 # Bootstrap janky borders
-borders active_color=0xff94dcff inactive_color=0xa1000000 inactive_width=5.0 width = 5.0 blacklist="iPhone Mirroring" & 
+borders active_color=0xff94dcff inactive_color=0xa1000000 width=5.0 blacklist="iPhone Mirroring" & 
 
