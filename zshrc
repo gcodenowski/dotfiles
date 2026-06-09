@@ -1,5 +1,6 @@
 # Path to my Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export PICO_SDK_PATH=~/pico-sdk
 
 # Sourcing the modular config files
 for config in ~/dotfiles/.config/zsh/*.zsh(N); do
