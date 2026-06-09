@@ -41,15 +41,15 @@ return {
     vim.keymap.set({ 'n', 'x' }, '<leader>as', function() require('opencode').command 'prompt.submit' end, { desc = 'Submit Prompt' })
     vim.keymap.set({ 'n', 'x' }, '<leader>ac', function() require('opencode').command 'prompt.clear' end, { desc = 'Clear Prompt' })
 
-    vim.keymap.set({ 'n', 'x' }, '<leader>so', function() require('opencode').select() end, { desc = 'Select opencode…' })
+    vim.keymap.set({ 'n', 'x' }, '<leader>ase', function() require('opencode').select() end, { desc = 'Select opencode…' })
 
-    vim.keymap.set('n', '<leader>os', function()
+    vim.keymap.set('n', '<leader>ai', function()
       require('opencode').command 'session.interrupt'
       require('opencode').command 'session.interrupt'
       -- has to be sent twice to confirm
     end, { desc = 'Interrupt opencode' })
 
-    vim.keymap.set('n', '<leader>ons', function() require('opencode').command 'session.new' end, { desc = 'Start a new session' })
+    vim.keymap.set('n', '<leader>ans', function() require('opencode').command 'session.new' end, { desc = 'Start a new session' })
 
     vim.keymap.set({ 'n', 'x' }, 'go', function() return require('opencode').operator '@this ' end, { desc = 'Add range to opencode', expr = true })
     vim.keymap.set('n', 'goo', function() return require('opencode').operator '@this ' .. '_' end, { desc = 'Add line to opencode', expr = true })
