@@ -38,6 +38,7 @@ found in kickstart.nvim, with the addition of the following:
 - [dooing](https://github.com/atiladefreitas/dooing) - To Do list
 - [typescript-tools](https://github.com/pmizio/typescript-tools.nvim) -
  Typescript all-in-one plugin
+- [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) - File explorer
 
 ---
 
