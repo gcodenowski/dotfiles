@@ -77,11 +77,12 @@ odysseus(){
 
 # Run Qwen
 qwen() {
-    case "$1" in
-	cli) llama-cli -hf model/Qwen/Qwen2.5-Coder-14B-Instruct-GGUF --ctx-size "$ctx" ;;
-	server) llama-server -hf model/Qwen/Qwen2.5-Coder-14B-Instruct-GGUF --ctx-size "$ctx" ;;
-	*) echo "Please pass cli|server [ctx-size]" ;;
-    esac
+    local ctx=${2:-8192}
+	case "$1" in
+		cli) llama-cli       -hf Qwen/Qwen2.5-Coder-14B-Instruct-GGUF --ctx-size "$ctx" ;;
+		server) llama-server -hf Qwen/Qwen2.5-Coder-14B-Instruct-GGUF --ctx-size "$ctx" ;;
+		*) echo "Please pass cli|server [ctx-size]" ;;
+        esac
 }
 
 # Run Granite 3

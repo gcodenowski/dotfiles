@@ -33,7 +33,7 @@
       "models": {
         "unsloth/granite-4.1-8b-GGUF": {
           "name": "Granite 4.1 8B",
-          "limit": { "context": 32000, "output": 4096 }
+          "limit": { "context": 40000, "output": 4096 }
         },
         "model/unsloth/granite-3.3-8b-instruct-GGUF": {
           "name": "Granite 3.3 8B Instruct",
