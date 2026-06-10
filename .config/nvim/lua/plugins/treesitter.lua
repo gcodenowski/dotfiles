@@ -20,6 +20,7 @@ return {
         'python',
         'sql',
         'java',
+        'regex',
       },
       auto_install = true,
     }
