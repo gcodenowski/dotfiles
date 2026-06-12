@@ -14,9 +14,14 @@ return { -- You can easily change to a different colorscheme.
     vim.api.nvim_set_hl(0, 'Comment', { italic = true, fg = hl.fg })
 
     -- Set the dimmed code colour
-    vim.api.nvim_set_hl(0, 'SnacksDim', { fg = '#1a1d21' })
-
+    vim.api.nvim_set_hl(0, 'SnacksDim', { fg = '#0d1117' })
+    -- #1a1d21
     -- Yanking colour (see autocmds.lua)
     vim.api.nvim_set_hl(0, 'YankFlash', { bg = '#f7768e', fg = '#1a1b26', bold = true })
+
+    -- Float windows (Mason, Lazy, etc.)
+    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#0d1117', fg = '#a9b8d0' })
+    vim.api.nvim_set_hl(0, 'FloatBorder', { bg = '#0d1117', fg = '#3d5a7a' })
+    vim.api.nvim_set_hl(0, 'FloatTitle', { bg = '#0d1117', fg = '#6b9ab8', bold = true })
   end,
 }
