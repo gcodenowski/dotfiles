@@ -31,8 +31,9 @@ local options = {
   confirm = true, -- ask before quitting without saving
 
   -- Indentation
+  tabstop = 4,
   shiftwidth = 4,
-  softtabstop = 2,
+  softtabstop = 4,
   expandtab = true,
 }
 
