@@ -9,7 +9,25 @@ return {
     -- refer to the configuration section below
     animate = { enabled = true },
     bigfile = { enabled = true },
-    dashboard = { enabled = false },
+
+    -- Dimming of code out of current scope
+    dim = {
+      enabled = true,
+      scope = {
+        min_size = 5,
+        max_size = 20,
+        siblings = true,
+      },
+      animate = {
+        enabled = vim.fn.has("nvim-0.10") == 1,
+        easing = "outQuad",
+        duration = {
+          step = 20,
+          total = 300,
+        },
+      },
+    },
+
     explorer = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
@@ -20,7 +38,8 @@ return {
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
-    zen = { enabled = true, notify = true, which_key = true },
-    toggle = { enabled = true },
   },
+  keys = {
+    { "<leader>D", function() Snacks.toggle.dim():map("<leader>D") end, desc = "Toggle Dimming" },
+  }
 }

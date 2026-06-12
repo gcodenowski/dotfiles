@@ -11,8 +11,7 @@
 return {
   -- Main LSP Configuration
   {
-    'neovim/nvim-lspconfig',
-    dependencies = {
+    'neovim/nvim-lspconfig', dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
       -- Mason must be loaded before its dependents so we need to set it up here.
       --NOTE: `opts = {}` is the same as calling `require('mason').setup({})`lsp.lua
@@ -121,11 +120,11 @@ return {
       --  See `:help lsp-config` for information about keys and how to configure
       local servers = {
         pyright = {},
-        ruff = {},
         clangd = {},
       }
 
       -- Ensure the servers and tools above are installed
+      -- All formatters and linters go here (lua-language-server is the only exception)
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         -- Lua
@@ -134,9 +133,6 @@ return {
 
         -- Python
         'ruff',
-
-        -- C/C++
-        'clangd'
       })
 
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
