@@ -8,9 +8,11 @@
   "agent": {
     "build": {
       "mode": "primary",
-      "edit": "ask",
-      "write": "ask",
-      "bash": "ask"
+      "permission": {
+        "edit": "ask",
+        "write": "ask",
+        "bash": "ask"
+      }
     },
     "analyst": {
       "mode": "primary",
@@ -20,7 +22,7 @@
         "bash": "ask",
         "write": "deny"
       },
-      "prompt": "You are supposed to analyse the code, provide guidance and explanations, and recommend solutions in line with best software engineering practices"
+      "prompt": "You are supposed to analyse the code, provide guidance and explanations, and recommend solutions in line with best software engineering practices, answer concisely and to the point, while including all critical information."
     }
   },
   "provider": {
