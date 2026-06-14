@@ -42,7 +42,7 @@ alias zshfunc='nvim ~/dotfiles/.config/zsh/functions.zsh'
 # QoL
 alias vim='nvim'
 alias neovim='nvim'
-alias ls='ls -a'
+alias ls='eza -a --icons'
 
 # Misc
 alias zshreload='exec zsh' # This sources zshrc and creates new zsh instance

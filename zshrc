@@ -4,14 +4,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PICO_SDK_PATH="$HOME/pico-sdk"
 
-# Sourcing the modular config files
-for config in ~/dotfiles/.config/zsh/*.zsh(N); do
-	# (N) ensures that an empty list is returned if there are no matching files
-	# instead of throwing an error
-	source "$config"
-done
-unset config # Remove the variable after use
-
 # Lua path
 export LUA_CPATH="$HOME/.local/share/sketchybar_lua/?.so;$HOME/.local/share/sketchybar_lua/?/init.so;;"
 
@@ -75,4 +67,12 @@ node() { nvm; node "$@"; }
 npm()  { nvm; npm  "$@"; }
 npx()  { nvm; npx  "$@"; }
 
-zprof # uncomment for loading time testing
+# Sourcing the modular config files
+for config in ~/dotfiles/.config/zsh/*.zsh(N); do
+	# (N) ensures that an empty list is returned if there are no matching files
+	# instead of throwing an error
+	source "$config"
+done
+unset config # Remove the variable after use
+
+# zprof # uncomment for loading time testing
