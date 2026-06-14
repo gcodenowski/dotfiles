@@ -1,3 +1,5 @@
+# zmodload zsh/zprof # uncomment for loading time testing
+
 # Path to my Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PICO_SDK_PATH="$HOME/pico-sdk"
@@ -62,6 +64,17 @@ source "$(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 # starship
 eval "$(starship init zsh)"
 
+# lazy-loading NVM, only sourcing it on the first call
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm() {
+  unfunction nvm node npm npx
+  [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+  nvm "$@"
+}
+node() { nvm; node "$@"; }
+npm()  { nvm; npm  "$@"; }
+npx()  { nvm; npx  "$@"; }
+
+
+# zprof # uncomment for loading time testing
