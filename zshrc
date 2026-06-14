@@ -72,6 +72,7 @@ nvm() {
   [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
   nvm "$@"
 }
+# same for npm, node and npx, calling them calls nvm and loads it
 node() { nvm; node "$@"; }
 npm()  { nvm; npm  "$@"; }
 npx()  { nvm; npx  "$@"; }
