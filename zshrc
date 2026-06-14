@@ -1,4 +1,5 @@
 # zmodload zsh/zprof # uncomment for loading time testing
+# # same for npm, node and npx, calling them calls nvm and loads it
 
 # Path to my Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -39,7 +40,19 @@ zstyle ':omz:update' frequency 14
 # Plugins
 plugins=(git colored-man-pages eza macos)
 
+# Disabling compfix before omz loads it (for speed)
+DISABLE_COMPFIX=true
+skip_global_compinit=1
+
 source $ZSH/oh-my-zsh.sh
+
+# This checks whether .zcompdump exists and is older than 12hrs, if so, it loads it, if no, it skips loading it
+autoload -Uz compinit
+if [[ -n "$HOME/.zcompdump"(#qN.mh+12) ]]; then
+  compinit
+else
+  compinit -C
+fi
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
