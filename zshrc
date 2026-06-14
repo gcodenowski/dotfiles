@@ -1,5 +1,4 @@
 # zmodload zsh/zprof # uncomment for loading time testing
-# # same for npm, node and npx, calling them calls nvm and loads it
 
 # Path to my Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -12,9 +11,6 @@ for config in ~/dotfiles/.config/zsh/*.zsh(N); do
 	source "$config"
 done
 unset config # Remove the variable after use
-
-# Autocomplete Plugin (has to be at the top of the file)
-source "$(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
 # Lua path
 export LUA_CPATH="$HOME/.local/share/sketchybar_lua/?.so;$HOME/.local/share/sketchybar_lua/?/init.so;;"
@@ -40,19 +36,7 @@ zstyle ':omz:update' frequency 14
 # Plugins
 plugins=(git colored-man-pages eza macos)
 
-# Disabling compfix before omz loads it (for speed)
-DISABLE_COMPFIX=true
-skip_global_compinit=1
-
 source $ZSH/oh-my-zsh.sh
-
-# This checks whether .zcompdump exists and is older than 12hrs, if so, it loads it, if no, it skips loading it
-autoload -Uz compinit
-if [[ -n "$HOME/.zcompdump"(#qN.mh+12) ]]; then
-  compinit
-else
-  compinit -C
-fi
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -85,10 +69,10 @@ nvm() {
   [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
   nvm "$@"
 }
+
 # same for npm, node and npx, calling them calls nvm and loads it
 node() { nvm; node "$@"; }
 npm()  { nvm; npm  "$@"; }
 npx()  { nvm; npx  "$@"; }
 
-
-# zprof # uncomment for loading time testing
+zprof # uncomment for loading time testing
