@@ -38,6 +38,7 @@ return {
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
+    scratch = { enabled = true },
   },
   keys = {
     { "<leader>D", function() Snacks.toggle.dim():map("<leader>D") end, desc = "Toggle Dimming" },

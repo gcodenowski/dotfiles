@@ -15,7 +15,7 @@ return { -- You can easily change to a different colorscheme.
 
     -- Set the dimmed code colour
     vim.api.nvim_set_hl(0, 'SnacksDim', { fg = '#0d1117' })
-    -- #1a1d21
+
     -- Yanking colour (see autocmds.lua)
     vim.api.nvim_set_hl(0, 'YankFlash', { bg = '#f7768e', fg = '#1a1b26', bold = true })
 
@@ -23,5 +23,12 @@ return { -- You can easily change to a different colorscheme.
     vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#0d1117', fg = '#a9b8d0' })
     vim.api.nvim_set_hl(0, 'FloatBorder', { bg = '#0d1117', fg = '#3d5a7a' })
     vim.api.nvim_set_hl(0, 'FloatTitle', { bg = '#0d1117', fg = '#6b9ab8', bold = true })
+
+    -- Window split borders
+    vim.api.nvim_set_hl(0, 'WinSeparator', { bg = 'NONE', fg = '#a9b8d0' })
+
+    -- Statusline
+    vim.api.nvim_set_hl(0, 'StatusLine', { bg = '#6b9ab8', fg = '#0d1117' })
+    vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = '#a9b8d0', fg = '#1a1b26' })
   end,
 }
