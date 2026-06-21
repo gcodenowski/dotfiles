@@ -85,6 +85,7 @@ ctrl + alt + cmd + shift - g : open -a "Steam" # g for games
 ctrl + alt + cmd + shift - o : open -a "Obsidian" 
 ctrl + alt + cmd + shift - n : open -a "Notes" 
 ctrl + alt + cmd + shift - c : open -a "Calendar"
+ctrl + alt + cmd + shift - l : open -a "LibreOffice"
 ctrl + alt + cmd + shift - r : open -a "Reminders"
 ctrl + alt + cmd + shift - p : open -a "Pages"
 ctrl + alt + cmd + shift - e : open -a "Elgato Stream Deck"
