@@ -105,7 +105,12 @@ local ctx=${2:-8192}
     esac
 }
 
-# Run aider with qwen
-run_aider() {
-    aider --model ollama_chat/qwen3-coder:latest --openai-api-base http://localhost:11434
+# Run Qwen
+qwen() {
+local ctx=${2:-8192}
+    case "$1" in
+	cli)    llama-cli -hf unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:UD-Q4_K_XL --ctx-size "$ctx" ;;
+        server) llama-server -hf unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:UD-Q4_K_XL --ctx-size "$ctx" ;;
+        *)      echo "Please pass cli|server [ctx-size]" ;;
+    esac
 }
