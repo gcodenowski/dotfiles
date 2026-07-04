@@ -19,6 +19,7 @@
       "mode": "primary",
       "description": "Provides guidance, recommends best practices and highlights issues",
       "permission": {
+        "read": "allow",
         "edit": "ask",
         "bash": "ask",
         "write": "deny"
@@ -42,13 +43,11 @@
           "name": "Granite 3.3 8B Instruct",
           "limit": { "context": 32000, "output": 4096 }
         },
-        "model/Qwen/Qwen2.5-Coder-14B-Instruct-GGUF": {
-          "name": "Qwen 2.5 Coder 14B Instruct",
-          "limit": {
-            "context": 32000,
-            "output": 4000
-          }
+        "model/yuxinlu1/gemma-4-12B-coder-fable5-comopser2.5-v1-GGUF": {
+          "name": "Geemma4-12B Coder - Python specialised",
+          "limit": { "context": 48000, "output": 4096 }
         }
+       }
       }
     }
   }

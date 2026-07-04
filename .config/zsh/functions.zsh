@@ -75,12 +75,12 @@ odysseus(){
     ./start-macos.sh
 }
 
-# Run Qwen
-qwen() {
+# Run Gemma
+gemma() {
     local ctx=${2:-8192}
 	case "$1" in
-		cli) llama-cli       -hf Qwen/Qwen2.5-Coder-14B-Instruct-GGUF --ctx-size "$ctx" ;;
-		server) llama-server -hf Qwen/Qwen2.5-Coder-14B-Instruct-GGUF --ctx-size "$ctx" ;;
+		cli) llama-cli       -hf yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF:Q4_K_M --ctx-size "$ctx" ;;
+		server) llama-server -hf yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF:Q4_K_M --ctx-size "$ctx" ;;
 		*) echo "Please pass cli|server [ctx-size]" ;;
         esac
 }
