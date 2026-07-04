@@ -75,42 +75,29 @@ odysseus(){
     ./start-macos.sh
 }
 
-# Run Gemma
-gemma() {
-    local ctx=${2:-8192}
-	case "$1" in
-		cli) llama-cli       -hf yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF:Q4_K_M --ctx-size "$ctx" ;;
-		server) llama-server -hf yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF:Q4_K_M --ctx-size "$ctx" ;;
-		*) echo "Please pass cli|server [ctx-size]" ;;
-        esac
-}
+# Run local models via llama.cpp
+llm() {
+    local model="$1"
+    local mode="$2"
+    local ctx=${3:-8192}
 
-# Run Granite 3
-granite3() {
-local ctx=${2:-8192}
-    case "$1" in
-        cli)    llama-cli    -hf unsloth/granite-3.3-8b-instruct-GGUF --ctx-size "$ctx" ;;
-        server) llama-server -hf unsloth/granite-3.3-8b-instruct-GGUF --ctx-size "$ctx" ;;
-        *)      echo "Please pass cli|server [ctx-size]" ;;
-    esac
-}
+    declare -A MODELS=(
+        [gemma]="yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF:Q4_K_M"
+        [granite3]="unsloth/granite-3.3-8b-instruct-GGUF"
+        [granite4]="unsloth/granite-4.1-8b-GGUF:Q6_K"
+        [qwen]="unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:UD-Q4_K_XL"
+    )
 
-# Run Granite 4
-granite4() {
-local ctx=${2:-8192}
-    case "$1" in
-	cli)    llama-cli    -hf unsloth/granite-4.1-8b-GGUF:Q6_K --ctx-size "$ctx" ;;
-        server) llama-server -hf unsloth/granite-4.1-8b-GGUF:Q6_K --ctx-size "$ctx" ;;
-        *)      echo "Please pass cli|server [ctx-size]" ;;
-    esac
-}
+    local repo="${MODELS[$model]}"
+    if [[ -z "$repo" ]]; then
+        echo "Unknown model: $model"
+        echo "Available: ${!MODELS[@]}"
+        return 1
+    fi
 
-# Run Qwen
-qwen() {
-local ctx=${2:-8192}
-    case "$1" in
-	cli)    llama-cli -hf unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:UD-Q4_K_XL --ctx-size "$ctx" ;;
-        server) llama-server -hf unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:UD-Q4_K_XL --ctx-size "$ctx" ;;
-        *)      echo "Please pass cli|server [ctx-size]" ;;
+    case "$mode" in
+        cli)    llama-cli    -hf "$repo" --ctx-size "$ctx" ;;
+        server) llama-server -hf "$repo" --ctx-size "$ctx" ;;
+        *)      echo "Please pass <model> cli|server [ctx-size]"; echo "Available models: ${!MODELS[@]}" ;;
     esac
 }
