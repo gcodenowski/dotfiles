@@ -79,25 +79,27 @@ odysseus(){
 llm() {
     local model="$1"
     local mode="$2"
-    local ctx=${3:-8192}
+    local ctx=${3:-32000}
 
-    declare -A MODELS=(
-        [gemma]="yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF:Q4_K_M"
-        [granite3]="unsloth/granite-3.3-8b-instruct-GGUF"
-        [granite4]="unsloth/granite-4.1-8b-GGUF:Q6_K"
-        [qwen]="unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:UD-Q4_K_XL"
+    typeset -A MODELS
+    MODELS=(
+        gemma "yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF:Q4_K_M"
+        granite3 "unsloth/granite-3.3-8b-instruct-GGUF"
+        granite4 "unsloth/granite-4.1-8b-GGUF:Q6_K"
+        qwen "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:UD-Q4_K_XL"
+        gpt "unsloth/gpt-oss-20b-GGUF:Q4_K_M"
     )
 
     local repo="${MODELS[$model]}"
     if [[ -z "$repo" ]]; then
         echo "Unknown model: $model"
-        echo "Available: ${!MODELS[@]}"
+        echo "Available: ${(k)MODELS}"
         return 1
     fi
 
     case "$mode" in
         cli)    llama-cli    -hf "$repo" --ctx-size "$ctx" ;;
         server) llama-server -hf "$repo" --ctx-size "$ctx" ;;
-        *)      echo "Please pass <model> cli|server [ctx-size]"; echo "Available models: ${!MODELS[@]}" ;;
+        *)      echo "Please pass <model> cli|server [ctx-size]"; echo "Available models: ${(k)MODELS}" ;;
     esac
 }
