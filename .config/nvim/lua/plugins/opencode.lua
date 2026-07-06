@@ -55,7 +55,7 @@ return {
     vim.keymap.set('n', 'goo', function() return require('opencode').operator '@this ' .. '_' end, { desc = 'Add line to opencode', expr = true })
 
     -- These don't work for now
-    vim.keymap.set('n', '<C>k', function() require('opencode').command 'session.half.page.up' end, { desc = 'Scroll opencode up' })
-    vim.keymap.set('n', '<C>j', function() require('opencode').command 'session.half.page.down' end, { desc = 'Scroll opencode down' })
+    vim.keymap.set('n', '<C>k', function() require('opencode').command 'session.page.up' end, { desc = 'Scroll opencode up' })
+    vim.keymap.set('n', '<C>j', function() require('opencode').command 'session.page.down' end, { desc = 'Scroll opencode down' })
   end,
 }
