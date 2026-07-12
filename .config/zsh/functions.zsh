@@ -71,7 +71,7 @@ cwd() {
 
 # Start Odysseus
 odysseus(){
-    cd "$HOME/Documents/Programming/odysseus/"
+    cd "$HOME/Code/odysseus/"
     ./start-macos.sh
 }
 

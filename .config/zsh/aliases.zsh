@@ -32,6 +32,7 @@ alias dissertation='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Chest
 alias tbackend='cd "$HOME/Code/TruckLoaderBackend"'
 alias midi='cd "$HOME/Code/midi-show-controller"'
 alias vis='cd "$HOME/Code/VIS"'
+alias huggingface='cd "$HOME/.cache/huggingface/hub"'
 
 # Edit File
 alias zshconfig='nvim ~/.zshrc'
