@@ -77,7 +77,7 @@ ctrl + alt - s : yabai --start-service
 
 # ctrl + alt + cmd + shift handled by hyperkey
 ctrl + alt + cmd + shift - return : open -a "Kitty"
-ctrl + alt + cmd + shift - s : open -a "Safari"
+ctrl + alt + cmd + shift - s : open -a "Firefox"
 ctrl + alt + cmd + shift - f : open -a "FL Studio 2025"
 ctrl + alt + cmd + shift - d : open -a "Discord"
 ctrl + alt + cmd + shift - m : open -a "Spotify" # m for music
