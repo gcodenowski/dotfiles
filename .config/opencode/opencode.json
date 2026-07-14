@@ -14,17 +14,6 @@
         "write": "ask",
         "bash": "ask"
       }
-    },
-    "analyst": {
-      "mode": "primary",
-      "description": "Provides guidance, recommends best practices and highlights issues",
-      "permission": {
-        "read": "allow",
-        "edit": "ask",
-        "bash": "ask",
-        "write": "deny"
-      },
-      "prompt": "You are supposed to analyse the code, provide guidance and explanations, and recommend solutions in line with best software engineering practices, answer concisely and to the point, while including all critical information."
     }
   },
   "provider": {
