@@ -17,13 +17,13 @@ Built on macOS Tahoe 26.3
 | [sketchybar-system-stats](https://github.com/joncrangle/sketchybar-system-stats) | Event provider for SketchyBar |
 | [JankyBorders](https://github.com/FelixKratz/JankyBorders) | Window Borders |
 | [Nvim](https://github.com/neovim/neovim) | Editor |
-| [Kickstart](https://github.com/nvim-lua/kickstart.nvim) | Nvim config starting point |
+| [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) | Nvim config starting point |
 | [SketchyVim](https://github.com/FelixKratz/SketchyVim) | Adds vim motions to macOS |
 | [Kitty](https://github.com/kovidgoyal/kitty) | Terminal Emulator |
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) | System Specs Fetch |
-| [GNU](https://www.gnu.org/software/stow/) | Easy symlinking |
+| [GNU Stow](https://www.gnu.org/software/stow/) | Easy symlinking |
 | [Starship](https://github.com/starship/starship) | Custom prompt |
-| [Opencode](https://github.com/anomalyco/opencode) | AI |
+| [Opencode](https://github.com/anomalyco/opencode) | Agentic AI |
 
 ---
 
@@ -32,13 +32,15 @@ Built on macOS Tahoe 26.3
 This neovim configuration contains everything that can be
 found in kickstart.nvim, with the addition of the following:
 
-- [dadbod](https://github.com/tpope/vim-dadbod) - DB work
-- [opencode](https://github.com/nickjvandyke/opencode.nvim) - Opencode Integration
-- [snacks](https://github.com/folke/snacks.nvim) - Collection of QoL tools
-- [dooing](https://github.com/atiladefreitas/dooing) - To Do list
-- [typescript-tools](https://github.com/pmizio/typescript-tools.nvim) -
- Typescript all-in-one plugin
-- [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) - File explorer
+| Title | Purpose |
+| ----- | ------- |
+| [alpha](https://github.com/goolord/alpha-nvim) | Dashboard |
+| [dadbod](https://github.com/tpope/vim-dadbod) | DB work |
+| [opencode](https://github.com/nickjvandyke/opencode.nvim) | Opencode Integration |
+| [snacks](https://github.com/folke/snacks.nvim) | Collection of QoL tools |
+| [dooing](https://github.com/atiladefreitas/dooing) | To Do list |
+| [typescript-tools](https://github.com/pmizio/typescript-tools.nvim) | Typescript all-in-one plugin |
+| [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) | File explorer |
 
 ---
 
@@ -50,7 +52,8 @@ If you are using an intel mac this will likely not work straight away
 as you install these dotfiles and you might have to change the path
 to the stats provider in the `sketchybarrc`.
 
-sketchybar-system-stats is being used as an easy way to
+[sketchybar-system-stats](https://github.com/joncrangle/sketchybar-system-stats)
+is being used as an easy way to
 provide system events to sketchybar.
 This can be used to create cpu graphs etc.
 
