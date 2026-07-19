@@ -108,7 +108,7 @@ llm() {
 sync_lessons(){
     local src="$HOME/Code/agentLearning"
     local dest="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas/002 Computer Science/Lessons/agentLearning"
-    local copied=0 skipped=0 deleted=0
+    local copied=0 skipped=0 deleted=0 assets=0
 
     # Copy source files to dest, preserving structure
     while IFS= read -r file; do
@@ -128,6 +128,14 @@ sync_lessons(){
         copied=$((copied + 1))
     done < <(find "$src" -path "*/reference/*.html" -o -path "*/lessons/*.html" | sort)
 
+    # Copy assets directories (CSS, JS)
+    while IFS= read -r assets_dir; do
+        local rel="${assets_dir#$src/}"
+        mkdir -p "$dest/$rel"
+        cp -r "$assets_dir"/* "$dest/$rel/" 2>/dev/null
+        assets=$((assets + $(find "$assets_dir" -type f | wc -l | tr -d ' ')))
+    done < <(find "$src" -type d -name "assets")
+
     # Delete orphaned files in dest
     while IFS= read -r file; do
         local rel="${file#$dest/}"
@@ -137,5 +145,5 @@ sync_lessons(){
         fi
     done < <(find "$dest" -name "*.html" -type f)
 
-    echo "Synced: $copied copied, $skipped skipped, $deleted deleted"
+    echo "Synced: $copied copied, $skipped skipped, $deleted deleted, $assets assets"
 }
