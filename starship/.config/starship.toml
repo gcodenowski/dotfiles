@@ -306,14 +306,3 @@ symbol = " "
 
 [zig]
 symbol = " "
-
-[git_status]
-format = '[$all_status$diverged]($style)'
-untracked = "?"
-stashed = "$"
-conflicted = "~"
-modified = "!"
-staged = "+"
-renamed = "»"
-deleted = "✘"
-diverged = "⇕"
