@@ -38,8 +38,8 @@ alias huggingface='cd "$HOME/.cache/huggingface/hub"'
 alias zshconfig='nvim ~/.zshrc'
 alias ohmyzshconfig='nvim ~/.oh-my-zsh'
 alias skhdconfig='nvim ~/.config/skhd/skhdrc'
-alias zshaliases='nvim ~/dotfiles/.config/zsh/aliases.zsh'
-alias zshfunc='nvim ~/dotfiles/.config/zsh/functions.zsh'
+alias zshaliases='nvim ~/dotfiles/zsh/.config/zsh/aliases.zsh'
+alias zshfunc='nvim ~/dotfiles/zsh/.config/zsh/functions.zsh'
 
 # QoL
 alias vim='nvim'
