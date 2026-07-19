@@ -1,3 +1,0 @@
-[submodule ".config/spicetify/themes"]
-	path = .config/spicetify/themes
-	url = https://github.com/spicetify/spicetify-themes.git
