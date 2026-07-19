@@ -103,3 +103,39 @@ llm() {
         *)      echo "Please pass <model> cli|server [ctx-size]"; echo "Available models: ${(k)MODELS}" ;;
     esac
 }
+
+# Sync agentLearning HTML files to Obsidian vault
+sync_lessons(){
+    local src="$HOME/Code/agentLearning"
+    local dest="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas/002 Computer Science/Lessons/agentLearning"
+    local copied=0 skipped=0 deleted=0
+
+    # Copy source files to dest, preserving structure
+    while IFS= read -r file; do
+        local rel="${file#$src/}"
+        local dest_file="$dest/$rel"
+        local dest_dir="${dest_file:h}"
+
+        if [[ -f "$dest_file" ]]; then
+            if [[ "$(stat -f%z "$file")" -eq "$(stat -f%z "$dest_file")" ]]; then
+                skipped=$((skipped + 1))
+                continue
+            fi
+        fi
+
+        mkdir -p "$dest_dir"
+        cp "$file" "$dest_file"
+        copied=$((copied + 1))
+    done < <(find "$src" -path "*/reference/*.html" -o -path "*/lessons/*.html" | sort)
+
+    # Delete orphaned files in dest
+    while IFS= read -r file; do
+        local rel="${file#$dest/}"
+        if [[ ! -f "$src/$rel" ]]; then
+            rm "$file"
+            deleted=$((deleted + 1))
+        fi
+    done < <(find "$dest" -name "*.html" -type f)
+
+    echo "Synced: $copied copied, $skipped skipped, $deleted deleted"
+}
