@@ -64,7 +64,7 @@ npm()  { nvm; npm  "$@"; }
 npx()  { nvm; npx  "$@"; }
 
 # Sourcing the modular config files
-for config in ~/dotfiles/.config/zsh/*.zsh(N); do
+for config in ~/.config/zsh/*.zsh(N); do
 	# (N) ensures that an empty list is returned if there are no matching files
 	# instead of throwing an error
 	source "$config"

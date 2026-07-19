@@ -9,7 +9,7 @@
 *~
 
 # Compiled binaries from sketchybar
-config/sketchybar/helpers*
+sketchybar/.config/sketchybar/helpers*
 
 # Logs
 *.log
