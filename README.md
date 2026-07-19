@@ -23,6 +23,7 @@ Built on macOS Tahoe 26.3
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) | System Specs Fetch |
 | [GNU Stow](https://www.gnu.org/software/stow/) | Easy symlinking |
 | [Starship](https://github.com/starship/starship) | Custom prompt |
+| [Tmux](https://github.com/tmux/tmux) | Terminal Mutliplexer |
 | [Opencode](https://github.com/anomalyco/opencode) | Agentic AI |
 
 ---
