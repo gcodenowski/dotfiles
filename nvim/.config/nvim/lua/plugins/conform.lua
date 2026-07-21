@@ -1,4 +1,6 @@
-return { -- Autoformat
+-- Autoformat
+
+return {
   'stevearc/conform.nvim',
   event = { 'BufWritePre' },
   cmd = { 'ConformInfo' },
@@ -18,10 +20,11 @@ return { -- Autoformat
       python = {'ruff' },
       typescript = { 'prettier' },
       javascript = { 'prettier' },
-      json = { 'prettier' },
-      jsonc = { 'prettier' },
+      json = { 'fixjson' },
+      jsonc = { 'fixjson' },
       cpp = { 'clang-format' },
-      shell = { 'shfmt' },
+      zsh = { 'shfmt' }, -- My modular shell config files
+      sh = { 'shfmt' },
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
