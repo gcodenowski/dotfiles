@@ -33,6 +33,7 @@ alias tbackend='cd "$HOME/Code/TruckLoaderBackend"'
 alias midi='cd "$HOME/Code/midi-show-controller"'
 alias vis='cd "$HOME/Code/VIS"'
 alias huggingface='cd "$HOME/.cache/huggingface/hub"'
+alias superfileconfig='cd "$HOME/Library/Application Support/superfile"'
 
 # Edit File
 alias zshconfig='nvim ~/.zshrc'
