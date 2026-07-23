@@ -11,20 +11,21 @@ Built on macOS Tahoe 26.3
 
 | Title | Purpose |
 | ----- | ------- |
-| [yabai](https://github.com/asmvik/yabai) | Tiling WM |
+| [fastfetch](https://github.com/fastfetch-cli/fastfetch) | System Specs Fetch |
+| [GNU Stow](https://www.gnu.org/software/stow/) | Easy symlinking |
+| [JankyBorders](https://github.com/FelixKratz/JankyBorders) | Window Borders |
+| [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) | Nvim config starting point |
+| [Kitty](https://github.com/kovidgoyal/kitty) | Terminal Emulator |
+| [Nvim](https://github.com/neovim/neovim) | Editor |
+| [Opencode](https://github.com/anomalyco/opencode) | Agentic AI |
 | [skhd](https://github.com/asmvik/skhd) | Hotkey daemon |
 | [SketchyBar](https://github.com/FelixKratz/SketchyBar) | Custom menu bar |
 | [sketchybar-system-stats](https://github.com/joncrangle/sketchybar-system-stats) | Event provider for SketchyBar |
-| [JankyBorders](https://github.com/FelixKratz/JankyBorders) | Window Borders |
-| [Nvim](https://github.com/neovim/neovim) | Editor |
-| [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) | Nvim config starting point |
 | [SketchyVim](https://github.com/FelixKratz/SketchyVim) | Adds vim motions to macOS |
-| [Kitty](https://github.com/kovidgoyal/kitty) | Terminal Emulator |
-| [fastfetch](https://github.com/fastfetch-cli/fastfetch) | System Specs Fetch |
-| [GNU Stow](https://www.gnu.org/software/stow/) | Easy symlinking |
 | [Starship](https://github.com/starship/starship) | Custom prompt |
+| [Superfile](https://github.com/yorukot/superfile) | TUI File Explorer |
 | [Tmux](https://github.com/tmux/tmux) | Terminal Mutliplexer |
-| [Opencode](https://github.com/anomalyco/opencode) | Agentic AI |
+| [yabai](https://github.com/asmvik/yabai) | Tiling WM |
 
 ---
 
