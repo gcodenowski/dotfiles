@@ -63,7 +63,7 @@ sort_order_reversed = false
 
 #-- Case-Sensitive Sorting
 # An uppercase "B" comes before a lowercase "a" if true.
-case_sensitive_sort = true
+case_sensitive_sort = false
 
 #-- Exit Shell on Success
 # Whether to exit the shell on successful command execution.
@@ -179,3 +179,5 @@ zoxide_support = false
 #   pdf = "zathura"
 #   conf = "nvim"
 [open_with]
+py = "kitty"
+md = "kitty"
