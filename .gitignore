@@ -8,6 +8,15 @@
 *.swo
 *~
 
+# Unnecessary superfile files
+**/lastCheckedVersion
+**/lastdir
+**/toggleDotFile
+**/toggleFooter
+**/themeFileVersion
+**/firstUseCheck
+**/pinned.json
+
 # Compiled binaries from sketchybar
 sketchybar/.config/sketchybar/helpers*
 
