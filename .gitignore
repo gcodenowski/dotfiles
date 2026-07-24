@@ -9,7 +9,7 @@
 *~
 
 # Unnecessary superfile files
-**/lastCheckedVersion
+**/lastCheckVersion
 **/lastdir
 **/toggleDotFile
 **/toggleFooter
