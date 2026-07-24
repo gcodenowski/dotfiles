@@ -16,7 +16,7 @@
 #-- Basic Actions
 confirm = ['y', 'right', 'l']
 cd_quit = ['Q', '']
-quit = ['esc', 'q']
+quit = ['q']
 
 #-- Navigation
 list_down = ['down', 'j']
@@ -45,10 +45,10 @@ file_panel_item_create = ['ctrl+n', 'a']
 file_panel_item_rename = ['ctrl+r', 'r']
 
 #-- Main File Operations
-copy_items = ['C', '']
-cut_items = ['ctrl+x', '']
+copy_items = ['ctrl+c', 'C']
+cut_items = ['ctrl+x', 'X']
 delete_items = ['d', 'delete', '']
-paste_items = ['V', 'ctrl+w', '']
+paste_items = ['ctrl+v', 'ctrl+w', 'V']
 permanently_delete_items = ['D', '']
 
 #-- Archive Manipulation
