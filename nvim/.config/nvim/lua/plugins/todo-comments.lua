@@ -5,7 +5,7 @@ return {
   opts = { signs = false },
 }
 
--- Possible notes:
+-- Available notes:
 -- TODO:
 -- HACK:
 -- WARN:

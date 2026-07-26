@@ -1,4 +1,5 @@
-return { -- Collection of various small independent plugins/modules
+-- Collection of various small independent plugins/modules
+return {
     'nvim-mini/mini.nvim',
     config = function()
       -- Better Around/Inside textobjects

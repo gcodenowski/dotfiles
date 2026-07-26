@@ -1,3 +1,4 @@
+-- Dashboard
 return {
 	"goolord/alpha-nvim",
 	dependencies = {

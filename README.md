@@ -21,7 +21,6 @@ Built on macOS Tahoe 26.3
 | [skhd](https://github.com/asmvik/skhd) | Hotkey daemon |
 | [SketchyBar](https://github.com/FelixKratz/SketchyBar) | Custom menu bar |
 | [sketchybar-system-stats](https://github.com/joncrangle/sketchybar-system-stats) | Event provider for SketchyBar |
-| [SketchyVim](https://github.com/FelixKratz/SketchyVim) | Adds vim motions to macOS |
 | [Starship](https://github.com/starship/starship) | Custom prompt |
 | [Superfile](https://github.com/yorukot/superfile) | TUI File Explorer |
 | [Tmux](https://github.com/tmux/tmux) | Terminal Mutliplexer |

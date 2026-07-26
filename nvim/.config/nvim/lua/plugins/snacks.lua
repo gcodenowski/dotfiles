@@ -1,3 +1,4 @@
+-- Lots of little QoL plugins
 return {
   "folke/snacks.nvim",
   priority = 1000,

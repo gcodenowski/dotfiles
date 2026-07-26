@@ -1,3 +1,4 @@
+-- A full db workflow integration
 return {
   {
     'tpope/vim-dadbod',
