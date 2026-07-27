@@ -31,19 +31,10 @@ map('n', '<C-l>', '<C-w><C-l>')
 map('n', '<C-j>', '<C-w><C-j>')
 map('n', '<C-k>', '<C-w><C-k>')
 
--- See the registers
-map('n', '<leader>r', '<cmd>reg<CR>')
-
--- Go the the dashboard
-map('n', '<leader>d', '<cmd>Alpha<CR>')
-
--- Checkhealth
-map('n', '<leader>ch', '<cmd>checkhealth<CR>')
-
--- Keymaps to (o)pen things:
--- Colorscheme picker
-map('n', '<leader>oc', '<cmd>Telescope colorscheme<CR>')
-
+-- Keymaps to open things:
 -- Open Mason and Lazy
-map('n', '<leader>om', '<cmd>Mason<CR>')
-map('n', '<leader>ol', '<cmd>Lazy<CR>')
+map('n', '<leader>m', '<cmd>Mason<CR>')
+map('n', '<leader>l', '<cmd>Lazy<CR>')
+map('n', '<leader>d', '<cmd>Alpha<CR>')
+map('n', '<leader>r', '<cmd>reg<CR>')
+map('n', '<leader>ch', '<cmd>checkhealth<CR>')

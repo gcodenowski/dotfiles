@@ -10,26 +10,42 @@ return { -- You can easily change to a different colorscheme.
 		vim.cmd.colorscheme("lunaperche")
 
 		-- Make the comments italic
-		local hl = vim.api.nvim_get_hl(0, { name = "Comment" })
-		vim.api.nvim_set_hl(0, "Comment", { italic = true, fg = hl.fg })
+		local highlights = {
+			Comment = function()
+				local hl = vim.api.nvim_get_hl(0, { name = "Comment" })
+				return { italic = true, fg = hl.fg }
+			end,
 
-		-- Set the dimmed code colour
-		vim.api.nvim_set_hl(0, "SnacksDim", { fg = "#0d1117" })
+			-- Set the dimmed code colour
+			SnacksDim = { fg = "#0d1117" },
 
-		-- Yanking colour (see autocmds.lua)
-		vim.api.nvim_set_hl(0, "YankFlash", { bg = "#f7768e", fg = "#1a1b26", bold = true })
+			-- Yanking colour (see autocmds.lua)
+			YankFlash = { bg = "#f7768e", fg = "#1a1b26", bold = true },
 
-		-- Float windows (Mason, Lazy, etc.)
-		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#0d1117", fg = "#dfe4ed" })
-		vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#0d1117", fg = "#3d5a7a" })
-		vim.api.nvim_set_hl(0, "FloatTitle", { bg = "#0d1117", fg = "#6b9ab8", bold = true })
+			-- Float windows (Mason, Lazy, etc.)
+			NormalFloat = { bg = "#0d1117", fg = "#dfe4ed" },
+			FloatBorder = { bg = "#0d1117", fg = "#3d5a7a" },
+			FloatTitle = { bg = "#0d1117", fg = "#6b9ab8", bold = true },
 
-		-- Window split borders
-		vim.api.nvim_set_hl(0, "WinSeparator", { bg = "NONE", fg = "#dfe4ed" })
+			-- Window split borders
+			WinSeparator = { bg = "NONE", fg = "#dfe4ed" },
 
-		-- Statusline
-		vim.api.nvim_set_hl(0, "StatusLine", { bg = "#6b9ab8", fg = "#0d1117" })
-		vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "#dfe4ed", fg = "#1a1b26" })
+			-- Statusline
+			StatusLine = { bg = "#6b9ab8", fg = "#0d1117" },
+			StatusLineNC = { bg = "#dfe4ed", fg = "#1a1b26" },
+
+			-- OrgMode
+			["@org.agenda.scheduled"] = { fg = '#ffd787'},
+			["@org.keyword.done"] = { fg = '#5ce0ba'},
+			["@org.keyword.working"] = { fg = '#ffd787'}
+		}
+
+		for group, opts in pairs(highlights) do
+			if type(opts) == "function" then
+				opts = opts()
+			end
+			vim.api.nvim_set_hl(0, group, opts)
+		end
 
 		-- Custom treesitter highlighting
 		local ts_overrides = {
