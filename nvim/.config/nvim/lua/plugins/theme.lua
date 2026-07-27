@@ -40,11 +40,11 @@ return { -- You can easily change to a different colorscheme.
 			["@org.keyword.working"] = { fg = '#ffd787'}
 		}
 
-		for group, opts in pairs(highlights) do
-			if type(opts) == "function" then
-				opts = opts()
+		for k, v in pairs(highlights) do
+			if type(v) == "function" then
+				v = v()
 			end
-			vim.api.nvim_set_hl(0, group, opts)
+			vim.api.nvim_set_hl(0, k, v)
 		end
 
 		-- Custom treesitter highlighting
@@ -94,8 +94,8 @@ return { -- You can easily change to a different colorscheme.
 			-- modules
 			["@module"] = { fg = "#3ecfff", italic = true }, -- import paths
 		}
-		for group, opts in pairs(ts_overrides) do
-			vim.api.nvim_set_hl(0, group, opts)
+		for k, v in pairs(ts_overrides) do
+			vim.api.nvim_set_hl(0, k, v)
 		end
 	end,
 }
