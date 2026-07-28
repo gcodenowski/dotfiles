@@ -17,6 +17,12 @@
 **/firstUseCheck
 **/pinned.json
 
+# Herdr
+session.json
+.plugins.lock
+*.log
+*.sock
+
 # Compiled binaries from sketchybar
 sketchybar/.config/sketchybar/helpers*
 

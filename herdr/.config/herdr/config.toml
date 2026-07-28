@@ -1,0 +1,37 @@
+# still deciding whether I should stick with herdr or tmux
+[theme]
+name = "nord"
+auto_switch = false
+
+[ui.toast]
+delivery = "herdr"
+
+[ui.sound]
+enabled = true
+
+[keys]
+prefix = "ctrl+a"
+
+focus_pane_left = "ctrl+h"
+focus_pane_down = "ctrl+j"
+focus_pane_up = "ctrl+k"
+focus_pane_right = "ctrl+l"
+
+split_vertical = "prefix+\\"
+split_horizontal = "prefix+|"
+
+toggle_sidebar = "prefix+L"
+
+next_workspace = "prefix+j"
+previous_workspace = "prefix+k"
+
+next_agent = "prefix+h"
+previous_agent = "prefix+l"
+
+rename_workspace = "prefix+$"
+
+[ui]
+show_agent_labels_on_pane_borders = false
+
+[experimental]
+switch_ascii_input_source_in_prefix = false
