@@ -23,7 +23,7 @@ Built on macOS Tahoe 26.3
 | [sketchybar-system-stats](https://github.com/joncrangle/sketchybar-system-stats) | Event provider for SketchyBar |
 | [Starship](https://github.com/starship/starship) | Custom prompt |
 | [Superfile](https://github.com/yorukot/superfile) | TUI File Explorer |
-| [Tmux](https://github.com/tmux/tmux) | Terminal Mutliplexer |
+| [Herdr](https://github.com/ogulcancelik/herdr) | Terminal Mutliplexer |
 | [yabai](https://github.com/asmvik/yabai) | Tiling WM |
 
 ---

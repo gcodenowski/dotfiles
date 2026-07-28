@@ -1,4 +1,3 @@
-# still deciding whether I should stick with herdr or tmux
 [theme]
 name = "nord"
 auto_switch = false
