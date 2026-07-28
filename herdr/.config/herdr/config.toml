@@ -7,7 +7,7 @@ auto_switch = false
 delivery = "herdr"
 
 [ui.sound]
-enabled = true
+enabled = false
 
 [keys]
 prefix = "ctrl+a"
