@@ -1,9 +1,10 @@
+onboarding = false
 [theme]
 name = "nord"
 auto_switch = false
 
 [ui.toast]
-delivery = "herdr"
+delivery = "terminal"
 
 [ui.sound]
 enabled = false
@@ -28,12 +29,16 @@ rename_workspace = "prefix+$"
 next_agent = "prefix+h"
 previous_agent = "prefix+l"
 
-open_worktree = "prefix+;"
-remove_worktree = "prefix+:"
+open_worktree = "prefix+["
+remove_worktree = "prefix+]"
 
 
 [ui]
-show_agent_labels_on_pane_borders = false
+show_agent_labels_on_pane_borders = true
+sidebar_width = 26 # default
+sidebar_min_width = 18
+sidebar_max_width = 37
+
 
 [experimental]
 switch_ascii_input_source_in_prefix = false
