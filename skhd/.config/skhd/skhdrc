@@ -22,11 +22,11 @@ ctrl + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # Modifying window size
 
-# maximise 
+# maximise
 ctrl + alt - return : yabai -m window --toggle zoom-fullscreen
 
 # balance out tree of windows (resize to occupy same area)
-ctrl + alt - e : yabai -m space --balance  
+ctrl + alt - e : yabai -m space --balance
 
 # Moving windows around
 
@@ -46,7 +46,7 @@ ctrl + alt + shift - l : yabai -m window --warp east
 ctrl + alt - p : yabai -m window --space prev
 ctrl + alt - n : yabai -m window --space next
 
-# move window to space x 
+# move window to space x
 ctrl + alt - 1 : yabai -m window --space 1
 ctrl + alt - 2 : yabai -m window --space 2
 ctrl + alt - 3 : yabai -m window --space 3
@@ -73,7 +73,7 @@ ctrl + alt - up : yabai -m window --display prev
 ctrl + alt - q : yabai --stop-service
 ctrl + alt - s : yabai --start-service
 
-# == Launching apps == 
+# == Launching apps ==
 
 # ctrl + alt + cmd + shift handled by hyperkey
 ctrl + alt + cmd + shift - c : open -a "Calendar"
@@ -84,6 +84,7 @@ ctrl + alt + cmd + shift - f : open -a "FL Studio 2025"
 ctrl + alt + cmd + shift - s : open -a "Firefox"
 ctrl + alt + cmd + shift - return : open -a "Kitty"
 ctrl + alt + cmd + shift - l : open -a "LibreOffice"
+ctrl + alt + cmd + shift - i : open -a "Messages"
 ctrl + alt + cmd + shift - n : open -a "Notes"
 ctrl + alt + cmd + shift - o : open -a "Obsidian"
 ctrl + alt + cmd + shift - a : open -a "Osaurus"

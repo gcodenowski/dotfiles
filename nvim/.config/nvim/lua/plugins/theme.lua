@@ -35,9 +35,9 @@ return { -- You can easily change to a different colorscheme.
 			StatusLineNC = { bg = "#dfe4ed", fg = "#1a1b26" },
 
 			-- OrgMode
-			["@org.agenda.scheduled"] = { fg = '#ffd787'},
+			["@org.agenda.scheduled"] = { fg = '#898989'},
 			["@org.keyword.done"] = { fg = '#5ce0ba'},
-			["@org.keyword.working"] = { fg = '#ffd787'}
+			["@org.keyword.todo"] = { fg = '#ffeb69'}
 		}
 
 		for k, v in pairs(highlights) do
