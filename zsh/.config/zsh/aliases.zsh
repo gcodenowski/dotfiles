@@ -34,6 +34,9 @@ alias midi='cd "$HOME/Code/midi-show-controller"'
 alias vis='cd "$HOME/Code/VIS"'
 alias huggingface='cd "$HOME/.cache/huggingface/hub"'
 alias superfileconfig='cd "$HOME/Library/Application Support/superfile"'
+alias org='cd "$HOME/orgfiles/"'
+alias orgfiles='cd "$HOME/orgfiles/"'
+alias orgmode='cd "$HOME/orgfiles/"'
 
 # Edit File
 alias zshconfig='nvim ~/.zshrc'
@@ -48,6 +51,7 @@ alias neovim='nvim'
 alias ls='eza -a --icons'
 alias op='opencode --port'
 alias ggr='git-graph'
+alias grep='rg'
 
 # Misc
 alias zshreload='exec zsh' # This sources zshrc and creates new zsh instance

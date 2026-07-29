@@ -35,9 +35,12 @@ remove_worktree = "prefix+]"
 
 [ui]
 show_agent_labels_on_pane_borders = true
+
 sidebar_width = 26 # default
 sidebar_min_width = 18
 sidebar_max_width = 37
+
+prompt_new_tab_name = false
 
 
 [experimental]
