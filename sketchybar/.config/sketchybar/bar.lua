@@ -5,7 +5,7 @@ sbar.bar({
 	position = "top",
 	height = 36,
 	blur_radius = 0,
-	color = colors.bar,
+	color = colors.transparent,
 	sticky = true,
 	shadow = true,
 	padding_left = 11,
