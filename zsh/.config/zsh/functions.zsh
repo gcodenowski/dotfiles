@@ -150,3 +150,20 @@ sync_lessons() {
 
     echo "Synced: $copied copied, $skipped skipped, $deleted deleted, $assets assets"
 }
+
+# Timer
+timer() {
+    local time="$1"
+
+    # Start timer through termdown
+    if [[ -z $time ]]; then
+        echo "Enter valid time in minutes ;)"
+        return 1
+    else
+        afplay "$HOME/Documents/Audio/Audio Projects 2/Organised/2026/OSsounddesign/shenzen/startup.wav" &
+
+        termdown ${time}m
+
+        afplay "$HOME/Documents/Audio/Audio Projects 2/Organised/2026/OSsounddesign/shenzen/shutdown.wav"
+    fi
+}
