@@ -32,6 +32,12 @@ previous_agent = "prefix+l"
 open_worktree = "prefix+["
 remove_worktree = "prefix+]"
 
+next_tab = "ctrl+tab"
+previous_tab = "ctrl+shift+tab"
+
+new_tab = "cmd+t"
+close_tab = "cmd+w"
+
 
 [ui]
 show_agent_labels_on_pane_borders = true
