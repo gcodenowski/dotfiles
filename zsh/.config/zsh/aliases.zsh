@@ -53,6 +53,7 @@ alias op='opencode --port'
 alias ggr='git-graph'
 alias grep='rg'
 alias cd='z'
+alias lg='lazygit'
 
 # Misc
 alias zshreload='exec zsh' # This sources zshrc and creates new zsh instance
