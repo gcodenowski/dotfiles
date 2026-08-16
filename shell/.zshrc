@@ -76,4 +76,7 @@ for config in ~/.config/zsh/*.zsh(N); do
 done
 unset config # Remove the variable after use
 
+# Add zoxide
+eval "$(zoxide init zsh)"
+
 # zprof # uncomment for loading time testing

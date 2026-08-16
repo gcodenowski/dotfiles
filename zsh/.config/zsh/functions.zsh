@@ -156,14 +156,16 @@ timer() {
     local time="$1"
 
     # Start timer through termdown
-    if [[ -z $time ]]; then
+    if [[ -z $time || ! $time =~ ^[0-9]+$ ]]; then
         echo "Enter valid time in minutes ;)"
         return 1
     else
         afplay "$HOME/Documents/Audio/Audio Projects 2/Organised/2026/OSsounddesign/shenzen/startup.wav" &
+        disown
 
         termdown ${time}m
 
         afplay "$HOME/Documents/Audio/Audio Projects 2/Organised/2026/OSsounddesign/shenzen/shutdown.wav"
+        echo "Timer finished!"
     fi
 }
