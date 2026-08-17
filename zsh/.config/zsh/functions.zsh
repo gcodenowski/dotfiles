@@ -13,7 +13,7 @@ ezat() {
     if [[ $# -eq 0 ]]; then
         eza -a --tree -L 1
     else
-        eza -a --tree "$@"
+        eza -a --tree -L "$1"
     fi
 }
 
@@ -168,4 +168,18 @@ timer() {
         afplay "$HOME/Documents/Audio/Audio Projects 2/Organised/2026/OSsounddesign/shenzen/shutdown.wav"
         echo "Timer finished!"
     fi
+}
+
+update_notes() {
+    local src="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas/007 University/Dissertation/Writing"
+    local dest="$HOME/Research/visResearch/research/writing/"
+    local files=("$src"/*.md(N))
+
+    if ((${#files} == 0)); then
+        print "No .md files found in: $src"
+        return 1
+    fi
+
+    mkdir -p "$dest"
+    cp -f -- $files "$dest"/
 }
