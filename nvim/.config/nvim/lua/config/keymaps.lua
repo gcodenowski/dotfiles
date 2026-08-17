@@ -40,3 +40,6 @@ map("n", "<leader>l", "<cmd>Lazy<CR>")
 map("n", "<leader>d", "<cmd>Alpha<CR>")
 map("n", "<leader>r", "<cmd>reg<CR>")
 map("n", "<leader>ch", "<cmd>checkhealth<CR>")
+
+-- Choose colorscheme
+map("n", "<leader>cc", "<cmd>Telescope colorscheme<CR>")
