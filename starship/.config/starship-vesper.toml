@@ -1,15 +1,15 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 [aws]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [azure]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [battery]
-format = "[$symbol$percentage](bold #ff9e64) "
+format = "[$symbol$percentage](bold #FFB066) "
 full_symbol = "󰁹 "
 charging_symbol = "󰂄 "
 discharging_symbol = "󰂃 "
@@ -17,207 +17,207 @@ unknown_symbol = "󰂑 "
 empty_symbol = "󰂎 "
 
 [buf]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [bun]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [c]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [cpp]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [cmake]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [cobol]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [conda]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [container]
-style = "bold #ff9e64"
+style = "bold #FFB066"
 symbol = " "
 
 [crystal]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [dart]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [deno]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [direnv]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [directory]
-style = "bold #9d8cff"
+style = "bold #FFC799"
 read_only = " 󰌾"
 
 [docker_context]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [dotnet]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [elixir]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [elm]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [erlang]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [fennel]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [fortran]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [fossil_branch]
-style = "bold #c792ea"
+style = "bold #FF9E64"
 symbol = " "
 
 [gcloud]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = "󱇶 "
 
 [gleam]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [git_branch]
-style = "bold #c792ea"
+style = "bold #FF9E64"
 symbol = " "
 
 [git_commit]
-style = "bold #c792ea"
+style = "bold #FF9E64"
 tag_symbol = '  '
 
 [golang]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [gradle]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [guix_shell]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [haskell]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [haxe]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [helm]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [hg_branch]
-style = "bold #c792ea"
+style = "bold #FF9E64"
 symbol = " "
 
 [hostname]
-style = "bold #ff9e64"
+style = "bold #FFB066"
 ssh_symbol = " "
 
 [java]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [julia]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [kotlin]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [kubernetes]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = "󱃾 "
 
 [lua]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [maven]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [memory_usage]
-style = "bold #ffd27f"
+style = "bold #FFE0B0"
 symbol = "󰍛 "
 
 [meson]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = "󰔷 "
 
 [mojo]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = "󰈸 "
 
 [nats]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [netns]
-style = "bold #ff9e64"
+style = "bold #FFB066"
 symbol = "󰛳 "
 
 [nim]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [nix_shell]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [nodejs]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [ocaml]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [odin]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = "󰟢 "
 
 [opa]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [openstack]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [os.symbols]
@@ -281,113 +281,113 @@ Windows = "󰍲 "
 Zorin = " "
 
 [package]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = "󰏗 "
 
 [perl]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [php]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [pijul_channel]
-style = "bold #c792ea"
+style = "bold #FF9E64"
 symbol = " "
 
 [pixi]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = "󰏗 "
 
 [pulumi]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [purescript]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [python]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [raku]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = "󱖊 "
 
 [red]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = "󱍼 "
 
 [rlang]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = "󰟔 "
 
 [ruby]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [rust]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = "󱘗 "
 
 [scala]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [shlvl]
-style = "bold #ff9e64"
+style = "bold #FFB066"
 symbol = "󰹍 "
 
 [singularity]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [solidity]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [spack]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [status]
-style = "bold #ff5370"
+style = "bold #FF6E6E"
 symbol = " "
 
 [sudo]
-style = "bold #ff9e64"
+style = "bold #FFB066"
 symbol = " "
 
 [swift]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [terraform]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [vlang]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [typst]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [vagrant]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [xmake]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [zig]
-style = "bold #82aaff"
+style = "bold #FFD27F"
 symbol = " "
 
 [character]
-success_symbol = "[❯](bold #9d8cff) "
-error_symbol = "[❯](bold #ff5370) "
+success_symbol = "[❯](bold #FFC799) "
+error_symbol = "[❯](bold #FF6E6E) "
