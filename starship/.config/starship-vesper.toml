@@ -1,0 +1,393 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[aws]
+style = "bold #82aaff"
+symbol = " "
+
+[azure]
+style = "bold #82aaff"
+symbol = " "
+
+[battery]
+format = "[$symbol$percentage](bold #ff9e64) "
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+unknown_symbol = "󰂑 "
+empty_symbol = "󰂎 "
+
+[buf]
+style = "bold #82aaff"
+symbol = " "
+
+[bun]
+style = "bold #82aaff"
+symbol = " "
+
+[c]
+style = "bold #82aaff"
+symbol = " "
+
+[cpp]
+style = "bold #82aaff"
+symbol = " "
+
+[cmake]
+style = "bold #82aaff"
+symbol = " "
+
+[cobol]
+style = "bold #82aaff"
+symbol = " "
+
+[conda]
+style = "bold #82aaff"
+symbol = " "
+
+[container]
+style = "bold #ff9e64"
+symbol = " "
+
+[crystal]
+style = "bold #82aaff"
+symbol = " "
+
+[dart]
+style = "bold #82aaff"
+symbol = " "
+
+[deno]
+style = "bold #82aaff"
+symbol = " "
+
+[direnv]
+style = "bold #82aaff"
+symbol = " "
+
+[directory]
+style = "bold #9d8cff"
+read_only = " 󰌾"
+
+[docker_context]
+style = "bold #82aaff"
+symbol = " "
+
+[dotnet]
+style = "bold #82aaff"
+symbol = " "
+
+[elixir]
+style = "bold #82aaff"
+symbol = " "
+
+[elm]
+style = "bold #82aaff"
+symbol = " "
+
+[erlang]
+style = "bold #82aaff"
+symbol = " "
+
+[fennel]
+style = "bold #82aaff"
+symbol = " "
+
+[fortran]
+style = "bold #82aaff"
+symbol = " "
+
+[fossil_branch]
+style = "bold #c792ea"
+symbol = " "
+
+[gcloud]
+style = "bold #82aaff"
+symbol = "󱇶 "
+
+[gleam]
+style = "bold #82aaff"
+symbol = " "
+
+[git_branch]
+style = "bold #c792ea"
+symbol = " "
+
+[git_commit]
+style = "bold #c792ea"
+tag_symbol = '  '
+
+[golang]
+style = "bold #82aaff"
+symbol = " "
+
+[gradle]
+style = "bold #82aaff"
+symbol = " "
+
+[guix_shell]
+style = "bold #82aaff"
+symbol = " "
+
+[haskell]
+style = "bold #82aaff"
+symbol = " "
+
+[haxe]
+style = "bold #82aaff"
+symbol = " "
+
+[helm]
+style = "bold #82aaff"
+symbol = " "
+
+[hg_branch]
+style = "bold #c792ea"
+symbol = " "
+
+[hostname]
+style = "bold #ff9e64"
+ssh_symbol = " "
+
+[java]
+style = "bold #82aaff"
+symbol = " "
+
+[julia]
+style = "bold #82aaff"
+symbol = " "
+
+[kotlin]
+style = "bold #82aaff"
+symbol = " "
+
+[kubernetes]
+style = "bold #82aaff"
+symbol = "󱃾 "
+
+[lua]
+style = "bold #82aaff"
+symbol = " "
+
+[maven]
+style = "bold #82aaff"
+symbol = " "
+
+[memory_usage]
+style = "bold #ffd27f"
+symbol = "󰍛 "
+
+[meson]
+style = "bold #82aaff"
+symbol = "󰔷 "
+
+[mojo]
+style = "bold #82aaff"
+symbol = "󰈸 "
+
+[nats]
+style = "bold #82aaff"
+symbol = " "
+
+[netns]
+style = "bold #ff9e64"
+symbol = "󰛳 "
+
+[nim]
+style = "bold #82aaff"
+symbol = " "
+
+[nix_shell]
+style = "bold #82aaff"
+symbol = " "
+
+[nodejs]
+style = "bold #82aaff"
+symbol = " "
+
+[ocaml]
+style = "bold #82aaff"
+symbol = " "
+
+[odin]
+style = "bold #82aaff"
+symbol = "󰟢 "
+
+[opa]
+style = "bold #82aaff"
+symbol = " "
+
+[openstack]
+style = "bold #82aaff"
+symbol = " "
+
+[os.symbols]
+AIX = " "
+AlmaLinux = " "
+Alpaquita = " "
+Alpine = " "
+ALTLinux = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = " "
+Artix = " "
+Bluefin = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Elementary = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = " "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = " "
+InstantOS = " "
+Ios = "󰀷 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = " "
+OpenCloudOS = " "
+openEuler = " "
+openSUSE = " "
+OracleLinux = "󰺡 "
+PikaOS = " "
+Pop = " "
+Raspbian = " "
+Redhat = "󱄛 "
+RedHatEnterprise = "󱄛 "
+Redox = "󰀘 "
+RockyLinux = " "
+Solus = " "
+SUSE = " "
+Ubuntu = " "
+Ultramarine = " "
+Unknown = " "
+Uos = " "
+Void = " "
+Windows = "󰍲 "
+Zorin = " "
+
+[package]
+style = "bold #82aaff"
+symbol = "󰏗 "
+
+[perl]
+style = "bold #82aaff"
+symbol = " "
+
+[php]
+style = "bold #82aaff"
+symbol = " "
+
+[pijul_channel]
+style = "bold #c792ea"
+symbol = " "
+
+[pixi]
+style = "bold #82aaff"
+symbol = "󰏗 "
+
+[pulumi]
+style = "bold #82aaff"
+symbol = " "
+
+[purescript]
+style = "bold #82aaff"
+symbol = " "
+
+[python]
+style = "bold #82aaff"
+symbol = " "
+
+[raku]
+style = "bold #82aaff"
+symbol = "󱖊 "
+
+[red]
+style = "bold #82aaff"
+symbol = "󱍼 "
+
+[rlang]
+style = "bold #82aaff"
+symbol = "󰟔 "
+
+[ruby]
+style = "bold #82aaff"
+symbol = " "
+
+[rust]
+style = "bold #82aaff"
+symbol = "󱘗 "
+
+[scala]
+style = "bold #82aaff"
+symbol = " "
+
+[shlvl]
+style = "bold #ff9e64"
+symbol = "󰹍 "
+
+[singularity]
+style = "bold #82aaff"
+symbol = " "
+
+[solidity]
+style = "bold #82aaff"
+symbol = " "
+
+[spack]
+style = "bold #82aaff"
+symbol = " "
+
+[status]
+style = "bold #ff5370"
+symbol = " "
+
+[sudo]
+style = "bold #ff9e64"
+symbol = " "
+
+[swift]
+style = "bold #82aaff"
+symbol = " "
+
+[terraform]
+style = "bold #82aaff"
+symbol = " "
+
+[vlang]
+style = "bold #82aaff"
+symbol = " "
+
+[typst]
+style = "bold #82aaff"
+symbol = " "
+
+[vagrant]
+style = "bold #82aaff"
+symbol = " "
+
+[xmake]
+style = "bold #82aaff"
+symbol = " "
+
+[zig]
+style = "bold #82aaff"
+symbol = " "
+
+[character]
+success_symbol = "[❯](bold #9d8cff) "
+error_symbol = "[❯](bold #ff5370) "
