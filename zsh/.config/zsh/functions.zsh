@@ -185,18 +185,42 @@ update_notes() {
 }
 
 # For changing sketchybar themes quickly
-sketchy_theme() {
+os_theme() {
+    local theme_file=~/.config/sketchybar/themes/$1.lua
+    if [[ ! -f $theme_file ]]; then
+        echo "No such sketchybar theme: $1" >&2
+        return 1
+    fi
+
     printf '%s\n' "$1" >~/.config/sketchybar/.theme
 
     # Update JankyBorders to the accent colour
     # grep called explicitly since ripgrep breaks on -oE
-    local theme_file=~/.config/sketchybar/themes/$1.lua
-    if [[ -f $theme_file ]]; then
-        local -l accent
-        accent=$(command grep -oE 'accent[[:space:]]*=[[:space:]]*0x[0-9a-fA-F]+' "$theme_file" |
-            command grep -oE '0x[0-9a-fA-F]+')
+    local -l accent
+    accent=$(command grep -oE 'accent[[:space:]]*=[[:space:]]*0x[0-9a-fA-F]+' "$theme_file" |
+        command grep -oE '0x[0-9a-fA-F]+')
         [[ -n $accent ]] && borders active_color="$accent"
-    fi
+
+    # Derive the starship prompt theme: use the same name when a
+    # matching starship-<name>.toml exists
+    local ship_toml=~/dotfiles/starship/.config/starship-$1.toml
+    [[ -f $ship_toml ]] && starship_theme "$1"
 
     sketchybar --reload
 }
+
+# Switch between starship themes
+starship_theme() {
+  local dir="$HOME/dotfiles/starship/.config"
+  if [[ -z $1 ]]; then
+    ls "$dir" | grep '^starship-.*\.toml$' | sed 's/^starship-//;s/\.toml$//'
+    return 1
+  fi
+  local tgt="$dir/starship-$1.toml"
+  if [[ ! -f $tgt ]]; then
+    echo "No such starship theme: $1" >&2
+    return 1
+  fi
+  ln -sf "$tgt" "$HOME/.config/starship.toml"
+}
+
