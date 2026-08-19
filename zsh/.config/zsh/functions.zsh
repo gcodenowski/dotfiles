@@ -183,3 +183,20 @@ update_notes() {
     mkdir -p "$dest"
     cp -f -- $files "$dest"/
 }
+
+# For changing sketchybar themes quickly
+sketchy_theme() {
+    printf '%s\n' "$1" >~/.config/sketchybar/.theme
+
+    # Update JankyBorders to the accent colour
+    # grep called explicitly since ripgrep breaks on -oE
+    local theme_file=~/.config/sketchybar/themes/$1.lua
+    if [[ -f $theme_file ]]; then
+        local -l accent
+        accent=$(command grep -oE 'accent[[:space:]]*=[[:space:]]*0x[0-9a-fA-F]+' "$theme_file" |
+            command grep -oE '0x[0-9a-fA-F]+')
+        [[ -n $accent ]] && borders active_color="$accent"
+    fi
+
+    sketchybar --reload
+}
