@@ -3,6 +3,7 @@
 # Path to my Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PICO_SDK_PATH="$HOME/pico-sdk"
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 
 # Path
 path=(
