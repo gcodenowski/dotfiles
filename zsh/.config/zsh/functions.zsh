@@ -199,28 +199,50 @@ os_theme() {
     local -l accent
     accent=$(command grep -oE 'accent[[:space:]]*=[[:space:]]*0x[0-9a-fA-F]+' "$theme_file" |
         command grep -oE '0x[0-9a-fA-F]+')
-        [[ -n $accent ]] && borders active_color="$accent"
+    [[ -n $accent ]] && borders active_color="$accent"
 
     # Derive the starship prompt theme: use the same name when a
     # matching starship-<name>.toml exists
     local ship_toml=~/dotfiles/starship/.config/starship-$1.toml
     [[ -f $ship_toml ]] && starship_theme "$1"
 
+    # Sync the herdr editor theme
+    typeset -A HERDR_FOR=(
+        vesper kanagawa
+        aurora one-dark
+    )
+
+    local herdr_name="${HERDR_FOR[$1]}"
+    if [[ -n $herdr_name ]]; then
+        local herdr_cfg=~/dotfiles/herdr/.config/herdr/config.toml
+        sed -i '' "s/^name = \".*\"/name = \"$herdr_name\"/" "$herdr_cfg"
+    fi
+
+    # Sync the neovim colorscheme (line 10 of theme.lua; explicit mapping)
+    typeset -A NVIM_FOR=(
+        vesper randomhue
+        aurora lunaperche
+    )
+    local nvim_name="${NVIM_FOR[$1]}"
+    if [[ -n $nvim_name ]]; then
+        local nvim_cfg=~/.config/nvim/lua/plugins/theme.lua
+        sed -i '' '10s/vim.cmd.colorscheme("[^"]*")/vim.cmd.colorscheme("'"$nvim_name"'")/' "$nvim_cfg"
+    fi
+
     sketchybar --reload
 }
 
 # Switch between starship themes
 starship_theme() {
-  local dir="$HOME/dotfiles/starship/.config"
-  if [[ -z $1 ]]; then
-    ls "$dir" | grep '^starship-.*\.toml$' | sed 's/^starship-//;s/\.toml$//'
-    return 1
-  fi
-  local tgt="$dir/starship-$1.toml"
-  if [[ ! -f $tgt ]]; then
-    echo "No such starship theme: $1" >&2
-    return 1
-  fi
-  ln -sf "$tgt" "$HOME/.config/starship.toml"
+    local dir="$HOME/dotfiles/starship/.config"
+    if [[ -z $1 ]]; then
+        ls "$dir" | grep '^starship-.*\.toml$' | sed 's/^starship-//;s/\.toml$//'
+        return 1
+    fi
+    local tgt="$dir/starship-$1.toml"
+    if [[ ! -f $tgt ]]; then
+        echo "No such starship theme: $1" >&2
+        return 1
+    fi
+    ln -sf "$tgt" "$HOME/.config/starship.toml"
 }
-
