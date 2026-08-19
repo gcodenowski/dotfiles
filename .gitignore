@@ -35,3 +35,6 @@ sketchybar/.config/sketchybar/helpers*
 
 # Any SSH keys
 .ssh/
+
+# theme holder file
+.theme
