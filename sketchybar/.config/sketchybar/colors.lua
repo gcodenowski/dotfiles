@@ -6,6 +6,6 @@ if not theme then
 		f:close()
 	end
 end
-theme = (theme and theme ~= "") and theme or "default"
+theme = (theme and theme ~= "") and theme or "aurora"
 
 return require("themes." .. theme)
