@@ -81,6 +81,14 @@ applications
 
 ---
 
+## Custom Scripts
+
+| Name | Args | Purpose |
+| --- | --- | --- |
+| os_theme | themename | Easy, dynamic theme switching |
+
+---
+
 ## Acknowledgements
 
 Sketchybar config inspired by FelixKratz's [dotfiles](https://github.com/FelixKratz/dotfiles)
