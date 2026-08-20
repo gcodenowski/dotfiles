@@ -7,7 +7,7 @@ return { -- You can easily change to a different colorscheme.
 	priority = 1000, -- Make sure to load this before all the other start plugins.
 
 	config = function()
-		vim.cmd.colorscheme("randomhue")
+		vim.cmd.colorscheme("tokyonight")
 
 		-- Make the comments italic
 		local highlights = {
