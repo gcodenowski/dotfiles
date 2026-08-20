@@ -186,6 +186,26 @@ update_notes() {
 
 # For changing os themes
 os_theme() {
+    if [[ -z $1 ]]; then
+        local d=~/.config/sketchybar/themes
+        local active_theme
+        if [[ -f ~/.config/sketchybar/.theme ]]; then
+            active_theme=$(<~/.config/sketchybar/.theme)
+        fi
+        local -a themes=()
+        for f in "$d"/*.lua; do
+            [[ -e $f ]] || continue
+            local t="${f:t:r}"
+            if [[ "$t" == "$active_theme" ]]; then
+                themes+=("*$t")
+            else
+                themes+=("$t")
+            fi
+        done
+        echo "Available themes: ${(j: :)themes}"
+        return 0
+    fi
+
     local theme_file=~/.config/sketchybar/themes/$1.lua
     if [[ ! -f $theme_file ]]; then
         echo "No such sketchybar theme: $1" >&2
@@ -206,11 +226,16 @@ os_theme() {
     local ship_toml=~/dotfiles/starship/.config/starship-$1.toml
     [[ -f $ship_toml ]] && starship_theme "$1"
 
-    # Sync the herdr editor theme
+    # Sync the herdr theme
     typeset -A HERDR_FOR=(
-        vesper gruvbox
+        vesper vesper
         aurora one-dark
         hacker terminal
+        garden solarized
+        mist tokyo-night
+        monochrome terminal
+        paper gruvbox-light
+        spill one-light
     )
 
     local herdr_name="${HERDR_FOR[$1]}"
@@ -224,6 +249,11 @@ os_theme() {
         vesper randomhue
         aurora lunaperche
         hacker koehler
+        garden habamax
+        mist tokyonight
+        monochrome quiet
+        paper minisummer
+        spill pablo
     )
     local nvim_name="${NVIM_FOR[$1]}"
     if [[ -n $nvim_name ]]; then
