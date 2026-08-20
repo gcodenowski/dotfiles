@@ -13,7 +13,7 @@ return {
 				"CursorLine", "StatusLine", "StatusLineNC",
 				"NormalFloat", "FloatBorder", "FloatTitle", "YankFlash",
 			},
-			require("transparent").toggle(true)
 		})
+		require("transparent").toggle(true)
 	end,
 }

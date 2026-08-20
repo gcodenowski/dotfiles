@@ -50,6 +50,7 @@ os_theme() {
         monochrome terminal
         paper gruvbox-light
         spill one-light
+        arctic catpuccin-latte
     )
 
     local herdr_name="${HERDR_FOR[$1]}"
@@ -58,7 +59,7 @@ os_theme() {
         sed -i '' "s/^name = \".*\"/name = \"$herdr_name\"/" "$herdr_cfg"
     fi
 
-    # Sync the neovim colorscheme (line 10 of theme.lua; explicit mapping)
+    # Sync the neovim colorscheme (mapping → marker file read at nvim startup)
     typeset -A NVIM_FOR=(
         vesper randomhue
         aurora lunaperche
@@ -68,12 +69,10 @@ os_theme() {
         monochrome quiet
         paper minisummer
         spill miniautumn
-        arctic catpuccin-latte
     )
     local nvim_name="${NVIM_FOR[$1]}"
     if [[ -n $nvim_name ]]; then
-        local nvim_cfg=~/.config/nvim/lua/plugins/theme.lua
-        sed -i '' '10s/vim.cmd.colorscheme("[^"]*")/vim.cmd.colorscheme("'"$nvim_name"'")/' "$nvim_cfg"
+        printf '%s\n' "$nvim_name" >~/.config/nvim/.theme
     fi
 
     # Sync the spicetify color scheme (sections added to Themes/text/color.ini)

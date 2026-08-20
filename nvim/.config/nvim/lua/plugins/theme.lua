@@ -56,6 +56,17 @@ return { -- You can easily change to a different colorscheme.
 			end,
 		})
 
-		vim.cmd.colorscheme("miniautumn")
+		-- Theme is sourced from the marker file written by os_theme
+		-- (~/dotfiles/zsh/.config/zsh/os_theme.zsh), so it survives
+		-- edits/refactors to this file. Falls back to lunaperche.
+		local theme_file = vim.fn.expand("~/.config/nvim/.theme")
+		local ok, lines = pcall(vim.fn.readfile, theme_file)
+		local scheme = "lunaperche"
+		if ok and #lines > 0 and vim.trim(lines[1]) ~= "" then
+			scheme = vim.trim(lines[1])
+		end
+		if not pcall(vim.cmd.colorscheme, scheme) then
+			vim.cmd.colorscheme("lunaperche")
+		end
 	end,
 }
