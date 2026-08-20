@@ -63,7 +63,7 @@ os_theme() {
     typeset -A NVIM_FOR=(
         vesper randomhue
         aurora lunaperche
-        hacker koehler
+        hacker zaibatsu
         garden habamax
         tokyonight tokyonight
         monochrome quiet
