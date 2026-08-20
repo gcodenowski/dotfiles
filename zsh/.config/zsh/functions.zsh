@@ -184,7 +184,7 @@ update_notes() {
     cp -f -- $files "$dest"/
 }
 
-# For changing sketchybar themes quickly
+# For changing os themes
 os_theme() {
     local theme_file=~/.config/sketchybar/themes/$1.lua
     if [[ ! -f $theme_file ]]; then
@@ -208,8 +208,9 @@ os_theme() {
 
     # Sync the herdr editor theme
     typeset -A HERDR_FOR=(
-        vesper kanagawa
+        vesper gruvbox
         aurora one-dark
+        hacker terminal
     )
 
     local herdr_name="${HERDR_FOR[$1]}"
@@ -222,11 +223,25 @@ os_theme() {
     typeset -A NVIM_FOR=(
         vesper randomhue
         aurora lunaperche
+        hacker koehler
     )
     local nvim_name="${NVIM_FOR[$1]}"
     if [[ -n $nvim_name ]]; then
         local nvim_cfg=~/.config/nvim/lua/plugins/theme.lua
         sed -i '' '10s/vim.cmd.colorscheme("[^"]*")/vim.cmd.colorscheme("'"$nvim_name"'")/' "$nvim_cfg"
+    fi
+
+    # Set the desktop wallpaper (all screens; skip if no asset for this theme)
+    local wp_dir=~/dotfiles/wallpapers
+    local wp_img=""
+    for ext in jpg jpeg png heic; do
+        if [[ -f "$wp_dir/$1.$ext" ]]; then
+            wp_img="$wp_dir/$1.$ext"
+            break
+        fi
+    done
+    if [[ -n $wp_img ]] && command -v wallpaper >/dev/null 2>&1; then
+        wallpaper set "$wp_img" --screen all
     fi
 
     sketchybar --reload
