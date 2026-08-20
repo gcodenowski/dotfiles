@@ -46,7 +46,7 @@ os_theme() {
         aurora one-dark
         hacker terminal
         garden solarized
-        mist tokyo-night
+        tokyonight tokyo-night
         monochrome terminal
         paper gruvbox-light
         spill one-light
@@ -64,7 +64,7 @@ os_theme() {
         aurora lunaperche
         hacker koehler
         garden habamax
-        mist tokyonight
+        tokyonight tokyonight
         monochrome quiet
         paper minisummer
         spill pablo
