@@ -67,12 +67,33 @@ os_theme() {
         tokyonight tokyonight
         monochrome quiet
         paper minisummer
-        spill pablo
+        spill miniautumn
+        arctic catpuccin-latte
     )
     local nvim_name="${NVIM_FOR[$1]}"
     if [[ -n $nvim_name ]]; then
         local nvim_cfg=~/.config/nvim/lua/plugins/theme.lua
         sed -i '' '10s/vim.cmd.colorscheme("[^"]*")/vim.cmd.colorscheme("'"$nvim_name"'")/' "$nvim_cfg"
+    fi
+
+    # Sync the spicetify color scheme (sections added to Themes/text/color.ini)
+    typeset -A SPOTIFY_FOR=(
+        aurora      aurora
+        vesper      vesper
+        hacker      hacker
+        garden      garden
+        tokyonight  tokyonight
+        monochrome  monochrome
+        paper       paper
+        spill       spill
+        arctic      arctic
+    )
+    local spotify_name="${SPOTIFY_FOR[$1]}"
+    if [[ -n $spotify_name ]] && command -v spicetify >/dev/null 2>&1; then
+        spicetify -q config color_scheme "$spotify_name"
+        spicetify -q apply
+        # Only bounce the client if Spotify is already running
+        pgrep -q -x Spotify && spicetify -q restart
     fi
 
     # Set the desktop wallpaper (all screens; skip if no asset for this theme)

@@ -7,8 +7,6 @@ return { -- You can easily change to a different colorscheme.
 	priority = 1000, -- Make sure to load this before all the other start plugins.
 
 	config = function()
-		vim.cmd.colorscheme("tokyonight")
-
 		-- Make the comments italic
 		local highlights = {
 			Comment = function()
@@ -18,9 +16,6 @@ return { -- You can easily change to a different colorscheme.
 
 			-- Set the dimmed code colour
 			SnacksDim = { fg = "#0d1117" },
-
-			-- Transparent background
-			Normal = { bg = "NONE"},
 
 			-- Cursor Line
 			CursorLine = { bg = "#434343"},
@@ -46,11 +41,21 @@ return { -- You can easily change to a different colorscheme.
 			["@org.keyword.todo"] = { fg = '#ffeb69'}
 		}
 
-		for k, v in pairs(highlights) do
-			if type(v) == "function" then
-				v = v()
-			end
-			vim.api.nvim_set_hl(0, k, v)
-		end
+		-- Re-apply on every colorscheme load. transparent.nvim's toggle()
+		-- re-runs `colorscheme`, which resets all highlights and would
+		-- otherwise wipe these custom groups.
+		vim.api.nvim_create_autocmd("ColorScheme", {
+			group = vim.api.nvim_create_augroup("custom-highlights", { clear = true }),
+			callback = function()
+				for k, v in pairs(highlights) do
+					if type(v) == "function" then
+						v = v()
+					end
+					vim.api.nvim_set_hl(0, k, v)
+				end
+			end,
+		})
+
+		vim.cmd.colorscheme("miniautumn")
 	end,
 }
