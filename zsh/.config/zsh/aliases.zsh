@@ -6,7 +6,6 @@
 ██║  ██║███████╗██║██║  ██║███████║███████╗███████║
 ╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
 COMMENT
-# ==Aliases==
 
 # Dirs
 alias icloud='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs"'
