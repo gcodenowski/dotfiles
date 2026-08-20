@@ -1,6 +1,6 @@
 onboarding = false
 [theme]
-name = "kanagawa"
+name = "gruvbox"
 auto_switch = false
 
 [ui.toast]
