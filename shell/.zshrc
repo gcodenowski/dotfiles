@@ -80,4 +80,7 @@ unset config # Remove the variable after use
 # Add zoxide
 eval "$(zoxide init zsh)"
 
+# Add fzf
+eval "$(fzf --zsh)"
+
 # zprof # uncomment for loading time testing
