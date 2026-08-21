@@ -3,16 +3,47 @@
 This is my main dotfiles configuration.
 It is not stable by any means. Use at your own risk.
 
+Managed with [chezmoi](https://www.chezmoi.io/), works on macOS (arm/x86) and Linux.
+
 Built on macOS Tahoe 26.3
 
 ![Desktop](assets/screenRec.gif)
+
+## Install
+
+On a fresh machine:
+
+```sh
+sh -c "$(curl -fsSL raw.githubusercontent.com/gcodenowski/dotfiles/main/install.sh)"
+```
+
+or clone and run locally:
+
+```sh
+git clone git@github.com:gcodenowski/dotfiles.git && cd dotfiles
+./install.sh
+```
+
+The script installs Homebrew (macOS), the packages from the `Brewfile`,
+chezmoi, and then applies the configuration with `chezmoi init --apply`.
+On Linux, install your distribution's equivalents of the core tools
+(the script prints them) — only the shared cross-platform configs are deployed.
+
+Everyday usage after install:
+
+```sh
+chezmoi cd          # edit the source state (this repo)
+chezmoi diff        # preview changes
+chezmoi apply       # apply changes to $HOME
+dot_push message    # commit & push
+```
 
 ## Tools Used
 
 | Title | Purpose |
 | ----- | ------- |
+| [chezmoi](https://www.chezmoi.io/) | Dotfile management |
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) | System Specs Fetch |
-| [GNU Stow](https://www.gnu.org/software/stow/) | Easy symlinking |
 | [JankyBorders](https://github.com/FelixKratz/JankyBorders) | Window Borders |
 | [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) | Nvim config starting point |
 | [Kitty](https://github.com/kovidgoyal/kitty) | Terminal Emulator |
@@ -86,7 +117,10 @@ applications
 
 | Name | Args | Purpose |
 | --- | --- | --- |
-| os_theme | themename | Easy, dynamic theme switching |
+| dotfiles-theme | themename | Switch theme everywhere (starship, nvim, herdr, sketchybar, wallpaper, spicetify) via chezmoi |
+
+Themes live in `home/.chezmoidata.yaml`. `dotfiles-theme <name>` updates the
+active theme and runs `chezmoi apply`, which regenerates every themed file.
 
 ---
 

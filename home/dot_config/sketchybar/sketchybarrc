@@ -1,0 +1,25 @@
+#!/usr/bin/env lua
+
+-- Path to SbarLua installation
+package.cpath = package.cpath .. ";" .. os.getenv("HOME") .. "/.local/share/sketchybar_lua/?.so"
+
+sbar = require("sketchybar")
+
+-- Bundle configuration
+sbar.begin_config()
+require("bar")
+require("default")
+sbar.end_config()
+
+-- Kill and restart stats_provider
+sbar.exec(
+	"killall stats_provider 2>/dev/null; "
+		.. os.getenv("HOME")
+		.. "/.local/bin/stats_provider --cpu usage --memory ram_available --network en0 --uptime day hour min --interval 1 &"
+)
+
+-- Load items
+require("items")
+
+-- Run event loop
+sbar.event_loop()

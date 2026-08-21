@@ -1,0 +1,14 @@
+{{- if ne .chezmoi.os "darwin" }}
+# macOS-only window-management / UI apps
+.config/yabai
+.config/skhd
+.config/sketchybar
+.config/svim
+.config/herdr
+.config/spicetify
+{{- end }}
+
+# Runtime/state files written by their applications
+.config/nvim/lazy-lock.json
+.config/superfile/lastdir
+.config/superfile/pinned.json

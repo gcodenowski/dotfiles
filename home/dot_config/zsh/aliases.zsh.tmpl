@@ -1,0 +1,63 @@
+: <<'COMMENT'
+ █████╗ ██╗     ██╗ █████╗ ███████╗███████╗███████╗
+██╔══██╗██║     ██║██╔══██╗██╔════╝██╔════╝██╔════╝
+███████║██║     ██║███████║███████╗█████╗  ███████╗
+██╔══██║██║     ██║██╔══██║╚════██║██╔══╝  ╚════██║
+██║  ██║███████╗██║██║  ██║███████║███████╗███████║
+╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
+COMMENT
+
+# Dotfiles (chezmoi source)
+alias dotfiles='cd "$(chezmoi source-path)"'
+alias kittyconfig='cd "$(chezmoi source-path)/home/dot_config/kitty"'
+alias fastfetchconfig='cd "$(chezmoi source-path)/home/dot_config/fastfetch"'
+alias sketchybarconfig='cd "$(chezmoi source-path)/home/dot_config/sketchybar"'
+alias nvimconfig='cd "$(chezmoi source-path)/home/dot_config/nvim"'
+alias neovimconfig='cd "$(chezmoi source-path)/home/dot_config/nvim"'
+alias zshaliases='nvim "$(chezmoi source-path)/home/dot_config/zsh/aliases.zsh"'
+alias zshfunc='nvim "$(chezmoi source-path)/home/dot_config/zsh/functions.zsh"'
+
+{{ if eq .chezmoi.os "darwin" -}}
+# Dirs (macOS)
+alias icloud='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs"'
+alias obsidian='cd "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Atlas"'
+alias yabaiconfig='cd "$(chezmoi source-path)/home/dot_config/yabai"'
+alias wallpapers='cd "$HOME/Documents/Graphics/Wallpapers"'
+alias graphics='cd "$HOME/Documents/Graphics"'
+alias calibrelibrary='cd "$HOME/Calibre Library"'
+alias coolphotos='cd "$HOME/Documents/Graphics/coolPhotos"'
+alias university='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Chester"'
+alias chester='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Chester"'
+alias dissertation='cd "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Chester/Dissertation"'
+alias superfileconfig='cd "$HOME/Library/Application Support/superfile"'
+{{- end }}
+
+# Dirs (all platforms)
+alias home='cd ~'
+alias downloads='cd "$HOME/Downloads"'
+alias programming='cd "$HOME/Code"'
+alias tbackend='cd "$HOME/Code/TruckLoaderBackend"'
+alias midi='cd "$HOME/Code/midi-show-controller"'
+alias vis='cd "$HOME/Code/VIS"'
+alias huggingface='cd "$HOME/.cache/huggingface/hub"'
+alias org='cd "$HOME/orgfiles/"'
+alias orgfiles='cd "$HOME/orgfiles/"'
+alias orgmode='cd "$HOME/orgfiles/"'
+
+# Edit File
+alias zshconfig='nvim ~/.zshrc'
+alias ohmyzshconfig='nvim ~/.oh-my-zsh'
+alias skhdconfig='nvim ~/.config/skhd/skhdrc'
+
+# QoL
+alias vim='nvim'
+alias neovim='nvim'
+alias ls='eza -a --icons'
+alias op='opencode --port'
+alias ggr='git-graph'
+alias grep='rg'
+alias cd='z'
+alias lg='lazygit'
+
+# Misc
+alias zshreload='exec zsh' # This sources zshrc and creates new zsh instance

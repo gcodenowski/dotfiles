@@ -1,0 +1,16 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
+
+# Migrate an existing real superfile dir into the managed ~/.config/superfile
+# and symlink the macOS location to it.
+dest="$HOME/Library/Application Support/superfile"
+
+if [ ! -e "$dest" ] && [ ! -L "$dest" ]; then
+    ln -s "$HOME/.config/superfile" "$dest"
+    echo "superfile: linked $dest -> $HOME/.config/superfile"
+elif [ -d "$dest" ] && [ ! -L "$dest" ]; then
+    mv "$dest" "$dest.pre-chezmoi"
+    ln -s "$HOME/.config/superfile" "$dest"
+    echo "superfile: moved old dir to $dest.pre-chezmoi and symlinked"
+fi
+{{- end }}

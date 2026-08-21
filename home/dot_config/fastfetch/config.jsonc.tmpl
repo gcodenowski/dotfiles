@@ -1,0 +1,208 @@
+// Config heavily inspired by https://github.com/Ctrl-Alb
+
+{{- $logo := .fastfetch_logo }}
+{{- if hasPrefix $logo "~" }}
+{{- $logo = printf "%s%s" .chezmoi.homeDir ($logo | trimPrefix "~") }}
+{{- end }}
+{
+   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+   "logo": {
+      "type": "kitty-direct",
+      "source": "{{ $logo }}",
+      "width": 30,
+      "height": 15
+   },
+   "display": {
+      "separator": " -> ",
+      "color": {
+         "separator": "2"
+      }
+   },
+   "modules": [
+      { 
+         "type": "title",
+         "color": {
+            "at": "2"
+         }
+      },
+      {
+         "type": "separator",
+         "outputColor": "2"
+      },
+      "break",
+      {
+         "type": "custom",
+         "format": "{#keys}{#1}{#cyan}모Hardware"
+      },
+
+      {
+         "type": "host",
+         "key": "├ Model ",
+         "keyColor": "cyan",
+         "format": "{5} {2} {3}"
+      },
+      {
+         "type": "display",
+         "key": "├ Screen",
+         "keyColor": "cyan",
+         "format": "{22} x {23} px @ {24} Hz{?12} in {12}\" ({13} ppi){?} - {14} bit - HDR: {20} - {7}"
+      },
+      {
+         "type": "brightness",
+         "key": "├ Bright",
+         "keyColor": "cyan",
+         "format": "{1}",
+         "percent": {
+            "type": [
+               "num"
+            ]
+         }
+      },
+      {
+         "type": "cpu",
+         "key": "├ CPU   ",
+         "keyColor": "cyan",
+         "format": "{1} - {5} core @ {7} - {8}",
+         "temp": true
+      },
+      {
+         "type": "gpu",
+         "key": "├ GPU   ",
+         "keyColor": "cyan",
+         "format": "{2} - {5} core @ {12} - {4} - {11}",
+         "temp": true
+      },
+      {
+         "type": "memory",
+         "key": "├ Memory",
+         "keyColor": "cyan"
+      },
+      {
+         "type": "disk",
+         "key": "├ Disk  ",
+         "keyColor": "cyan",
+         "format": "{10} ({20}) - {1} / {2} ({3}) - {9}"
+      },
+      {
+         "type": "battery",
+         "key": "├ Charge",
+         "keyColor": "cyan",
+         "format": "{4}{?12} ({12} hours, {13} mins remaining){?} - {7} cycles - {6}",
+         "temp": true,
+         "percent": {
+            "green": 51,
+            "cyan": 11
+         }
+      },
+      {
+         "type": "camera",
+         "key": "├ Camera",
+         "keyColor": "cyan",
+         "format": "{1} - {5} x {6} px"
+      },
+      {         
+         "type": "sound",
+         "key": "└ Sound ",
+         "keyColor": "cyan",
+         "format": "{2} - {3}",
+         "percent": {
+            "type": [
+               "num"
+            ]
+         }
+      },
+      "break",
+      {
+         "type": "custom",
+         "format": "{#keys}{#1}{#magenta} Software"
+      },
+      {
+         "type":"wm",
+         "key":"├ WM    ",
+         "keyColor": "magenta",
+         "detectPlugin": true,
+         "format":"Yabai + JankyBorders"
+      },
+      {
+         "type":"custom",
+         "key":"├ Bar   ",
+         "keyColor":"magenta",
+         "format":"SketchyBar"
+      },
+
+      {
+         "type": "os",
+         "key": "├ OS Ver",
+         "keyColor": "magenta",
+         "format": "{2} {10} {8} - {12}"
+      },
+      {
+         "type": "uptime",
+         "key": "├ Uptime",
+         "keyColor": "magenta"
+      },
+      {
+         "type": "shell",
+         "key": "├ Shell ",
+         "keyColor": "magenta"
+      },
+      {
+         "type": "processes",
+         "key": "├ Processes ",
+         "keyColor": "magenta"
+      },
+      {
+         "type": "packages",
+         "key": "├ Packages  ",
+         "keyColor": "magenta"
+      },
+      {
+         "type": "command",
+         "key": "└ Apps  ",
+         "keyColor": "magenta",
+         "text": "USER_EXCLUDES='Safari.app'; USER_APPS=$(find /Applications -maxdepth 1 -name '*.app' -prune | grep -v -E \"($USER_EXCLUDES)\" | wc -l | xargs); SYSTEM_APPS=$( (find /System/Applications -maxdepth 1 -name '*.app' -prune; find /System/Applications/Utilities -maxdepth 1 -name '*.app' -prune) | wc -l | xargs); if [ -d /Applications/Safari.app ]; then SYSTEM_APPS=$((SYSTEM_APPS + 1)); fi; TOTAL=$((USER_APPS + SYSTEM_APPS)); echo \"Total: $TOTAL - User: $USER_APPS - System: $SYSTEM_APPS\""
+      },
+      "break",
+      {
+         "type": "custom",
+         "format": "{#keys}{#1}{#blue}ᯤ Connectivity"
+      },
+      {
+         "type": "publicip",
+         "key": "├ Pub IP",
+         "keyColor": "blue",
+         "format": "{1} - {2}"
+      },
+      {
+         "type": "localip",
+         "key": "├ Loc IP",
+         "keyColor": "blue",
+         "format": "{1} - {3}",
+         "showMac": true
+      },
+      {
+         "type": "dns",
+         "key": "├ DNS   ",
+         "keyColor": "blue"
+      },
+      {
+         "type": "wifi",
+         "key": "├ Wi-Fi ",
+         "keyColor": "blue",
+         "format": "{4} - {7} - {13} GHz - {6} - {10}"
+      },
+      {
+         "type": "bluetooth",
+         "key": "├ BT Dev",
+         "keyColor": "blue",
+         "format": "{1} - {4}"
+      },
+      {
+         "type": "bluetoothradio",
+         "key": "└ BT Ver",
+         "keyColor": "blue",
+         "format": "{5}"
+      },
+      "break"
+   ]
+}

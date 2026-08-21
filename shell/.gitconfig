@@ -1,8 +1,0 @@
-[user]
-	name = gcodenowski
-	email = gilbertkozanowski@gmail.com
-[commit]
-	gpgsign = false
-	pgsign = true
-[credential]
-	helper = osxkeychain

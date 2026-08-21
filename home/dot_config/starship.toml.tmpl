@@ -1,0 +1,2 @@
+{{- $t := index .themes .theme.name -}}
+{{ include (printf "dot_config/starship/starship-%s.toml" $t.starship) }}

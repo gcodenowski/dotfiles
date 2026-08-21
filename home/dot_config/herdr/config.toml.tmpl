@@ -1,0 +1,53 @@
+onboarding = false
+[theme]
+name = "{{ index .themes .theme.name "herdr" }}"
+auto_switch = false
+
+[ui.toast]
+delivery = "terminal"
+
+[ui.sound]
+enabled = false
+
+[keys]
+prefix = "ctrl+a"
+
+focus_pane_left = "ctrl+h"
+focus_pane_down = "ctrl+j"
+focus_pane_up = "ctrl+k"
+focus_pane_right = "ctrl+l"
+
+split_vertical = "prefix+\\"
+split_horizontal = "prefix+|"
+
+toggle_sidebar = "prefix+L"
+
+next_workspace = "prefix+j"
+previous_workspace = "prefix+k"
+rename_workspace = "prefix+$"
+
+next_agent = "prefix+h"
+previous_agent = "prefix+l"
+
+open_worktree = "prefix+["
+remove_worktree = "prefix+]"
+
+next_tab = "ctrl+tab"
+previous_tab = "ctrl+shift+tab"
+
+new_tab = "cmd+t"
+close_tab = "cmd+w"
+
+
+[ui]
+show_agent_labels_on_pane_borders = true
+
+sidebar_width = 14 # default
+sidebar_min_width = 14
+sidebar_max_width = 37
+
+prompt_new_tab_name = false
+
+
+[experimental]
+switch_ascii_input_source_in_prefix = false

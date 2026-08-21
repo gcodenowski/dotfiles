@@ -38,3 +38,6 @@ sketchybar/.config/sketchybar/helpers*
 
 # theme holder file
 .theme
+
+# chezmoi runtime
+home/dot_config/herdr/*.sock

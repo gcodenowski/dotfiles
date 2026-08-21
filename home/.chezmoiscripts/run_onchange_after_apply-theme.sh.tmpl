@@ -1,0 +1,43 @@
+{{- if eq .chezmoi.os "darwin" -}}
+{{- $t := index .themes .theme.name -}}
+#!/bin/sh
+# Re-applied whenever the active theme changes.
+# {{ .theme.name | toJson | sha256sum }} {{ $t | toJson | sha256sum }}
+
+set -eu
+
+theme_dir="$HOME/.config/sketchybar"
+theme_file="$theme_dir/themes/{{ .theme.name }}.lua"
+
+# Update JankyBorders to the accent colour (grep, not ripgrep: -oE)
+if command -v borders >/dev/null 2>&1 && [ -f "$theme_file" ]; then
+    accent=$(command grep -oE 'accent[[:space:]]*=[[:space:]]*0x[0-9a-fA-F]+' "$theme_file" |
+        command grep -oE '0x[0-9a-fA-F]+')
+    [ -n "$accent" ] && borders active_color="$accent" || true
+fi
+
+# Sync the spicetify color scheme (scheme names match theme names)
+if command -v spicetify >/dev/null 2>&1 && pgrep -x Spotify >/dev/null; then
+    spicetify -q config color_scheme "{{ .theme.name }}" || true
+    spicetify -q apply || true
+    spicetify -q restart || true
+fi
+
+# Set the desktop wallpaper (all screens; skip if no asset for this theme)
+wp_dir="$HOME/.local/share/wallpapers"
+wp_img=""
+for ext in jpg jpeg png heic; do
+    if [ -f "$wp_dir/{{ .theme.name }}.$ext" ]; then
+        wp_img="$wp_dir/{{ .theme.name }}.$ext"
+        break
+    fi
+done
+if [ -n "$wp_img" ] && command -v wallpaper >/dev/null 2>&1; then
+    wallpaper set "$wp_img" --screen all || true
+fi
+
+# Reload sketchybar with the new theme
+if command -v sketchybar >/dev/null 2>&1 && pgrep -x sketchybar >/dev/null; then
+    sketchybar --reload || true
+fi
+{{- end }}

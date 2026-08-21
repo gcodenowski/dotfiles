@@ -1,0 +1,24 @@
+# Central chezmoi configuration data.
+# Change the active theme with `dotfiles-theme <name>` (runs `chezmoi apply`).
+
+theme:
+  name: garden
+  # Kitty color scheme file inside kitty-themes/themes/ (kitty.conf includes it)
+  kitty: Atom
+
+themes:
+  vesper:     { starship: vesper,     herdr: vesper,          nvim: randomhue }
+  aurora:     { starship: aurora,     herdr: one-dark,        nvim: lunaperche }
+  hacker:     { starship: hacker,     herdr: terminal,        nvim: zaibatsu }
+  garden:     { starship: garden,     herdr: solarized,       nvim: habamax }
+  tokyonight: { starship: tokyonight, herdr: tokyo-night,     nvim: tokyonight }
+  monochrome: { starship: monochrome, herdr: terminal,        nvim: quiet }
+  paper:      { starship: paper,      herdr: gruvbox-light,   nvim: minisummer }
+  spill:      { starship: spill,      herdr: one-light,       nvim: miniautumn }
+  arctic:     { starship: arctic,     herdr: catpuccin-latte, nvim: "" }
+
+git:
+  name: gcodenowski
+  email: gilbertkozanowski@gmail.com
+
+fastfetch_logo: ~/Documents/Graphics/coolPhotos/apple_blue.png

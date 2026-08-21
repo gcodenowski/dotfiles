@@ -1,0 +1,12 @@
+[user]
+	name = {{ .git.name }}
+	email = {{ .git.email }}
+[commit]
+	gpgsign = false
+	pgsign = true
+[credential]
+{{- if eq .chezmoi.os "darwin" }}
+	helper = osxkeychain
+{{- else }}
+	helper = store
+{{- end }}

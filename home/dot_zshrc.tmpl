@@ -1,0 +1,90 @@
+# zmodload zsh/zprof # uncomment for loading time testing
+
+# Path to my Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+export PICO_SDK_PATH="$HOME/pico-sdk"
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+
+# Path
+path=(
+  $HOME/bin
+  $HOME/.local/bin
+{{ if eq .chezmoi.os "darwin" -}}
+  $HOME/Library/Python/3.12/bin # Python executables
+{{- end }}
+  /usr/local/bin
+  $path
+)
+
+# == Themes ==
+# Theme is disabled as I'm using starship anyway
+
+# Autoupdate every 2 weeks
+zstyle ':omz:update' frequency 14
+
+# Plugins
+plugins=(git colored-man-pages eza{{ if eq .chezmoi.os "darwin" }} macos{{ end }})
+
+source $ZSH/oh-my-zsh.sh
+
+# Preferred editor for local and remote sessions
+export EDITOR='nvim'
+
+{{ if eq .chezmoi.os "darwin" -}}
+# zsh plugins (Homebrew)
+# syntax highlighting:
+source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+# autosuggestions
+source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+# vi-mode
+source "$(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
+{{ else }}
+# zsh plugins (Linux, best-effort locations)
+[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+{{ end }}
+
+# starship
+eval "$(starship init zsh)"
+
+# Lazy-loading NVM, only sourcing it on the first call
+# This is for speeding up shell startup
+export NVM_DIR="$HOME/.nvm"
+nvm() {
+  unfunction nvm node npm npx
+  [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+  nvm "$@"
+}
+
+# same for npm, node and npx, calling them calls nvm and loads it
+node() {
+  nvm
+  node "$@"
+}
+npm() {
+  nvm
+  npm "$@"
+}
+npx() {
+  nvm
+  npx "$@"
+}
+
+# Sourcing the modular config files
+for config in ~/.config/zsh/*.zsh(N); do
+  # (N) ensures that an empty list is returned if there are no matching files
+  # instead of throwing an error
+  source "$config"
+done
+unset config # Remove the variable after use
+
+# Add zoxide
+eval "$(zoxide init zsh)"
+
+# Add fzf
+eval "$(fzf --zsh)"
+
+# zprof # uncomment for loading time testing
