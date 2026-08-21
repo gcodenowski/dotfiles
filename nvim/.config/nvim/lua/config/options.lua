@@ -29,6 +29,7 @@ local options = {
   cursorline = true, -- highlights current line
   scrolloff = 10, -- min number of screen lines above and below the cursor
   confirm = true, -- ask before quitting without saving
+  colorcolumn = "80",
 
   -- Indentation
   tabstop = 4,
