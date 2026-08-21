@@ -9,7 +9,7 @@ dotfiles-theme() {
 
     if [[ -z $1 ]]; then
         echo "Available themes:"
-        awk '/^themes:/{f=1; next} f && /^  [a-z]/{gsub(":", "", $1); print "  " $1} f && /^[^ #]/{f=0}' "$data"
+        awk '/^themes:/{f=1; next} f && /^[^ #]/{f=0} f && /^  [a-z]/{gsub(":", "", $1); print "  " $1}' "$data"
         echo "Current: $(awk '/^theme:/{f=1; next} f && /^  name:/{print $2}' "$data")"
         return 0
     fi
