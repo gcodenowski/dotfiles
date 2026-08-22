@@ -32,11 +32,11 @@ previous_agent = "prefix+l"
 open_worktree = "prefix+["
 remove_worktree = "prefix+]"
 
-next_tab = "ctrl+tab"
-previous_tab = "ctrl+shift+tab"
+next_tab = ["ctrl+tab", "prefix+n"]
+previous_tab = ["ctrl+shift+tab", "prefix+p" ]
 
-new_tab = "cmd+t"
-close_tab = "cmd+w"
+new_tab = ["cmd+t", "prefix+t"]
+close_tab = ["cmd+w", "prefix+w"]
 
 
 [ui]
