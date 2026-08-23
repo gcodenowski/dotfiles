@@ -51,6 +51,7 @@ os_theme() {
         paper gruvbox-light
         spill one-light
         arctic catpuccin-latte
+        elcapitan tokyo-night-day
     )
 
     local herdr_name="${HERDR_FOR[$1]}"
@@ -69,6 +70,7 @@ os_theme() {
         monochrome quiet
         paper minisummer
         spill miniautumn
+        elcapitan tokyonight-day
     )
     local nvim_name="${NVIM_FOR[$1]}"
     if [[ -n $nvim_name ]]; then
@@ -77,16 +79,18 @@ os_theme() {
 
     # Sync the spicetify color scheme (sections added to Themes/text/color.ini)
     typeset -A SPOTIFY_FOR=(
-        aurora      aurora
-        vesper      vesper
-        hacker      hacker
-        garden      garden
-        tokyonight  tokyonight
-        monochrome  monochrome
-        paper       paper
-        spill       spill
-        arctic      arctic
+        aurora aurora
+        vesper vesper
+        hacker hacker
+        garden garden
+        tokyonight tokyonight
+        monochrome monochrome
+        paper paper
+        spill spill
+        arctic arctic
+        elcapitan elcapitan
     )
+
     local spotify_name="${SPOTIFY_FOR[$1]}"
     if [[ -n $spotify_name ]] && command -v spicetify >/dev/null 2>&1; then
         spicetify -q config color_scheme "$spotify_name"
@@ -115,7 +119,8 @@ os_theme() {
 starship_theme() {
     local dir="$HOME/dotfiles/starship/.config"
     if [[ -z $1 ]]; then
-        ls "$dir" | grep '^starship-.*\.toml$' | sed 's/^starship-//;s/\.toml$//'
+        ls "$dir" | grep '^starship-.*\.toml$' |
+            sed 's/^starship-//;s/\.toml$//'
         return 1
     fi
     local tgt="$dir/starship-$1.toml"

@@ -1,6 +1,6 @@
 onboarding = false
 [theme]
-name = "terminal"
+name = "tokyo-night-day"
 auto_switch = false
 
 [ui.toast]

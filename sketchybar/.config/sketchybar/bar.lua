@@ -1,7 +1,7 @@
 local colors = require("colors")
 
 -- Equivalent to the --bar domain
-sbar.bar({
+local bar_config = {
 	position = "top",
 	height = 36,
 	blur_radius = 6,
@@ -11,4 +11,12 @@ sbar.bar({
 	padding_left = 11,
 	padding_right = 11,
 	font_smoothing = true,
-})
+}
+
+if colors.bar_overrides then
+	for k, v in pairs(colors.bar_overrides) do
+		bar_config[k] = v
+	end
+end
+
+sbar.bar(bar_config)

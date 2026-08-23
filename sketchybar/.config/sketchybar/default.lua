@@ -1,8 +1,23 @@
 local colors = require("colors")
 local settings = require("settings")
 
+-- This is for changing the defaults with os_theme
+local function merge(base, overrides)
+	if not overrides then
+		return base
+	end
+	for k, v in pairs(overrides) do
+		if type(v) == "table" and type(base[k]) == "table" then
+			merge(base[k], v)
+		else
+			base[k] = v
+		end
+	end
+	return base
+end
+
 -- Equivalent to the --default domain
-sbar.default({
+local defaults = {
 	padding_left = 2,
 	padding_right = 2,
 
@@ -28,4 +43,11 @@ sbar.default({
 		border_color = colors.border,
 		border_width = 1,
 	},
-})
+}
+
+-- Per-theme item styling (e.g. flatter, borderless for El Capitan).
+if colors.default_overrides then
+	merge(defaults, colors.default_overrides)
+end
+
+sbar.default(defaults)
