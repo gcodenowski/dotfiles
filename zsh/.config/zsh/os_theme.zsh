@@ -52,6 +52,9 @@ os_theme() {
         spill one-light
         arctic catpuccin-latte
         elcapitan tokyo-night-day
+        cockpit gruvbox
+        creator vesper
+        lunar solarized
     )
 
     local herdr_name="${HERDR_FOR[$1]}"
@@ -62,7 +65,7 @@ os_theme() {
 
     # Sync the neovim colorscheme (mapping → marker file read at nvim startup)
     typeset -A NVIM_FOR=(
-        vesper randomhue
+        vesper vesper
         aurora lunaperche
         hacker zaibatsu
         garden habamax
@@ -70,7 +73,10 @@ os_theme() {
         monochrome quiet
         paper minisummer
         spill miniautumn
-        elcapitan tokyonight-day
+        elcapitan unokai
+        lunar moonfly
+        cockpit unokai
+        creator vesper
     )
     local nvim_name="${NVIM_FOR[$1]}"
     if [[ -n $nvim_name ]]; then
@@ -89,6 +95,9 @@ os_theme() {
         spill spill
         arctic arctic
         elcapitan elcapitan
+        lunar lunar
+        cockpit cockpit
+        creator creator
     )
 
     local spotify_name="${SPOTIFY_FOR[$1]}"
