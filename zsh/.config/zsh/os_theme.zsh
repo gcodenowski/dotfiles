@@ -68,7 +68,7 @@ os_theme() {
         vesper vesper
         aurora lunaperche
         hacker zaibatsu
-        garden habamax
+        garden everforest # habamax
         tokyonight tokyonight
         monochrome quiet
         paper minisummer
