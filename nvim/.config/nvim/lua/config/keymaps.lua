@@ -36,10 +36,14 @@ map("n", "<C-k>", "<C-w><C-k>")
 -- Keymaps to open things:
 -- Open Mason and Lazy
 map("n", "<leader>m", "<cmd>Mason<CR>")
-map("n", "<leader>l", "<cmd>Lazy<CR>")
+map("n", "<leader>la", "<cmd>Lazy<CR>")
 map("n", "<leader>d", "<cmd>Alpha<CR>")
 map("n", "<leader>r", "<cmd>reg<CR>")
 map("n", "<leader>ch", "<cmd>checkhealth<CR>")
 
 -- Choose colorscheme
-map("n", "<leader>cc", "<cmd>Telescope colorscheme<CR>")
+map("n", "<leader>cc", "<cmd>checkhealth<CR>")
+
+-- Center the screen on scrolling
+map("n", "<C-u>", "<C-u>zz" )
+map("n", "<C-d>", "<C-d>zz" )
