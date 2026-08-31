@@ -33,7 +33,6 @@ return {
 		explorer = { enabled = true },
 		indent = { enabled = true },
 		input = { enabled = true },
-		picker = { enabled = true },
 		notifier = { enabled = true },
 		quickfile = { enabled = true },
 		scope = { enabled = true },
@@ -56,6 +55,27 @@ return {
 				Snacks.lazygit.open():map("<leader>lg")
 			end,
 			desc = "Open Lazygit",
+		},
+		{
+			"<leader>.t",
+			function()
+				Snacks.scratch()
+			end,
+			desc = "Toggle Scratch Buffer",
+		},
+		{
+			"<leader>.s",
+			function()
+				Snacks.scratch.select()
+			end,
+			desc = "Select Scratch Buffer",
+		},
+		{
+			"<leader>.<CR>",
+			function()
+				Snacks.debug.run()
+			end,
+			desc = "Run scratch buffer",
 		},
 	},
 }
