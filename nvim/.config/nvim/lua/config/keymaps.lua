@@ -47,3 +47,17 @@ map("n", "<leader>cc", "<cmd>checkhealth<CR>")
 -- Center the screen on scrolling
 map("n", "<C-u>", "<C-u>zz" )
 map("n", "<C-d>", "<C-d>zz" )
+
+-- Toggling diagnostics
+local diagnostics_active = true
+
+vim.keymap.set('n', '<leader>td', function()
+  diagnostics_active = not diagnostics_active
+  if diagnostics_active then
+    vim.diagnostic.show()
+    vim.notify('Diagnostics Enabled', 'info')
+  else
+    vim.diagnostic.hide()
+    vim.notify('Diagnostics Disabled', 'warning')
+  end
+end, { desc = 'Toggle diagnostics' })
