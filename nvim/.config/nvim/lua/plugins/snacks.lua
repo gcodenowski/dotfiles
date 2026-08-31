@@ -73,7 +73,7 @@ return {
 		{
 			"<leader>.<CR>",
 			function()
-				Snacks.debug.run()
+				Snacks.run()
 			end,
 			desc = "Run scratch buffer",
 		},

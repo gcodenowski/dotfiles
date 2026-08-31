@@ -55,9 +55,9 @@ vim.keymap.set('n', '<leader>td', function()
   diagnostics_active = not diagnostics_active
   if diagnostics_active then
     vim.diagnostic.show()
-    vim.notify('Diagnostics Enabled', 'info')
+    vim.notify('Diagnostics Enabled', "info")
   else
     vim.diagnostic.hide()
-    vim.notify('Diagnostics Disabled', 'warning')
+    vim.notify('Diagnostics Disabled', "warn")
   end
 end, { desc = 'Toggle diagnostics' })
