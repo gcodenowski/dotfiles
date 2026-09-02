@@ -42,7 +42,7 @@ map("n", "<leader>r", "<cmd>reg<CR>")
 map("n", "<leader>ch", "<cmd>checkhealth<CR>")
 
 -- Choose colorscheme
-map("n", "<leader>cc", "<cmd>checkhealth<CR>")
+map("n", "<leader>cc", "<cmd>Telescope colorscheme<CR>")
 
 -- Center the screen on scrolling
 map("n", "<C-u>", "<C-u>zz" )

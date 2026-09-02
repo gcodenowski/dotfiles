@@ -1,6 +1,6 @@
 onboarding = false
 [theme]
-name = "solarized"
+name = "one-light"
 auto_switch = false
 
 [ui.toast]
