@@ -52,7 +52,6 @@ os_theme() {
         spill one-light
         arctic catpuccin-latte
         elcapitan tokyo-night-day
-        cockpit gruvbox
         creator vesper
         lunar solarized
     )
@@ -68,14 +67,13 @@ os_theme() {
         vesper vesper
         aurora lunaperche
         hacker zaibatsu
-        garden everforest # habamax
+        garden everforest # or habamax
         tokyonight tokyonight
         monochrome quiet
         paper minisummer
         spill miniautumn
         elcapitan unokai
         lunar moonfly
-        cockpit unokai
         creator vesper
     )
     local nvim_name="${NVIM_FOR[$1]}"
@@ -96,7 +94,6 @@ os_theme() {
         arctic arctic
         elcapitan elcapitan
         lunar lunar
-        cockpit cockpit
         creator creator
     )
 
