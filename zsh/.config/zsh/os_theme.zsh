@@ -55,6 +55,8 @@ os_theme() {
         creator vesper
         lunar solarized
         bears gruvbox
+        river kanagawa-lotus
+        hills nord
     )
 
     local herdr_name="${HERDR_FOR[$1]}"
@@ -77,6 +79,8 @@ os_theme() {
         lunar moonfly
         creator vesper
         bears everforest
+        river everforest
+        hills sorbet
     )
     local nvim_name="${NVIM_FOR[$1]}"
     if [[ -n $nvim_name ]]; then

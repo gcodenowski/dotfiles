@@ -1,6 +1,6 @@
 onboarding = false
 [theme]
-name = "one-light"
+name = "nord"
 auto_switch = false
 
 [ui.toast]
