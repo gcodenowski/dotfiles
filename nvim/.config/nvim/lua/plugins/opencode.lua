@@ -74,14 +74,6 @@ return {
 			require("opencode").command("session.new")
 		end, { desc = "Start a new session" })
 
-		vim.keymap.set("n", "<leader>af", function()
-			require("opencode").operator("@fix")
-		end, { desc = "Fix this" })
-
-		vim.keymap.set("n", "<leader>ao", function()
-			require("opencode").operator("@optimize")
-		end, { desc = "Optimize this" })
-
 		vim.keymap.set({ "n", "x" }, "go", function()
 			return require("opencode").operator("@this ")
 		end, { desc = "Add range to opencode", expr = true })
