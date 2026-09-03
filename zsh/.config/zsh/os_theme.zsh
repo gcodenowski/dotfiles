@@ -1,5 +1,6 @@
 # For changing os themes
 os_theme() {
+    # If no argument is passed, show available themes and current theme
     if [[ -z $1 ]]; then
         local d=~/.config/sketchybar/themes
         local active_theme
@@ -28,11 +29,10 @@ os_theme() {
 
     printf '%s\n' "$1" >~/.config/sketchybar/.theme
 
-    # Update JankyBorders to the accent colour
-    # grep called explicitly since ripgrep breaks on -oE
+    # Update JankyBorders to the accent colour of sketchybar
     local -l accent
-    accent=$(command grep -oE 'accent[[:space:]]*=[[:space:]]*0x[0-9a-fA-F]+' "$theme_file" |
-        command grep -oE '0x[0-9a-fA-F]+')
+    # grep needs to be called explicitly (command grep) to bypass the grep = rg alias
+    accent=$(cat "$theme_file" | command grep -oE 'accent[[:space:]]*=[[:space:]]*0x[0-9a-fA-F]+' | command grep -oE '0x[0-9a-fA-F]+')
     [[ -n $accent ]] && borders active_color="$accent"
 
     # Derive the starship prompt theme: use the same name when a
@@ -54,6 +54,7 @@ os_theme() {
         elcapitan tokyo-night-day
         creator vesper
         lunar solarized
+        bears gruvbox
     )
 
     local herdr_name="${HERDR_FOR[$1]}"
@@ -62,7 +63,7 @@ os_theme() {
         sed -i '' "s/^name = \".*\"/name = \"$herdr_name\"/" "$herdr_cfg"
     fi
 
-    # Sync the neovim colorscheme (mapping → marker file read at nvim startup)
+    # Sync the neovim colorscheme (mapping -> marker file read at nvim startup)
     typeset -A NVIM_FOR=(
         vesper vesper
         aurora lunaperche
@@ -75,6 +76,7 @@ os_theme() {
         elcapitan unokai
         lunar moonfly
         creator vesper
+        bears everforest
     )
     local nvim_name="${NVIM_FOR[$1]}"
     if [[ -n $nvim_name ]]; then
@@ -95,6 +97,9 @@ os_theme() {
         elcapitan elcapitan
         lunar lunar
         creator creator
+        river river
+        hills hills
+        bears bears
     )
 
     local spotify_name="${SPOTIFY_FOR[$1]}"
