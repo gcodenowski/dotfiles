@@ -72,7 +72,7 @@ os_theme() {
         hacker zaibatsu
         garden everforest # or habamax
         tokyonight tokyonight
-        monochrome quiet
+        monochrome monoglow
         paper minisummer
         spill miniautumn
         elcapitan unokai
@@ -80,7 +80,7 @@ os_theme() {
         creator vesper
         bears everforest
         river everforest
-        hills sorbet
+        hills habamax
     )
     local nvim_name="${NVIM_FOR[$1]}"
     if [[ -n $nvim_name ]]; then
