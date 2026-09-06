@@ -1,6 +1,6 @@
 onboarding = false
 [theme]
-name = "nord"
+name = "terminal"
 auto_switch = false
 
 [ui.toast]
@@ -43,7 +43,7 @@ close_tab = ["cmd+w", "prefix+w"]
 show_agent_labels_on_pane_borders = true
 
 sidebar_width = 14 # default
-sidebar_min_width = 14
+sidebar_min_width = 12
 sidebar_max_width = 37
 
 prompt_new_tab_name = false
