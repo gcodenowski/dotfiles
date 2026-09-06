@@ -77,5 +77,6 @@ return {
 	"datsfilipe/vesper.nvim",
 	"AlexvZyl/nordic.nvim",
 	"bluz71/vim-moonfly-colors",
-	"neanias/everforest-nvim"
+	"neanias/everforest-nvim",
+	"wnkz/monoglow.nvim"
 }
