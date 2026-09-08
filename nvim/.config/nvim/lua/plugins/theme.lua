@@ -20,7 +20,7 @@ return {
 				CursorLine = { bg = "#434343" },
 
 				-- Color Column
-				ColorColumn = { bg = "#010101" },
+				ColorColumn = { bg = "#181818" },
 
 				-- Yanking colour (see autocmds.lua)
 				YankFlash = { bg = "#f7768e", fg = "#1a1b26", bold = true },
