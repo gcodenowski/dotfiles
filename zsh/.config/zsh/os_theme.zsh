@@ -4,6 +4,7 @@ os_theme() {
     if [[ -z $1 ]]; then
         local d=~/.config/sketchybar/themes
         local active_theme
+        # If a theme file exists, input it into active_theme
         if [[ -f ~/.config/sketchybar/.theme ]]; then
             active_theme=$(<~/.config/sketchybar/.theme)
         fi
@@ -29,10 +30,11 @@ os_theme() {
 
     printf '%s\n' "$1" >~/.config/sketchybar/.theme
 
-    # Update JankyBorders to the accent colour of sketchybar
+    # Update JankyBorders: optional borders_accent key, else the bar accent
     local -l accent
     # grep needs to be called explicitly (command grep) to bypass the grep = rg alias
-    accent=$(cat "$theme_file" | command grep -oE 'accent[[:space:]]*=[[:space:]]*0x[0-9a-fA-F]+' | command grep -oE '0x[0-9a-fA-F]+')
+    accent=$(command grep -E '^[[:space:]]*borders_accent[[:space:]]*=' "$theme_file" | command grep -oE '0x[0-9a-fA-F]+')
+    [[ -z $accent ]] && accent=$(command grep -E '^[[:space:]]*accent[[:space:]]*=' "$theme_file" | command grep -oE '0x[0-9a-fA-F]+')
     [[ -n $accent ]] && borders active_color="$accent"
 
     # Derive the starship prompt theme: use the same name when a
@@ -57,6 +59,10 @@ os_theme() {
         bears gruvbox
         river kanagawa-lotus
         hills nord
+        eva01-red terminal
+        eva02-blue terminal
+        eva03-ecru gruvbox-light
+        eva04-green terminal
     )
 
     local herdr_name="${HERDR_FOR[$1]}"
@@ -81,6 +87,10 @@ os_theme() {
         bears everforest
         river everforest
         hills habamax
+        eva01-red retrobox
+        eva02-blue lunaperche
+        eva03-ecru desert
+        eva04-green koehler
     )
     local nvim_name="${NVIM_FOR[$1]}"
     if [[ -n $nvim_name ]]; then
@@ -104,6 +114,10 @@ os_theme() {
         river river
         hills hills
         bears bears
+        eva01-red eva01-red
+        eva02-blue eva02-blue
+        eva03-ecru eva03-ecru
+        eva04-green eva04-green
     )
 
     local spotify_name="${SPOTIFY_FOR[$1]}"

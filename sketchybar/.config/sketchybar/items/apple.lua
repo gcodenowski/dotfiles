@@ -6,7 +6,7 @@ local menu = sbar.add("item", "apple", {
 	position = "left",
 	icon = {
 		string = icons.apple,
-		color = colors.text,
+		color = colors.apple or colors.text,
 		padding_left = 7,
 		padding_right = 9,
 	},
