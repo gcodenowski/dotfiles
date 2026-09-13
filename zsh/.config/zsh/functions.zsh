@@ -83,7 +83,6 @@ llm() {
     typeset -A MODELS
     MODELS=(
         gemma "yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF:Q4_K_M"
-        granite3 "unsloth/granite-3.3-8b-instruct-GGUF"
         granite4 "unsloth/granite-4.1-8b-GGUF:Q6_K"
         qwen "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:UD-Q4_K_XL"
         gpt "unsloth/gpt-oss-20b-GGUF:Q4_K_M"
