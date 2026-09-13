@@ -87,7 +87,7 @@ os_theme() {
         bears everforest
         river everforest
         hills habamax
-        eva01-red retrobox
+        eva01-red ashen
         eva02-blue lunaperche
         eva03-ecru desert
         eva04-green koehler
