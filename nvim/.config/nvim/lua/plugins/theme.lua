@@ -79,5 +79,5 @@ return {
 	"bluz71/vim-moonfly-colors",
 	"neanias/everforest-nvim",
 	"wnkz/monoglow.nvim",
-	"ficd0/ashen.nvim"
+	"ficd0/ashen.nvim",
 }
